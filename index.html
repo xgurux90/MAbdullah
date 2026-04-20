@@ -24,7 +24,6 @@
                             500: '#06b6d4',
                             600: '#0891b2',
                             900: '#164e63',
-                            950: '#083344',
                         },
                         dark: {
                             900: '#0f172a',
@@ -127,7 +126,6 @@
             @apply scale-110;
         }
 
-        /* Custom Scrollbar */
         .project-scroll::-webkit-scrollbar {
             width: 6px;
         }
@@ -141,6 +139,16 @@
         }
         .project-scroll::-webkit-scrollbar-thumb:hover {
             background: #06b6d4; 
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -158,7 +166,7 @@
                 <a href="#about" class="px-5 py-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all text-sm font-semibold">About</a>
                 <a href="#experience" class="px-5 py-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all text-sm font-semibold">Experience</a>
                 <a href="#projects" class="px-5 py-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all text-sm font-semibold">Projects</a>
-                <a href="#skills" class="px-5 py-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all text-sm font-semibold">Skills</a>
+                <a href="#certifications" class="px-5 py-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all text-sm font-semibold">Certifications</a>
                 <a href="#contact" class="px-6 py-2 bg-brand-500 hover:bg-brand-400 text-white rounded-full transition-all text-sm font-bold shadow-lg shadow-brand-500/20 ml-2">Contact</a>
             </div>
             
@@ -171,7 +179,7 @@
                 <a href="#about" class="py-3 text-slate-300 hover:text-white font-medium border-b border-white/5">About</a>
                 <a href="#experience" class="py-3 text-slate-300 hover:text-white font-medium border-b border-white/5">Experience</a>
                 <a href="#projects" class="py-3 text-slate-300 hover:text-white font-medium border-b border-white/5">Projects</a>
-                <a href="#skills" class="py-3 text-slate-300 hover:text-white font-medium border-b border-white/5">Skills</a>
+                <a href="#certifications" class="py-3 text-slate-300 hover:text-white font-medium border-b border-white/5">Certifications</a>
                 <a href="#contact" class="py-3 text-brand-400 font-bold">Contact</a>
             </div>
         </div>
@@ -183,14 +191,21 @@
             
             <div class="container mx-auto px-6 text-center relative z-10">
                 <div class="profile-img-container mb-10">
-                    <img src="1650302875259.jpg" alt="M.O. Abdullah" class="rounded-full h-48 w-48 object-cover relative z-10">
+                    <img src="1650302875259.jpg" alt="M.O. Abdullah" class="rounded-full h-48 w-48 object-cover relative z-10 border-4 border-dark-900">
                 </div>
                 <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
                     Mohammad Abdullah
                 </h1>
                 <div class="flex items-center justify-center gap-4 mb-8">
-                    <span class="px-4 py-1.5 rounded-full bg-dark-800 border border-slate-700 text-brand-400 font-bold tracking-widest text-sm shadow-inner">PMP®</span>
-                    <span class="px-4 py-1.5 rounded-full bg-dark-800 border border-slate-700 text-brand-400 font-bold tracking-widest text-sm shadow-inner">CFPS®</span>
+                    <span class="px-4 py-1.5 rounded-full bg-dark-800 border border-slate-700 text-brand-400 font-bold tracking-widest text-sm shadow-inner flex items-center gap-2">
+                        <img src="project-management-professional-pmp (1).png" alt="PMP" class="h-4 object-contain hidden sm:inline-block"> PMP®
+                    </span>
+                    <span class="px-4 py-1.5 rounded-full bg-dark-800 border border-slate-700 text-brand-400 font-bold tracking-widest text-sm shadow-inner flex items-center gap-2">
+                        <img src="certified-fire-protection-specialist-cfps-certifica (1).png" alt="CFPS" class="h-4 object-contain hidden sm:inline-block"> CFPS®
+                    </span>
+                    <span class="px-4 py-1.5 rounded-full bg-dark-800 border border-slate-700 text-brand-400 font-bold tracking-widest text-sm shadow-inner flex items-center gap-2">
+                        <img src="Saudi_Council_of_Engineers_Logo.svg.png" alt="SCE" class="h-4 object-contain hidden sm:inline-block"> SCE Engineer
+                    </span>
                 </div>
                 
                 <div class="flex flex-wrap justify-center gap-3 mb-12 text-sm font-semibold text-slate-300 max-w-3xl mx-auto">
@@ -266,18 +281,13 @@
                                 <i class="far fa-clock text-brand-500"></i> Apr 2022 - Oct 2024 | Al Khobar, KSA
                             </p>
                             <div class="text-slate-600 font-medium">
-                                <p class="mb-3 font-bold text-slate-800 border-b pb-2">Key Duties:</p>
                                 <ul class="space-y-2 text-sm">
-                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Develop and maintain relationships with key customers and partners.</li>
-                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Analyze customer requirements and develop technical solutions to meet their needs.</li>
-                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Design and deliver technical presentations to customers and partners.</li>
-                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Create and maintain technical documentation and sales collateral.</li>
-                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Develop and maintain product knowledge and competitive analysis.</li>
-                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Develop and maintain sales strategies and plans.</li>
-                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Assist in the development of sales proposals and presentations.</li>
-                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Assist in the development of pricing strategies.</li>
-                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Provide technical support to customers and partners.</li>
-                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Monitor and report on sales performance.</li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1 shrink-0"></i> Develop and maintain relationships with key customers and partners.</li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1 shrink-0"></i> Analyze customer requirements and develop technical solutions to meet their needs.</li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1 shrink-0"></i> Design and deliver technical presentations to customers and partners.</li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1 shrink-0"></i> Create and maintain technical documentation and sales collateral.</li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1 shrink-0"></i> Assist in the development of pricing strategies and sales proposals.</li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1 shrink-0"></i> Provide technical support and monitor sales performance.</li>
                                 </ul>
                             </div>
                         </div>
@@ -324,7 +334,6 @@
                                 <i class="far fa-clock text-brand-500"></i> Nov 2014 - Aug 2015 | Jordan
                             </p>
                             <ul class="text-slate-600 leading-relaxed space-y-3 font-medium text-sm">
-                                <li class="flex gap-3"><i class="fas fa-angle-right text-brand-400 mt-1 shrink-0"></i> <span>Control, Supervise and make sure every thing is going the right way and every body are doing their job that's when is it comes to production and production hall.</span></li>
                                 <li class="flex gap-3"><i class="fas fa-angle-right text-brand-400 mt-1 shrink-0"></i> <span>Control, Supervise and maintain the blending process for a wide range of lubricant oil types and greases.</span></li>
                                 <li class="flex gap-3"><i class="fas fa-angle-right text-brand-400 mt-1 shrink-0"></i> <span>Report to higher management and coordinate the work between departments.</span></li>
                             </ul>
@@ -388,7 +397,7 @@
                                                 <p class="text-sm font-medium text-slate-500 mt-1">Design, Supply Installation Testing and Commissioning</p>
                                             </div>
                                         </div>
-                                        <span class="text-xs font-bold text-slate-500 whitespace-nowrap bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">Oct 2023 – Oct 2023</span>
+                                        <span class="text-xs font-bold text-slate-500 whitespace-nowrap bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">Oct 2023</span>
                                     </li>
                                     <li class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 p-4 hover:bg-slate-50 rounded-xl border border-transparent hover:border-slate-100 transition-colors">
                                         <div class="flex items-start gap-3">
@@ -520,12 +529,6 @@
                                         </div>
                                         <span class="text-[11px] font-bold text-slate-400 w-fit">Sep 2018 – Feb 2019</span>
                                     </div>
-                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
-                                        <div class="mb-3">
-                                            <p class="font-bold text-slate-700">Marjan Oil Field Development - E-houses Fire protection systems</p>
-                                        </div>
-                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Jun 2018 – Present</span>
-                                    </div>
                                     <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full lg:col-span-2">
                                         <div class="mb-3">
                                             <p class="font-bold text-slate-700">Various projects in Saudi Arabia</p>
@@ -600,7 +603,150 @@
             </div>
         </section>
 
-        <section id="education" class="py-28 bg-slate-100/50 border-y border-slate-200/60">
+        <section id="certifications" class="py-28 bg-slate-100/50 border-y border-slate-200/60">
+            <div class="container mx-auto px-6 fade-in-up">
+                <h2 class="section-title">Licenses & <span>Accreditations</span></h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                    <div class="neo-card p-8 flex flex-col items-center text-center">
+                        <img src="project-management-professional-pmp (1).png" alt="PMP Logo" class="h-20 mb-6 object-contain">
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-2">Project Management Professional (PMP)®</h3>
+                        <p class="text-brand-600 font-bold text-sm mb-4">Project Management Institute</p>
+                        <div class="mt-auto border-t border-slate-100 pt-4 w-full">
+                            <p class="text-xs text-slate-500 font-semibold">ID: 3128273 | Exp: Aug 2027</p>
+                        </div>
+                    </div>
+                    
+                    <div class="neo-card p-8 flex flex-col items-center text-center">
+                        <img src="certified-fire-protection-specialist-cfps-certifica (1).png" alt="CFPS Logo" class="h-20 mb-6 object-contain">
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-2">Certified Fire Protection Specialist (CFPS)</h3>
+                        <p class="text-brand-600 font-bold text-sm mb-4">National Fire Protection Association</p>
+                        <div class="mt-auto border-t border-slate-100 pt-4 w-full">
+                            <p class="text-xs text-slate-500 font-semibold">ID: 1131510-CFPS | Exp: Nov 2027</p>
+                        </div>
+                    </div>
+
+                    <div class="neo-card p-8 flex flex-col items-center text-center">
+                        <img src="Saudi_Council_of_Engineers_Logo.svg.png" alt="SCE Logo" class="h-20 mb-6 object-contain">
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-2">Professional Accreditation: Engineer</h3>
+                        <p class="text-brand-600 font-bold text-sm mb-4">Saudi Council of Engineers (SCE)</p>
+                        <div class="mt-auto border-t border-slate-100 pt-4 w-full">
+                            <p class="text-xs text-slate-500 font-semibold">Mechatronics | Membership: 251526</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-title mt-20">Technical Training & <span>Certifications</span></h2>
+                
+                <div class="max-w-6xl mx-auto columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                    
+                    <div class="neo-card p-6 break-inside-avoid">
+                        <h3 class="text-lg font-extrabold text-slate-800 mb-4 border-b border-slate-100 pb-3 flex items-center gap-2">
+                            <i class="fas fa-microchip text-brand-500"></i> Siemens SITRAIN
+                        </h3>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <p class="font-bold text-slate-700">Basic principles of electrical engineering</p>
+                                <p class="text-xs text-slate-400">Jan 2025</p>
+                            </li>
+                            <li>
+                                <p class="font-bold text-slate-700">Protection concept</p>
+                                <p class="text-xs text-slate-400">Jan 2025</p>
+                            </li>
+                            <li>
+                                <p class="font-bold text-slate-700">Protection systems in low-voltage power distribution</p>
+                                <p class="text-xs text-slate-400">Jan 2025</p>
+                            </li>
+                            <li>
+                                <p class="font-bold text-slate-700">3WA air circuit breakers</p>
+                                <p class="text-xs text-slate-400">Jan 2025</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="neo-card p-6 break-inside-avoid">
+                        <h3 class="text-lg font-extrabold text-slate-800 mb-4 border-b border-slate-100 pb-3 flex items-center gap-2">
+                            <i class="fas fa-shield-alt text-red-500"></i> FEMA National Fire Academy
+                        </h3>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <p class="font-bold text-slate-700">Testing and Evaluation of Water Supplies for Fire Protection</p>
+                                <p class="text-xs text-slate-400">Oct 2019</p>
+                            </li>
+                            <li>
+                                <p class="font-bold text-slate-700">Hydraulic Calculations for Water-Based Fire Protection Systems Plan Review</p>
+                                <p class="text-xs text-slate-400">Sep 2018</p>
+                            </li>
+                            <li>
+                                <p class="font-bold text-slate-700">Hazardous Materials for Inspectors</p>
+                                <p class="text-xs text-slate-400">Oct 2019</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="neo-card p-6 break-inside-avoid">
+                        <h3 class="text-lg font-extrabold text-slate-800 mb-4 border-b border-slate-100 pb-3 flex items-center gap-2">
+                            <i class="fas fa-plug text-green-500"></i> Schneider Electric Energy Univ.
+                        </h3>
+                        <ul class="space-y-3 text-sm">
+                            <li><p class="font-bold text-slate-700">Pumping Systems I, II, III</p><p class="text-xs text-slate-400">Jul 2018</p></li>
+                            <li><p class="font-bold text-slate-700">Power Distribution I</p><p class="text-xs text-slate-400">Jul 2018</p></li>
+                            <li><p class="font-bold text-slate-700">Emergency Power Generators For Healthcare</p><p class="text-xs text-slate-400">Jun 2018</p></li>
+                            <li><p class="font-bold text-slate-700">Demand Response and the Smart Grid</p><p class="text-xs text-slate-400">Jun 2018</p></li>
+                            <li><p class="font-bold text-slate-700">Alternative Power Generation Technologies</p><p class="text-xs text-slate-400">Jun 2018</p></li>
+                            <li><p class="font-bold text-slate-700">Active Energy Efficiency Using Speed Control</p><p class="text-xs text-slate-400">Jun 2018</p></li>
+                        </ul>
+                    </div>
+
+                    <div class="neo-card p-6 break-inside-avoid">
+                        <h3 class="text-lg font-extrabold text-slate-800 mb-4 border-b border-slate-100 pb-3 flex items-center gap-2">
+                            <i class="fas fa-car-battery text-slate-700"></i> Kohler Power Systems
+                        </h3>
+                        <ul class="space-y-3 text-sm">
+                            <li><p class="font-bold text-slate-700">Kohler Power QuickPack</p><p class="text-xs text-slate-400">Sep 2017</p></li>
+                            <li><p class="font-bold text-slate-700">Marine Power Systems Fundamentals</p><p class="text-xs text-slate-400">May 2017</p></li>
+                            <li><p class="font-bold text-slate-700">Kohler Power Resource Center</p><p class="text-xs text-slate-400">Aug 2017</p></li>
+                            <li><p class="font-bold text-slate-700">Industrial Power Systems Fundamentals</p><p class="text-xs text-slate-400">May 2017</p></li>
+                        </ul>
+                    </div>
+
+                    <div class="neo-card p-6 break-inside-avoid">
+                        <h3 class="text-lg font-extrabold text-slate-800 mb-4 border-b border-slate-100 pb-3 flex items-center gap-2">
+                            <i class="fas fa-video text-red-600"></i> Honeywell
+                        </h3>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <p class="font-bold text-slate-700">An Introduction To Electronic Access Control</p>
+                                <p class="text-xs text-slate-400">Aug 2024</p>
+                            </li>
+                            <li>
+                                <p class="font-bold text-slate-700">An Introduction To Video Systems</p>
+                                <p class="text-xs text-slate-400">Aug 2024</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="neo-card p-6 break-inside-avoid">
+                        <h3 class="text-lg font-extrabold text-slate-800 mb-4 border-b border-slate-100 pb-3 flex items-center gap-2">
+                            <i class="fas fa-fire-extinguisher text-blue-500"></i> 3M Academy
+                        </h3>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <p class="font-bold text-slate-700">Clean Agent Fire Suppression</p>
+                                <p class="text-xs text-slate-400">Sep 2018</p>
+                            </li>
+                            <li>
+                                <p class="font-bold text-slate-700">Clean Agent Fire Extinguishment</p>
+                                <p class="text-xs text-slate-400">Sep 2018</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-28">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">Education & Publications</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -626,51 +772,6 @@
                         </div>
                     </div>
 
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="py-28">
-            <div class="container mx-auto px-6 fade-in-up">
-                <h2 class="section-title">Core <span>Competencies</span></h2>
-                
-                <div class="max-w-5xl mx-auto neo-card p-12">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        
-                        <div>
-                            <h3 class="text-xl font-extrabold text-slate-900 mb-6 flex items-center gap-3">
-                                <i class="fas fa-bolt text-brand-500"></i> Top Skills
-                            </h3>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="skill-badge">Servo Drives</span>
-                                <span class="skill-badge">AC Drives</span>
-                                <span class="skill-badge">DC Drives</span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 class="text-xl font-extrabold text-slate-900 mb-6 flex items-center gap-3">
-                                <i class="fas fa-certificate text-brand-500"></i> Certifications
-                            </h3>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="skill-badge bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-600 hover:border-blue-600">Certified Fire Protection Specialist (CFPS)</span>
-                                <span class="skill-badge bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-600 hover:border-blue-600">Alternative Power Generation Technologies</span>
-                                <span class="skill-badge bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-600 hover:border-blue-600">Clean Agent Fire Suppression</span>
-                                <span class="skill-badge bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-600 hover:border-blue-600">3VA Molded case circuit breakers</span>
-                            </div>
-                        </div>
-
-                        <div class="md:col-span-2 pt-8 border-t border-slate-100">
-                            <h3 class="text-xl font-extrabold text-slate-900 mb-6 flex items-center gap-3">
-                                <i class="fas fa-language text-brand-500"></i> Languages
-                            </h3>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="skill-badge bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-800 hover:border-slate-800 hover:text-white">English (Native or Bilingual)</span>
-                                <span class="skill-badge bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-800 hover:border-slate-800 hover:text-white">Arabic (Native or Bilingual)</span>
-                            </div>
-                        </div>
-                        
-                    </div>
                 </div>
             </div>
         </section>
