@@ -7,91 +7,129 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#ecfeff',
+                            100: '#cffafe',
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            900: '#164e63',
+                            950: '#083344',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
             background-color: #f8fafc;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 32px 32px;
         }
         
-        .hero-bg {
-            background: linear-gradient(-45deg, #0f172a, #1e1b4b, #172554, #0f172a);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-        }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: 
+                linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: relative;
         }
 
-        .glass {
-            background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .section-title {
-            @apply text-3xl md:text-4xl font-bold text-slate-800 mb-12 text-center tracking-tight;
+            @apply text-3xl md:text-5xl font-extrabold text-slate-800 mb-16 text-center tracking-tight;
         }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: #4f46e5;
-            margin: 16px auto 0;
-            border-radius: 2px;
+        .section-title span {
+            @apply text-brand-500;
         }
 
-        .card {
-            @apply bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300;
+        .neo-card {
+            @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100/80 transition-all duration-300;
         }
         
-        .card:hover {
-            @apply shadow-xl -translate-y-2 border-indigo-100;
-        }
-
-        .nav-link {
-            @apply px-4 py-2 text-slate-300 hover:text-white transition-colors duration-300 rounded-md text-sm font-medium;
+        .neo-card:hover {
+            @apply shadow-2xl shadow-brand-500/10 border-brand-200 -translate-y-1.5;
         }
 
         .skill-badge {
-            @apply bg-indigo-50 text-indigo-700 border border-indigo-100 text-sm font-medium mr-2 mb-3 px-4 py-1.5 rounded-full shadow-sm transition-colors hover:bg-indigo-100 hover:border-indigo-200 cursor-default inline-block;
-        }
-
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .fade-in-up.visible {
-            opacity: 1;
-            transform: translateY(0);
+            @apply bg-dark-900 text-brand-400 border border-brand-500/30 px-4 py-2.5 rounded-xl text-sm font-semibold tracking-wide shadow-sm hover:bg-brand-500 hover:text-white hover:border-brand-500 transition-colors duration-300 inline-block;
         }
 
         .profile-img-container {
             position: relative;
             display: inline-block;
+            z-index: 10;
         }
+        
+        .profile-img-container::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, #06b6d4, #3b82f6, #06b6d4);
+            animation: spin 4s linear infinite;
+            z-index: -1;
+        }
+
         .profile-img-container::after {
             content: '';
             position: absolute;
-            top: -5px; left: -5px; right: -5px; bottom: -5px;
+            inset: -4px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #4f46e5, #38bdf8);
+            background: #0f172a;
             z-index: -1;
-            animation: spin 4s linear infinite;
         }
+
         @keyframes spin {
             100% { transform: rotate(360deg); }
         }
 
+        .timeline-dot {
+            @apply w-12 h-12 rounded-xl flex items-center justify-center border-4 border-slate-50 text-white font-bold shadow-lg z-10 shrink-0 transition-transform duration-300;
+        }
+        
+        .group:hover .timeline-dot {
+            @apply scale-110;
+        }
+
+        /* Custom Scrollbar */
         .project-scroll::-webkit-scrollbar {
-            width: 8px;
+            width: 6px;
         }
         .project-scroll::-webkit-scrollbar-track {
             background: #f1f5f9; 
@@ -102,182 +140,214 @@
             border-radius: 8px;
         }
         .project-scroll::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; 
+            background: #06b6d4; 
         }
 
-        .cite-text {
-            @apply text-xs text-indigo-400 font-mono ml-1 align-super opacity-70;
+        .cite-tag {
+            @apply text-[10px] text-slate-400 ml-1 align-top opacity-50 select-none;
+        }
+        .hero-bg .cite-tag {
+            @apply text-slate-500;
         }
     </style>
 </head>
-<body class="text-slate-700 antialiased selection:bg-indigo-200 selection:text-indigo-900">
+<body class="text-slate-600 antialiased selection:bg-brand-200 selection:text-brand-900">
 
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
-                <span class="bg-indigo-500 text-white w-8 h-8 rounded flex items-center justify-center text-lg">M</span>
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold text-white tracking-tighter flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-400 to-blue-600 flex items-center justify-center text-white text-xl shadow-lg shadow-brand-500/30">
+                    M
+                </div>
                 Abdullah
             </a>
-            <div class="hidden md:flex items-center space-x-1">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#education" class="nav-link">Education</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#contact" class="nav-link bg-indigo-600/20 text-indigo-300 hover:bg-indigo-600 ml-4">Contact</a>
+            <div class="hidden md:flex items-center space-x-2 bg-dark-800/50 backdrop-blur-md px-2 py-1.5 rounded-full border border-white/10">
+                <a href="#about" class="px-5 py-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all text-sm font-semibold">About</a>
+                <a href="#experience" class="px-5 py-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all text-sm font-semibold">Experience</a>
+                <a href="#projects" class="px-5 py-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all text-sm font-semibold">Projects</a>
+                <a href="#skills" class="px-5 py-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all text-sm font-semibold">Skills</a>
+                <a href="#contact" class="px-6 py-2 bg-brand-500 hover:bg-brand-400 text-white rounded-full transition-all text-sm font-bold shadow-lg shadow-brand-500/20 ml-2">Contact</a>
             </div>
             
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2 bg-white/10 rounded-lg">
+                <i class="fas fa-bars text-xl"></i>
             </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden glass border-t border-slate-700/50">
+        <div id="mobile-menu" class="hidden md:hidden glass-nav border-t border-slate-700/50">
             <div class="flex flex-col px-6 py-4 space-y-2">
-                <a href="#about" class="py-2 text-slate-300 hover:text-white">About</a>
-                <a href="#experience" class="py-2 text-slate-300 hover:text-white">Experience</a>
-                <a href="#education" class="py-2 text-slate-300 hover:text-white">Education</a>
-                <a href="#projects" class="py-2 text-slate-300 hover:text-white">Projects</a>
-                <a href="#skills" class="py-2 text-slate-300 hover:text-white">Skills</a>
-                <a href="#contact" class="py-2 text-indigo-400 font-medium">Contact</a>
+                <a href="#about" class="py-3 text-slate-300 hover:text-white font-medium border-b border-white/5">About</a>
+                <a href="#experience" class="py-3 text-slate-300 hover:text-white font-medium border-b border-white/5">Experience</a>
+                <a href="#projects" class="py-3 text-slate-300 hover:text-white font-medium border-b border-white/5">Projects</a>
+                <a href="#skills" class="py-3 text-slate-300 hover:text-white font-medium border-b border-white/5">Skills</a>
+                <a href="#contact" class="py-3 text-brand-400 font-bold">Contact</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="hero-bg text-white min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/20 rounded-full mix-blend-screen filter blur-3xl opacity-50"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full mix-blend-screen filter blur-3xl opacity-50"></div>
+        <section class="hero-pattern text-white min-h-[90vh] flex items-center pt-28 pb-20 overflow-hidden">
+            <div class="hero-glow"></div>
             
             <div class="container mx-auto px-6 text-center relative z-10">
-                <div class="profile-img-container mb-8">
-                    <img src="1650302875259.jpg" alt="M.O. Abdullah" class="rounded-full h-44 w-44 object-cover border-4 border-slate-900 bg-slate-800">
+                <div class="profile-img-container mb-10">
+                    <img src="1650302875259.jpg" alt="M.O. Abdullah" class="rounded-full h-48 w-48 object-cover relative z-10">
                 </div>
-                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4 tracking-tight">
-                    Mohammad Abdullah<span class="cite-text">[cite: 20]</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
+                    Mohammad Abdullah<sup class="cite-tag">[cite: 20]</sup>
                 </h1>
-                <p class="text-lg md:text-xl text-indigo-300 font-medium mb-6">
-                    PMP®<span class="cite-text">[cite: 20]</span> | CFPS®<span class="cite-text">[cite: 21]</span>
-                </p>
-                <div class="flex flex-wrap justify-center gap-3 mb-10 text-sm font-medium text-slate-300 max-w-3xl mx-auto">
-                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Business Development<span class="cite-text">[cite: 22]</span></span>
-                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Sales<span class="cite-text">[cite: 22]</span></span>
-                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Strategic Partnerships<span class="cite-text">[cite: 22]</span></span>
-                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Industrial Automation & Energy<span class="cite-text">[cite: 22]</span></span>
-                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Low Current<span class="cite-text">[cite: 22]</span></span>
-                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Fire Protection<span class="cite-text">[cite: 23]</span></span>
+                <div class="flex items-center justify-center gap-4 mb-8">
+                    <span class="px-4 py-1.5 rounded-full bg-dark-800 border border-slate-700 text-brand-400 font-bold tracking-widest text-sm shadow-inner">PMP®<sup class="cite-tag">[cite: 20]</sup></span>
+                    <span class="px-4 py-1.5 rounded-full bg-dark-800 border border-slate-700 text-brand-400 font-bold tracking-widest text-sm shadow-inner">CFPS®<sup class="cite-tag">[cite: 21]</sup></span>
                 </div>
-                <p class="text-slate-400 mb-8"><i class="fas fa-map-marker-alt mr-2"></i>Al Khobar, Eastern, Saudi Arabia<span class="cite-text">[cite: 23]</span></p>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="#experience" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 shadow-lg shadow-indigo-500/30">
+                
+                <div class="flex flex-wrap justify-center gap-3 mb-12 text-sm font-semibold text-slate-300 max-w-3xl mx-auto">
+                    <span class="bg-white/5 px-5 py-2.5 rounded-xl border border-white/10 backdrop-blur-sm">Business Development<sup class="cite-tag">[cite: 22]</sup></span>
+                    <span class="bg-white/5 px-5 py-2.5 rounded-xl border border-white/10 backdrop-blur-sm">Sales<sup class="cite-tag">[cite: 22]</sup></span>
+                    <span class="bg-white/5 px-5 py-2.5 rounded-xl border border-white/10 backdrop-blur-sm">Strategic Partnerships<sup class="cite-tag">[cite: 22]</sup></span>
+                    <span class="bg-white/5 px-5 py-2.5 rounded-xl border border-white/10 backdrop-blur-sm">Industrial Automation & Energy<sup class="cite-tag">[cite: 22]</sup></span>
+                    <span class="bg-white/5 px-5 py-2.5 rounded-xl border border-white/10 backdrop-blur-sm">Low Current<sup class="cite-tag">[cite: 22]</sup></span>
+                    <span class="bg-white/5 px-5 py-2.5 rounded-xl border border-white/10 backdrop-blur-sm">Fire Protection<sup class="cite-tag">[cite: 23]</sup></span>
+                </div>
+                
+                <p class="text-slate-400 mb-12 text-lg font-medium flex items-center justify-center gap-2">
+                    <i class="fas fa-location-dot text-brand-500"></i> Al Khobar, Eastern, Saudi Arabia<sup class="cite-tag">[cite: 23]</sup>
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-5">
+                    <a href="#experience" class="w-full sm:w-auto bg-gradient-to-r from-brand-600 to-brand-400 hover:from-brand-500 hover:to-brand-300 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-lg shadow-brand-500/25">
                         View Experience
                     </a>
-                    <a href="#contact" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-medium py-3 px-8 rounded-full transition-all duration-300">
+                    <a href="#contact" class="w-full sm:w-auto bg-dark-800 hover:bg-dark-700 border border-slate-700 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300">
                         Get In Touch
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-24 relative">
+        <section id="about" class="py-28 relative">
             <div class="container mx-auto px-6 fade-in-up">
-                <h2 class="section-title">Summary</h2>
-                <div class="max-w-4xl mx-auto bg-white p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 relative text-center">
-                    <i class="fas fa-quote-left text-4xl text-slate-100 mb-4 inline-block"></i>
-                    <p class="text-xl text-slate-600 leading-relaxed relative z-10 font-light">
-                        Highly experienced Sales Manager and Certified Fire Protection Specialist (CFPS) with more than twelve years of experience, exceptional MEP knowledge working with prestigious clients covering Oil & Gas, Water & Power, and Industrial sectors.<span class="cite-text">[cite: 25]</span>
+                <h2 class="section-title">Professional <span>Summary</span></h2>
+                <div class="max-w-4xl mx-auto neo-card p-12 text-center relative overflow-hidden">
+                    <div class="absolute -top-10 -left-10 text-[120px] text-brand-50/50 rotate-12 z-0">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="text-2xl text-slate-700 leading-relaxed relative z-10 font-medium">
+                        Highly experienced Sales Manager and Certified Fire Protection Specialist (CFPS) with more than twelve years of experience, exceptional MEP knowledge working with prestigious clients covering Oil & Gas, Water & Power, and Industrial sectors.<sup class="cite-tag">[cite: 25]</sup>
                     </p>
                 </div>
             </div>
         </section>
         
-        <section id="experience" class="py-24 bg-slate-50 border-y border-slate-200/60">
+        <section id="experience" class="py-28 bg-slate-100/50 border-y border-slate-200/60">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Experience<span class="cite-text">[cite: 26]</span></h2>
+                <h2 class="section-title">Career <span>Experience</span></h2>
                 
-                <div class="max-w-5xl mx-auto space-y-12 relative before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:bg-indigo-200 before:md:mx-auto before:md:w-px">
+                <div class="max-w-5xl mx-auto space-y-12 relative before:absolute before:inset-0 before:ml-6 before:h-full before:w-1 before:bg-gradient-to-b before:from-brand-500 before:via-blue-300 before:to-slate-200 before:md:mx-auto">
                     
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-indigo-600 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10">
-                             <i class="fas fa-briefcase"></i>
+                        <div class="timeline-dot bg-brand-500 md:ml-[-1.35rem]">
+                             <i class="fas fa-chart-line text-xl"></i>
                         </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8 border-t-4 border-t-indigo-600">
-                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Sales and Marketing Manager<span class="cite-text">[cite: 28]</span></h3>
-                            <p class="text-lg font-medium text-indigo-600 mt-1">SUBWAY NETWORKS<span class="cite-text">[cite: 27]</span></p>
-                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>October 2024 - Present (1 year 7 months) Saudi Arabia. Bahrain, UAE<span class="cite-text">[cite: 28]</span></p>
-                            <ul class="text-slate-600 leading-relaxed list-disc list-inside space-y-2">
-                                <li>Managed sales operations for Siemens Partners, specializing in automation, SCADA and instrumentation.<span class="cite-text">[cite: 29]</span></li>
-                                <li>Oversaw supply of mechanical and electrical equipment, providing turnkey solutions for oil and gas, petrochemicals, and industrial sectors.<span class="cite-text">[cite: 30]</span></li>
-                                <li>Successfully expanded client base in the Kingdom of Saudi Arabia, driving revenue growth and establishing SUBWAY NETWORKS as a key player in the market.<span class="cite-text">[cite: 31]</span></li>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] neo-card p-8 border-l-4 border-l-brand-500 group-odd:border-l-0 group-odd:border-r-4 group-odd:border-r-brand-500">
+                            <h3 class="font-extrabold text-2xl text-slate-900 tracking-tight">Sales and Marketing Manager<sup class="cite-tag">[cite: 28]</sup></h3>
+                            <p class="text-lg font-bold text-brand-600 mt-1 mb-3">SUBWAY NETWORKS<span class="cite-tag">[cite: 27]</span></p>
+                            <p class="text-sm text-slate-500 mb-6 font-semibold flex items-center gap-2 bg-slate-100 w-fit px-3 py-1.5 rounded-lg">
+                                <i class="far fa-clock text-brand-500"></i> Oct 2024 - Present | KSA, Bahrain, UAE<sup class="cite-tag">[cite: 28]</sup>
+                            </p>
+                            <ul class="text-slate-600 leading-relaxed space-y-3 font-medium">
+                                <li class="flex gap-3"><i class="fas fa-check-circle text-brand-400 mt-1 shrink-0"></i> <span>Managed sales operations for Siemens Partners, specializing in automation, SCADA and instrumentation.<sup class="cite-tag">[cite: 29]</sup></span></li>
+                                <li class="flex gap-3"><i class="fas fa-check-circle text-brand-400 mt-1 shrink-0"></i> <span>Oversaw supply of mechanical and electrical equipment, providing turnkey solutions for oil and gas, petrochemicals, and industrial sectors.<sup class="cite-tag">[cite: 30]</sup></span></li>
+                                <li class="flex gap-3"><i class="fas fa-check-circle text-brand-400 mt-1 shrink-0"></i> <span>Successfully expanded client base in the Kingdom of Saudi Arabia, driving revenue growth and establishing SUBWAY NETWORKS as a key player in the market.<sup class="cite-tag">[cite: 31]</sup></span></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-indigo-500 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10"></div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8 border-t-4 border-t-indigo-500">
-                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Senior Sales Engineer<span class="cite-text">[cite: 33]</span></h3>
-                             <p class="text-lg font-medium text-indigo-600 mt-1">Johnson Controls Arabia<span class="cite-text">[cite: 32]</span></p>
-                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>April 2022 October 2024 (2 years 7 months) Al Khobar, Eastern, Saudi Arabia<span class="cite-text">[cite: 34, 35]</span></p>
-                            <p class="font-medium mb-2 text-slate-700">Duties:<span class="cite-text">[cite: 36]</span></p>
-                            <ul class="text-slate-600 leading-relaxed list-disc list-inside space-y-2">
-                                <li>Develop and maintain relationships with key customers and partners.<span class="cite-text">[cite: 37]</span></li>
-                                <li>Analyze customer requirements and develop technical solutions to meet their needs.<span class="cite-text">[cite: 38, 39]</span></li>
-                                <li>Design and deliver technical presentations to customers and partners.<span class="cite-text">[cite: 40]</span></li>
-                                <li>Create and maintain technical documentation and sales collateral.<span class="cite-text">[cite: 41]</span></li>
-                                <li>Develop and maintain product knowledge and competitive analysis.<span class="cite-text">[cite: 42]</span></li>
-                                <li>Develop and maintain sales strategies and plans.<span class="cite-text">[cite: 44]</span></li>
-                                <li>Assist in the development of sales proposals and presentations.<span class="cite-text">[cite: 45]</span></li>
-                                <li>Assist in the development of pricing strategies.<span class="cite-text">[cite: 46]</span></li>
-                                <li>Develop and maintain a thorough understanding of the company's products and services.<span class="cite-text">[cite: 47, 48]</span></li>
-                                <li>Provide technical support to customers and partners.<span class="cite-text">[cite: 49]</span></li>
-                                <li>Monitor and report on sales performance.<span class="cite-text">[cite: 50]</span></li>
-                                <li>Participate in industry events and trade shows.<span class="cite-text">[cite: 51]</span></li>
-                            </ul>
+                        <div class="timeline-dot bg-blue-500 md:ml-[-1.35rem]">
+                            <i class="fas fa-building text-xl"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] neo-card p-8 border-l-4 border-l-blue-500 group-odd:border-l-0 group-odd:border-r-4 group-odd:border-r-blue-500">
+                            <h3 class="font-extrabold text-2xl text-slate-900 tracking-tight">Senior Sales Engineer<sup class="cite-tag">[cite: 33]</sup></h3>
+                             <p class="text-lg font-bold text-brand-600 mt-1 mb-3">Johnson Controls Arabia<sup class="cite-tag">[cite: 32]</sup></p>
+                            <p class="text-sm text-slate-500 mb-6 font-semibold flex items-center gap-2 bg-slate-100 w-fit px-3 py-1.5 rounded-lg">
+                                <i class="far fa-clock text-brand-500"></i> Apr 2022 - Oct 2024 | Al Khobar, KSA<sup class="cite-tag">[cite: 34, 35]</sup>
+                            </p>
+                            <div class="text-slate-600 font-medium">
+                                <p class="mb-3 font-bold text-slate-800 border-b pb-2">Key Duties:<sup class="cite-tag">[cite: 36]</sup></p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Develop and maintain relationships with key customers and partners.<sup class="cite-tag">[cite: 37]</sup></li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Analyze customer requirements and develop technical solutions to meet their needs.<sup class="cite-tag">[cite: 38, 39]</sup></li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Design and deliver technical presentations to customers and partners.<sup class="cite-tag">[cite: 40]</sup></li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Create and maintain technical documentation and sales collateral.<sup class="cite-tag">[cite: 41]</sup></li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Develop and maintain product knowledge and competitive analysis.<sup class="cite-tag">[cite: 42]</sup></li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Develop and maintain sales strategies and plans.<sup class="cite-tag">[cite: 44]</sup></li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Assist in the development of sales proposals and presentations.<sup class="cite-tag">[cite: 45]</sup></li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Assist in the development of pricing strategies.<sup class="cite-tag">[cite: 46]</sup></li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Provide technical support to customers and partners.<sup class="cite-tag">[cite: 49]</sup></li>
+                                    <li class="flex gap-2"><i class="fas fa-angle-right text-brand-400 mt-1"></i> Monitor and report on sales performance.<sup class="cite-tag">[cite: 50]</sup></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
                      <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-slate-400 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10"></div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8 border-t-4 border-t-slate-400">
-                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Projects Sales Engineer<span class="cite-text">[cite: 52]</span></h3>
-                             <p class="text-lg font-medium text-indigo-600 mt-1">Heba Fire & Safety Equipments Company<span class="cite-text">[cite: 52]</span></p>
-                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>September 2018 - March 2022 (3 years 7 months) Saudi Arabia<span class="cite-text">[cite: 53]</span></p>
-                            <ul class="text-slate-600 leading-relaxed list-disc list-inside space-y-2">
-                                <li>Managed Fire Protection projects and OMC in Saudi Arabia's Water and Power, Oil and Gas, Petrochemical, and Industrial Sectors, serving a diverse customer base.<span class="cite-text">[cite: 54]</span></li>
-                                <li>Successfully completed projects in all regions of Saudi Arabia, showcasing expertise and adaptability in various environments.<span class="cite-text">[cite: 55]</span></li>
+                        <div class="timeline-dot bg-slate-700 md:ml-[-1.35rem]">
+                            <i class="fas fa-fire-extinguisher text-xl"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] neo-card p-8">
+                            <h3 class="font-extrabold text-2xl text-slate-900 tracking-tight">Projects Sales Engineer<sup class="cite-tag">[cite: 52]</sup></h3>
+                             <p class="text-lg font-bold text-brand-600 mt-1 mb-3">Heba Fire & Safety Equipments Company<sup class="cite-tag">[cite: 52]</sup></p>
+                            <p class="text-sm text-slate-500 mb-6 font-semibold flex items-center gap-2 bg-slate-100 w-fit px-3 py-1.5 rounded-lg">
+                                <i class="far fa-clock text-brand-500"></i> Sep 2018 - Mar 2022 | Saudi Arabia<sup class="cite-tag">[cite: 53]</sup>
+                            </p>
+                            <ul class="text-slate-600 leading-relaxed space-y-3 font-medium">
+                                <li class="flex gap-3"><i class="fas fa-check-circle text-brand-400 mt-1 shrink-0"></i> <span>Managed Fire Protection projects and OMC in Saudi Arabia's Water and Power, Oil and Gas, Petrochemical, and Industrial Sectors, serving a diverse customer base.<sup class="cite-tag">[cite: 54]</sup></span></li>
+                                <li class="flex gap-3"><i class="fas fa-check-circle text-brand-400 mt-1 shrink-0"></i> <span>Successfully completed projects in all regions of Saudi Arabia, showcasing expertise and adaptability in various environments.<sup class="cite-tag">[cite: 55]</sup></span></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-slate-400 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10"></div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8 border-t-4 border-t-slate-400">
-                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Sales Engineer<span class="cite-text">[cite: 57]</span></h3>
-                             <p class="text-lg font-medium text-indigo-600 mt-1">Abunayyan Trading<span class="cite-text">[cite: 56]</span></p>
-                            <p class="text-sm text-slate-400 font-medium"><i class="far fa-calendar-alt mr-2"></i>August 2015 August 2018 (3 years 1 month) Saudi Arabia<span class="cite-text">[cite: 58]</span></p>
+                        <div class="timeline-dot bg-slate-600 md:ml-[-1.35rem]">
+                            <i class="fas fa-handshake text-xl"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] neo-card p-8">
+                            <h3 class="font-extrabold text-2xl text-slate-900 tracking-tight">Sales Engineer<sup class="cite-tag">[cite: 57]</sup></h3>
+                             <p class="text-lg font-bold text-brand-600 mt-1 mb-3">Abunayyan Trading<sup class="cite-tag">[cite: 56]</sup></p>
+                            <p class="text-sm text-slate-500 font-semibold flex items-center gap-2 bg-slate-100 w-fit px-3 py-1.5 rounded-lg">
+                                <i class="far fa-clock text-brand-500"></i> Aug 2015 - Aug 2018 | Saudi Arabia<sup class="cite-tag">[cite: 58]</sup>
+                            </p>
                         </div>
                     </div>
 
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-slate-300 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10"></div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8 border-t-4 border-t-slate-300">
-                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Control and Blending Engineer<span class="cite-text">[cite: 60]</span></h3>
-                             <p class="text-lg font-medium text-indigo-600 mt-1">FUCHS PETROLUB SE<span class="cite-text">[cite: 59]</span></p>
-                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>November 2014 - August 2015 (10 months) Jordan<span class="cite-text">[cite: 61, 62]</span></p>
-                            <ul class="text-slate-600 leading-relaxed list-disc list-inside space-y-2">
-                                <li>Control, Supervise and make sure every thing is going the right way and every body are doing their job that's when is it comes to production and production hall.<span class="cite-text">[cite: 63, 64]</span></li>
-                                <li>Control, Supervise and maintain the blending process for a wide range of lubricant oil types and greases.<span class="cite-text">[cite: 65, 66]</span></li>
-                                <li>Report to higher management and coordinate the work between departments.<span class="cite-text">[cite: 67]</span></li>
+                        <div class="timeline-dot bg-slate-500 md:ml-[-1.35rem]">
+                            <i class="fas fa-cogs text-xl"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] neo-card p-8">
+                            <h3 class="font-extrabold text-2xl text-slate-900 tracking-tight">Control and Blending Engineer<sup class="cite-tag">[cite: 60]</sup></h3>
+                             <p class="text-lg font-bold text-brand-600 mt-1 mb-3">FUCHS PETROLUB SE<sup class="cite-tag">[cite: 59]</sup></p>
+                            <p class="text-sm text-slate-500 mb-6 font-semibold flex items-center gap-2 bg-slate-100 w-fit px-3 py-1.5 rounded-lg">
+                                <i class="far fa-clock text-brand-500"></i> Nov 2014 - Aug 2015 | Jordan<sup class="cite-tag">[cite: 61, 62]</sup>
+                            </p>
+                            <ul class="text-slate-600 leading-relaxed space-y-3 font-medium text-sm">
+                                <li class="flex gap-3"><i class="fas fa-angle-right text-brand-400 mt-1 shrink-0"></i> <span>Control, Supervise and make sure every thing is going the right way and every body are doing their job that's when is it comes to production and production hall.<sup class="cite-tag">[cite: 63, 64]</sup></span></li>
+                                <li class="flex gap-3"><i class="fas fa-angle-right text-brand-400 mt-1 shrink-0"></i> <span>Control, Supervise and maintain the blending process for a wide range of lubricant oil types and greases.<sup class="cite-tag">[cite: 65, 66]</sup></span></li>
+                                <li class="flex gap-3"><i class="fas fa-angle-right text-brand-400 mt-1 shrink-0"></i> <span>Report to higher management and coordinate the work between departments.<sup class="cite-tag">[cite: 67]</sup></span></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-slate-300 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10"></div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8 border-t-4 border-t-slate-300">
-                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Technical Sales Engineer<span class="cite-text">[cite: 69]</span></h3>
-                             <p class="text-lg font-medium text-indigo-600 mt-1">Ayoubi Steel Furniture Factory<span class="cite-text">[cite: 68]</span></p>
-                            <p class="text-sm text-slate-400 font-medium"><i class="far fa-calendar-alt mr-2"></i>September 2012 - November 2014 (2 years 3 months) Amman, Jordan<span class="cite-text">[cite: 70]</span></p>
+                        <div class="timeline-dot bg-slate-400 md:ml-[-1.35rem]">
+                            <i class="fas fa-tools text-xl"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] neo-card p-8">
+                            <h3 class="font-extrabold text-2xl text-slate-900 tracking-tight">Technical Sales Engineer<sup class="cite-tag">[cite: 69]</sup></h3>
+                             <p class="text-lg font-bold text-brand-600 mt-1 mb-3">Ayoubi Steel Furniture Factory<sup class="cite-tag">[cite: 68]</sup></p>
+                            <p class="text-sm text-slate-500 font-semibold flex items-center gap-2 bg-slate-100 w-fit px-3 py-1.5 rounded-lg">
+                                <i class="far fa-clock text-brand-500"></i> Sep 2012 - Nov 2014 | Amman, Jordan<sup class="cite-tag">[cite: 70]</sup>
+                            </p>
                         </div>
                     </div>
 
@@ -285,275 +355,364 @@
             </div>
         </section>
 
-        <section id="education" class="py-24">
+        <section id="projects" class="py-28 relative">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Education<span class="cite-text">[cite: 72]</span> & Publications<span class="cite-text">[cite: 18]</span></h2>
+                <h2 class="section-title">Projects <span>Portfolio</span></h2>
+                
+                <div class="max-w-6xl mx-auto fade-in-up">
+                    <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden">
+                        
+                        <div class="bg-dark-900 text-white p-6 border-b border-slate-800 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-500 flex items-center justify-center text-xl shadow-inner">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Comprehensive Project Log</h3>
+                                <p class="text-slate-400 text-sm font-medium">Archived milestones across major organizations.</p>
+                            </div>
+                        </div>
+
+                        <div class="max-h-[700px] overflow-y-auto project-scroll p-8 bg-slate-50/50">
+                            
+                            <div class="mb-10 neo-card p-6">
+                                <div class="flex items-center gap-3 border-b border-slate-100 pb-4 mb-6">
+                                    <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center"><i class="fas fa-building"></i></div>
+                                    <h4 class="text-xl font-extrabold text-slate-800">Johnson Controls Arabia</h4>
+                                </div>
+                                <ul class="space-y-4">
+                                    <li class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 p-4 hover:bg-slate-50 rounded-xl border border-transparent hover:border-slate-100 transition-colors">
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-caret-right text-brand-500 mt-1"></i>
+                                            <p class="font-bold text-slate-700">Jubail Energy Service Co. Fire Protection Systems replacement and upgradation</p>
+                                        </div>
+                                        <span class="text-xs font-bold text-slate-500 whitespace-nowrap bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">Nov 2023 – Present</span>
+                                    </li>
+                                    <li class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 p-4 hover:bg-slate-50 rounded-xl border border-transparent hover:border-slate-100 transition-colors">
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-caret-right text-brand-500 mt-1"></i>
+                                            <div>
+                                                <p class="font-bold text-slate-700">Dammam Camp Wet Chemical Fire Extinguishing System</p>
+                                                <p class="text-sm font-medium text-slate-500 mt-1">Design, Supply Installation Testing and Commissioning</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs font-bold text-slate-500 whitespace-nowrap bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">Oct 2023 – Oct 2023</span>
+                                    </li>
+                                    <li class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 p-4 hover:bg-slate-50 rounded-xl border border-transparent hover:border-slate-100 transition-colors">
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-caret-right text-brand-500 mt-1"></i>
+                                            <div>
+                                                <p class="font-bold text-slate-700">Hardh Camp Wet Chemical Fire Extinguishing System</p>
+                                                <p class="text-sm font-medium text-slate-500 mt-1">Design, Supply, Installation, Testing and Commissioning</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs font-bold text-slate-500 whitespace-nowrap bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">Aug 2023 – Sep 2023</span>
+                                    </li>
+                                    <li class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 p-4 hover:bg-slate-50 rounded-xl border border-transparent hover:border-slate-100 transition-colors">
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-caret-right text-brand-500 mt-1"></i>
+                                            <p class="font-bold text-slate-700">Rectification and Maintenance of PA/GA system @ Saudi Kayan</p>
+                                        </div>
+                                        <span class="text-xs font-bold text-slate-500 whitespace-nowrap bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">Aug 2022 – Sep 2022</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-10 neo-card p-6">
+                                <div class="flex items-center gap-3 border-b border-slate-100 pb-4 mb-6">
+                                    <div class="w-8 h-8 rounded-lg bg-red-100 text-red-600 flex items-center justify-center"><i class="fas fa-fire"></i></div>
+                                    <h4 class="text-xl font-extrabold text-slate-800">Heba Fire & Safety Equipments Company</h4>
+                                </div>
+                                <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">Saudi Electricity Company - New Call Center Makkah</p>
+                                            <p class="text-xs font-medium text-slate-500 mt-1 line-clamp-2">Design, Supply, testing and commissioning of Fire Alarm and Fm-200 Fire Suppression System</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Apr 2021 – Feb 2022</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">Tri-Sponge Plant Yanbu</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Jan 2021 – Dec 2021</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">Supply and installation of Fire Alarm System @ JT MTU Radar Room - ARAMCO Jeddah Refinery</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Sep 2020 – Present</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">ARAMCO ABQAIQ FOAM CHAMBERS</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Jul 2020 – Mar 2021</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">Apex Pharma - KAEC</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Mar 2020 – Present</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">JODRAN AL-WATAN PRECAST PANEL FACTORY, JUBAIL</p>
+                                            <p class="text-xs font-medium text-slate-500 mt-1 line-clamp-2">Fire Protection Systems</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Sep 2019 – Jun 2020</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">Marjan -E-houses Fire Alarm & Suppression system</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Sep 2019 – May 2021</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">supply of Fire Alarm system for Al Kifah batching plant</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Aug 2019 – Sep 2019</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">Ras Tanura Fire Alarm System Replacement - ARAMCO</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Apr 2019 – Feb 2020</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">Waad Al Shamaal - Fire protection systems for 7 pumping stations</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Feb 2019 – Nov 2019</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">Port Control Center - Jazan Fire Protection Systems</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Jan 2019 – May 2020</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">KAPSARK Riyadh Fire Alarm system - Hi-Tech & Saudi ARAMCO</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Jan 2019 – Apr 2020</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">Fire Protection System - GTG Load Compartment Mafriq</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Dec 2018 – Sep 2020</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">ARASCO - DPS Maintenance and rectification of Fire Alarm and Fire Fighting Systems</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Dec 2018 – Dec 2019</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">ARASCO DFM maintenance and rectification of Fire Alarm and Fire Suppression systems</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Dec 2018 – Dec 2019</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">FAAST system turnkey project</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Dec 2018 – Aug 2019</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">Replacement of Fire Alarm Systems @ Jubail Desalination Plants</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Sep 2018 – Feb 2019</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">Marjan Oil Field Development - E-houses Fire protection systems</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Jun 2018 – Present</span>
+                                    </div>
+                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full lg:col-span-2">
+                                        <div class="mb-3">
+                                            <p class="font-bold text-slate-700">Various projects in Saudi Arabia</p>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Sep 2015 – Present</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-10 neo-card p-6">
+                                <div class="flex items-center gap-3 border-b border-slate-100 pb-4 mb-6">
+                                    <div class="w-8 h-8 rounded-lg bg-green-100 text-green-600 flex items-center justify-center"><i class="fas fa-industry"></i></div>
+                                    <h4 class="text-xl font-extrabold text-slate-800">Abunayyan Trading</h4>
+                                </div>
+                                <ul class="space-y-4">
+                                    <li class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 p-4 hover:bg-slate-50 rounded-xl border border-transparent hover:border-slate-100 transition-colors">
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-caret-right text-brand-500 mt-1"></i>
+                                            <div>
+                                                <p class="font-bold text-slate-700">National Guard Housing - Thowal</p>
+                                                <p class="text-sm font-medium text-slate-500 mt-1">Supply of 9 Dewatering pumps</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs font-bold text-slate-500 whitespace-nowrap bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">Jun 2017 – Nov 2018</span>
+                                    </li>
+                                    <li class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 p-4 hover:bg-slate-50 rounded-xl border border-transparent hover:border-slate-100 transition-colors">
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-caret-right text-brand-500 mt-1"></i>
+                                            <p class="font-bold text-slate-700">King Fahad Armed Forces Hospital Warehouse</p>
+                                        </div>
+                                        <span class="text-xs font-bold text-slate-500 whitespace-nowrap bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">Jan 2017 – Nov 2017</span>
+                                    </li>
+                                    <li class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 p-4 hover:bg-slate-50 rounded-xl border border-transparent hover:border-slate-100 transition-colors">
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-caret-right text-brand-500 mt-1"></i>
+                                            <div>
+                                                <p class="font-bold text-slate-700">Leejam Sports Company - Riyadh Warehouse</p>
+                                                <p class="text-sm font-medium text-slate-500 mt-1">Logistics Solutions</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs font-bold text-slate-500 whitespace-nowrap bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">Feb 2016 – Jul 2016</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="neo-card p-6">
+                                <div class="flex items-center gap-3 border-b border-slate-100 pb-4 mb-6">
+                                    <div class="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center"><i class="fas fa-boxes"></i></div>
+                                    <h4 class="text-xl font-extrabold text-slate-800">Ayoubi Steel Furniture Factory</h4>
+                                </div>
+                                <ul class="space-y-4">
+                                    <li class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 p-4 hover:bg-slate-50 rounded-xl border border-transparent hover:border-slate-100 transition-colors">
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-caret-right text-brand-500 mt-1"></i>
+                                            <p class="font-bold text-slate-700">Jordanian Wheat Mills "Al Ghazal" Racking System</p>
+                                        </div>
+                                        <span class="text-xs font-bold text-slate-500 whitespace-nowrap bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">Dec 2013 – Present</span>
+                                    </li>
+                                    <li class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 p-4 hover:bg-slate-50 rounded-xl border border-transparent hover:border-slate-100 transition-colors">
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-caret-right text-brand-500 mt-1"></i>
+                                            <p class="font-bold text-slate-700">Various projects in Jordan</p>
+                                        </div>
+                                        <span class="text-xs font-bold text-slate-500 whitespace-nowrap bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">Feb 2013 – Jan 2015</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-28 bg-slate-100/50 border-y border-slate-200/60">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Education<span class="cite-tag">[cite: 72]</span> & Publications<span class="cite-tag">[cite: 18]</span></h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     
-                    <div class="card fade-in-up p-8 flex flex-col border-t-4 border-indigo-500">
-                        <div class="bg-indigo-50 w-12 h-12 rounded-lg flex items-center justify-center text-indigo-600 text-xl mb-6">
+                    <div class="neo-card p-10 flex flex-col border-t-4 border-brand-500">
+                        <div class="bg-brand-50 w-14 h-14 rounded-xl flex items-center justify-center text-brand-500 text-2xl mb-6 shadow-inner">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <h3 class="font-bold text-xl mb-2 text-slate-800">Bachelor of Engineering - BE, Mechatronics, Robotics, and Automation Engineering<span class="cite-text">[cite: 74]</span></h3>
-                        <p class="text-slate-600 flex-grow leading-relaxed font-medium">Jami'at Al-Balqa Al-Tatbiqiyya<span class="cite-text">[cite: 73]</span></p>
-                        <div class="mt-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs text-slate-400 font-medium">September 2008 - June 2012<span class="cite-text">[cite: 74]</span></p>
+                        <h3 class="font-extrabold text-2xl mb-2 text-slate-900 tracking-tight">Bachelor of Engineering - BE, Mechatronics, Robotics, and Automation Engineering<span class="cite-tag">[cite: 74]</span></h3>
+                        <p class="text-brand-600 flex-grow leading-relaxed font-bold mt-2">Jami'at Al-Balqa Al-Tatbiqiyya<span class="cite-tag">[cite: 73]</span></p>
+                        <div class="mt-8 border-t border-slate-100 pt-5">
+                            <p class="text-sm text-slate-500 font-bold bg-slate-50 w-fit px-3 py-1 rounded-md">September 2008 - June 2012<span class="cite-tag">[cite: 74]</span></p>
                         </div>
                     </div>
 
-                    <div class="card fade-in-up p-8 flex flex-col border-t-4 border-indigo-500">
-                        <div class="bg-indigo-50 w-12 h-12 rounded-lg flex items-center justify-center text-indigo-600 text-xl mb-6">
+                    <div class="neo-card p-10 flex flex-col border-t-4 border-blue-500">
+                        <div class="bg-blue-50 w-14 h-14 rounded-xl flex items-center justify-center text-blue-500 text-2xl mb-6 shadow-inner">
                             <i class="fas fa-book-open"></i>
                         </div>
-                        <h3 class="font-bold text-xl mb-2 text-slate-800">Publications<span class="cite-text">[cite: 18]</span></h3>
-                        <p class="text-slate-600 flex-grow leading-relaxed italic">Adaptive cruise control design and further implementation<span class="cite-text">[cite: 19]</span></p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="py-24 bg-slate-50 border-y border-slate-200/60">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title">Projects Portfolio</h2>
-                
-                <div class="max-w-5xl mx-auto fade-in-up">
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                        <div class="max-h-[600px] overflow-y-auto project-scroll p-4">
-                            
-                            <div class="mb-8 px-4 pt-4">
-                                <h4 class="text-lg font-bold text-indigo-700 border-b border-indigo-100 pb-2 mb-4">Johnson Controls Arabia</h4>
-                                <ul class="space-y-4">
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Jubail Energy Service Co. Fire Protection Systems replacement and upgradation</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Nov 2023 – Present</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <div>
-                                            <p class="font-medium text-slate-800">Dammam Camp Wet Chemical Fire Extinguishing System</p>
-                                            <p class="text-sm text-slate-500">Design, Supply Installation Testing and Commissioning</p>
-                                        </div>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Oct 2023 – Oct 2023</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <div>
-                                            <p class="font-medium text-slate-800">Hardh Camp Wet Chemical Fire Extinguishing System</p>
-                                            <p class="text-sm text-slate-500">Design, Supply, Installation, Testing and Commissioning</p>
-                                        </div>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Aug 2023 – Sep 2023</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Rectification and Maintenance of PA/GA system @ Saudi Kayan</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Aug 2022 – Sep 2022</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="mb-8 px-4">
-                                <h4 class="text-lg font-bold text-indigo-700 border-b border-indigo-100 pb-2 mb-4">Heba Fire & Safety Equipments Company</h4>
-                                <ul class="space-y-4">
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <div>
-                                            <p class="font-medium text-slate-800">Saudi Electricity Company - New Call Center Makkah</p>
-                                            <p class="text-sm text-slate-500">Design, Supply, testing and commissioning of Fire Alarm and Fm-200 Fire Suppression System</p>
-                                        </div>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Apr 2021 – Feb 2022</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Tri-Sponge Plant Yanbu</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Jan 2021 – Dec 2021</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Supply and installation of Fire Alarm System @ JT MTU Radar Room - ARAMCO Jeddah Refinery</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Sep 2020 – Present</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">ARAMCO ABQAIQ FOAM CHAMBERS</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Jul 2020 – Mar 2021</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Apex Pharma - KAEC</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Mar 2020 – Present</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <div>
-                                            <p class="font-medium text-slate-800">JODRAN AL-WATAN PRECAST PANEL FACTORY, JUBAIL</p>
-                                            <p class="text-sm text-slate-500">Fire Protection Systems</p>
-                                        </div>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Sep 2019 – Jun 2020</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Marjan -E-houses Fire Alarm & Suppression system</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Sep 2019 – May 2021</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">supply of Fire Alarm system for Al Kifah batching plant</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Aug 2019 – Sep 2019</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Ras Tanura Fire Alarm System Replacement - ARAMCO</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Apr 2019 – Feb 2020</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Waad Al Shamaal - Fire protection systems for 7 pumping stations</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Feb 2019 – Nov 2019</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Port Control Center - Jazan Fire Protection Systems</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Jan 2019 – May 2020</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">KAPSARK Riyadh Fire Alarm system - Hi-Tech & Saudi ARAMCO</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Jan 2019 – Apr 2020</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Fire Protection System - GTG Load Compartment Mafriq</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Dec 2018 – Sep 2020</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">ARASCO - DPS Maintenance and rectification of Fire Alarm and Fire Fighting Systems</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Dec 2018 – Dec 2019</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">ARASCO DFM maintenance and rectification of Fire Alarm and Fire Suppression systems</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Dec 2018 – Dec 2019</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">FAAST system turnkey project</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Dec 2018 – Aug 2019</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Replacement of Fire Alarm Systems @ Jubail Desalination Plants</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Sep 2018 – Feb 2019</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Marjan Oil Field Development - E-houses Fire protection systems</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Jun 2018 – Present</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Various projects in Saudi Arabia</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Sep 2015 – Present</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="mb-8 px-4">
-                                <h4 class="text-lg font-bold text-indigo-700 border-b border-indigo-100 pb-2 mb-4">Abunayyan Trading</h4>
-                                <ul class="space-y-4">
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <div>
-                                            <p class="font-medium text-slate-800">National Guard Housing - Thowal</p>
-                                            <p class="text-sm text-slate-500">Supply of 9 Dewatering pumps</p>
-                                        </div>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Jun 2017 – Nov 2018</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">King Fahad Armed Forces Hospital Warehouse</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Jan 2017 – Nov 2017</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <div>
-                                            <p class="font-medium text-slate-800">Leejam Sports Company - Riyadh Warehouse</p>
-                                            <p class="text-sm text-slate-500">Logistics Solutions</p>
-                                        </div>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Feb 2016 – Jul 2016</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="mb-4 px-4 pb-4">
-                                <h4 class="text-lg font-bold text-indigo-700 border-b border-indigo-100 pb-2 mb-4">Ayoubi Steel Furniture Factory</h4>
-                                <ul class="space-y-4">
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">Jordanian Wheat Mills "Al Ghazal" Racking System</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Dec 2013 – Present</span>
-                                    </li>
-                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                                        <p class="font-medium text-slate-800">various projects in Jordan</p>
-                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Feb 2013 – Jan 2015</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            
+                        <h3 class="font-extrabold text-2xl mb-2 text-slate-900 tracking-tight">Publications<span class="cite-tag">[cite: 18]</span></h3>
+                        <div class="mt-4 bg-slate-50 border border-slate-100 p-5 rounded-xl border-l-4 border-l-blue-400">
+                            <p class="text-slate-700 leading-relaxed font-semibold italic">"Adaptive cruise control design and further implementation"<span class="cite-tag">[cite: 19]</span></p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="py-24">
+        <section id="skills" class="py-28">
             <div class="container mx-auto px-6 fade-in-up">
-                <h2 class="section-title">Skills<span class="cite-text">[cite: 7]</span> & Certifications<span class="cite-text">[cite: 13]</span></h2>
+                <h2 class="section-title">Core <span>Competencies</span></h2>
                 
-                <div class="max-w-5xl mx-auto bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
-                    <div class="mb-8">
-                        <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-3 border-b pb-2">
-                            Top Skills<span class="cite-text">[cite: 7]</span>
-                        </h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-badge">Servo Drives<span class="cite-text">[cite: 8]</span></span>
-                            <span class="skill-badge">AC Drives<span class="cite-text">[cite: 9]</span></span>
-                            <span class="skill-badge">DC Drives<span class="cite-text">[cite: 10]</span></span>
+                <div class="max-w-5xl mx-auto neo-card p-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        
+                        <div>
+                            <h3 class="text-xl font-extrabold text-slate-900 mb-6 flex items-center gap-3">
+                                <i class="fas fa-bolt text-brand-500"></i> Top Skills<span class="cite-tag">[cite: 7]</span>
+                            </h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="skill-badge">Servo Drives<span class="cite-tag">[cite: 8]</span></span>
+                                <span class="skill-badge">AC Drives<span class="cite-tag">[cite: 9]</span></span>
+                                <span class="skill-badge">DC Drives<span class="cite-tag">[cite: 10]</span></span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="mb-8">
-                        <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-3 border-b pb-2">
-                            Certifications<span class="cite-text">[cite: 13]</span>
-                        </h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-badge">Certified Fire Protection Specialist (CFPS) Certification<span class="cite-text">[cite: 14]</span></span>
-                            <span class="skill-badge">Alternative Power Generation Technologies<span class="cite-text">[cite: 15]</span></span>
-                            <span class="skill-badge">Clean Agent Fire Suppression<span class="cite-text">[cite: 16]</span></span>
-                            <span class="skill-badge">3VA Molded case circuit breakers<span class="cite-text">[cite: 17]</span></span>
+                        <div>
+                            <h3 class="text-xl font-extrabold text-slate-900 mb-6 flex items-center gap-3">
+                                <i class="fas fa-certificate text-brand-500"></i> Certifications<span class="cite-tag">[cite: 13]</span>
+                            </h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="skill-badge bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-600 hover:border-blue-600">Certified Fire Protection Specialist (CFPS)<span class="cite-tag">[cite: 14]</span></span>
+                                <span class="skill-badge bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-600 hover:border-blue-600">Alternative Power Generation Technologies<span class="cite-tag">[cite: 15]</span></span>
+                                <span class="skill-badge bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-600 hover:border-blue-600">Clean Agent Fire Suppression<span class="cite-tag">[cite: 16]</span></span>
+                                <span class="skill-badge bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-600 hover:border-blue-600">3VA Molded case circuit breakers<span class="cite-tag">[cite: 17]</span></span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-3 border-b pb-2">
-                            Languages<span class="cite-text">[cite: 11]</span>
-                        </h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-badge">English (Native or Bilingual)<span class="cite-text">[cite: 12]</span></span>
-                            <span class="skill-badge">Arabic (Native or Bilingual)<span class="cite-text">[cite: 12]</span></span>
+                        <div class="md:col-span-2 pt-8 border-t border-slate-100">
+                            <h3 class="text-xl font-extrabold text-slate-900 mb-6 flex items-center gap-3">
+                                <i class="fas fa-language text-brand-500"></i> Languages<span class="cite-tag">[cite: 11]</span>
+                            </h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="skill-badge bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-800 hover:border-slate-800 hover:text-white">English (Native or Bilingual)<span class="cite-tag">[cite: 12]</span></span>
+                                <span class="skill-badge bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-800 hover:border-slate-800 hover:text-white">Arabic (Native or Bilingual)<span class="cite-tag">[cite: 12]</span></span>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500 via-slate-900 to-slate-900"></div>
+        <section id="contact" class="py-28 hero-pattern text-white relative border-t border-slate-800">
+            <div class="hero-glow opacity-50"></div>
             
             <div class="container mx-auto px-6 text-center fade-in-up relative z-10">
-                <h2 class="text-4xl font-bold mb-6 tracking-tight">Contact<span class="cite-text">[cite: 1]</span></h2>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8 mt-12">
-                    <a href="mailto:eng-m-a@outlook.com" class="flex items-center justify-center gap-3 bg-indigo-600 hover:bg-indigo-500 text-white w-full sm:w-auto px-8 py-4 rounded-full font-medium transition-all duration-300">
-                        <i class="fas fa-envelope text-xl"></i>
-                        eng-m-a@outlook.com<span class="cite-text">[cite: 3]</span>
+                <h2 class="section-title text-white">Let's <span>Connect</span><span class="cite-tag">[cite: 1]</span></h2>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12 max-w-2xl mx-auto">
+                    <a href="mailto:eng-m-a@outlook.com" class="flex items-center justify-center gap-3 bg-brand-600 hover:bg-brand-500 text-white w-full sm:w-auto px-8 py-5 rounded-2xl font-bold transition-all duration-300 shadow-lg shadow-brand-500/20 group">
+                        <div class="bg-white/20 p-2 rounded-lg group-hover:scale-110 transition-transform"><i class="fas fa-envelope text-xl"></i></div>
+                        eng-m-a@outlook.com<span class="cite-tag">[cite: 3]</span>
                     </a>
-                    <a href="tel:+966538766689" class="flex items-center justify-center gap-3 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 w-full sm:w-auto px-8 py-4 rounded-full font-medium transition-all duration-300">
-                        <i class="fas fa-phone text-xl"></i>
-                        +966-538766689 (Mobile)<span class="cite-text">[cite: 2]</span>
+                    <a href="tel:+966538766689" class="flex items-center justify-center gap-3 bg-dark-800 hover:bg-dark-700 text-white border border-slate-700 w-full sm:w-auto px-8 py-5 rounded-2xl font-bold transition-all duration-300 group">
+                        <div class="bg-white/10 p-2 rounded-lg group-hover:scale-110 transition-transform"><i class="fas fa-phone text-xl"></i></div>
+                        +966-538766689 (Mobile)<span class="cite-tag">[cite: 2]</span>
                     </a>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="https://www.linkedin.com/in/m-o-abdullah" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2">
-                        <i class="fab fa-linkedin text-xl"></i> www.linkedin.com/in/m-o-abdullah<span class="cite-text">[cite: 4, 5]</span>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <a href="https://www.linkedin.com/in/m-o-abdullah" target="_blank" rel="noopener noreferrer" class="bg-dark-800 px-6 py-3 rounded-xl border border-slate-800 text-slate-300 hover:text-brand-400 hover:border-brand-500/50 transition-all flex items-center gap-3 font-semibold">
+                        <i class="fab fa-linkedin text-2xl text-blue-500"></i> www.linkedin.com/in/m-o-abdullah<span class="cite-tag">[cite: 4, 5]</span>
                     </a>
-                    <span class="hidden sm:inline text-slate-600">|</span>
-                    <a href="https://xgurux90.github.io/MAbdullah/portfolio.html" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2">
-                        <i class="fas fa-globe text-xl"></i> Personal Portfolio<span class="cite-text">[cite: 6]</span>
+                    <a href="https://xgurux90.github.io/MAbdullah/portfolio.html" target="_blank" rel="noopener noreferrer" class="bg-dark-800 px-6 py-3 rounded-xl border border-slate-800 text-slate-300 hover:text-brand-400 hover:border-brand-500/50 transition-all flex items-center gap-3 font-semibold">
+                        <i class="fas fa-globe text-2xl text-brand-500"></i> Personal Portfolio<span class="cite-tag">[cite: 6]</span>
                     </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-slate-950 text-slate-500 py-8 border-t border-slate-800">
+    <footer class="bg-dark-900 text-slate-500 py-10 border-t border-slate-800/50">
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-sm">&copy; <span id="year"></span> Mohammad Abdullah. All Rights Reserved.</p>
+            <p class="text-sm font-semibold">&copy; <span id="year"></span> Mohammad Abdullah. All Rights Reserved.</p>
         </div>
     </footer>
     
@@ -578,7 +737,7 @@
                     const targetId = this.getAttribute('href');
                     if (targetId.length > 1) {
                         const targetElement = document.querySelector(targetId);
-                        const headerOffset = 80;
+                        const headerOffset = 90;
                         const elementPosition = targetElement.getBoundingClientRect().top;
                         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
   
@@ -592,11 +751,12 @@
 
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 20) {
-                    header.classList.add('glass');
-                    header.classList.remove('bg-transparent');
+                    header.classList.add('glass-nav');
+                    header.classList.remove('bg-transparent', 'py-5');
+                    header.classList.add('py-3');
                 } else {
-                    header.classList.remove('glass');
-                    header.classList.add('bg-transparent');
+                    header.classList.remove('glass-nav', 'py-3');
+                    header.classList.add('bg-transparent', 'py-5');
                 }
             });
 
