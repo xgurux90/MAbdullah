@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad Abdullah | Sales & Marketing Manager</title>
+    <title>Mohammad Abdullah | Sales Manager</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,20 +90,6 @@
             100% { transform: rotate(360deg); }
         }
 
-        .typing-cursor {
-            display: inline-block;
-            width: 3px;
-            height: 1.1em;
-            background-color: #38bdf8;
-            animation: blink 0.8s infinite;
-            vertical-align: text-bottom;
-            margin-left: 2px;
-        }
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-        
         .project-scroll::-webkit-scrollbar {
             width: 8px;
         }
@@ -117,6 +103,10 @@
         }
         .project-scroll::-webkit-scrollbar-thumb:hover {
             background: #94a3b8; 
+        }
+
+        .cite-text {
+            @apply text-xs text-indigo-400 font-mono ml-1 align-super opacity-70;
         }
     </style>
 </head>
@@ -163,21 +153,20 @@
                     <img src="1650302875259.jpg" alt="M.O. Abdullah" class="rounded-full h-44 w-44 object-cover border-4 border-slate-900 bg-slate-800">
                 </div>
                 <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4 tracking-tight">
-                    Mohammad Abdullah
+                    Mohammad Abdullah<span class="cite-text">[cite: 20]</span>
                 </h1>
                 <p class="text-lg md:text-xl text-indigo-300 font-medium mb-6">
-                    PMP® | CFPS®
+                    PMP®<span class="cite-text">[cite: 20]</span> | CFPS®<span class="cite-text">[cite: 21]</span>
                 </p>
-                <p class="text-xl md:text-2xl text-slate-300 mb-10 h-8 font-light">
-                    <span id="typing-text"></span><span class="typing-cursor"></span>
-                </p>
-                <div class="flex flex-wrap justify-center gap-3 mb-10 text-sm font-medium text-slate-300 max-w-2xl mx-auto">
-                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Business Development</span>
-                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Strategic Partnerships</span>
-                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Industrial Automation & Energy</span>
-                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Low Current</span>
-                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Fire Protection</span>
+                <div class="flex flex-wrap justify-center gap-3 mb-10 text-sm font-medium text-slate-300 max-w-3xl mx-auto">
+                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Business Development<span class="cite-text">[cite: 22]</span></span>
+                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Sales<span class="cite-text">[cite: 22]</span></span>
+                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Strategic Partnerships<span class="cite-text">[cite: 22]</span></span>
+                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Industrial Automation & Energy<span class="cite-text">[cite: 22]</span></span>
+                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Low Current<span class="cite-text">[cite: 22]</span></span>
+                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Fire Protection<span class="cite-text">[cite: 23]</span></span>
                 </div>
+                <p class="text-slate-400 mb-8"><i class="fas fa-map-marker-alt mr-2"></i>Al Khobar, Eastern, Saudi Arabia<span class="cite-text">[cite: 23]</span></p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                     <a href="#experience" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 shadow-lg shadow-indigo-500/30">
                         View Experience
@@ -195,7 +184,7 @@
                 <div class="max-w-4xl mx-auto bg-white p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 relative text-center">
                     <i class="fas fa-quote-left text-4xl text-slate-100 mb-4 inline-block"></i>
                     <p class="text-xl text-slate-600 leading-relaxed relative z-10 font-light">
-                        Highly experienced Sales Manager and Certified Fire Protection Specialist (CFPS) with more than twelve years of experience. Exceptional MEP knowledge working with prestigious clients covering Oil & Gas, Water & Power, and Industrial sectors.
+                        Highly experienced Sales Manager and Certified Fire Protection Specialist (CFPS) with more than twelve years of experience, exceptional MEP knowledge working with prestigious clients covering Oil & Gas, Water & Power, and Industrial sectors.<span class="cite-text">[cite: 25]</span>
                     </p>
                 </div>
             </div>
@@ -203,7 +192,7 @@
         
         <section id="experience" class="py-24 bg-slate-50 border-y border-slate-200/60">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Professional Experience</h2>
+                <h2 class="section-title">Experience<span class="cite-text">[cite: 26]</span></h2>
                 
                 <div class="max-w-5xl mx-auto space-y-12 relative before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:bg-indigo-200 before:md:mx-auto before:md:w-px">
                     
@@ -212,73 +201,83 @@
                              <i class="fas fa-briefcase"></i>
                         </div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8 border-t-4 border-t-indigo-600">
-                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Sales and Marketing Manager</h3>
-                            <p class="text-lg font-medium text-indigo-600 mt-1">SUBWAY NETWORKS</p>
-                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>Oct 2024 - Present | Saudi Arabia, Bahrain, UAE</p>
+                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Sales and Marketing Manager<span class="cite-text">[cite: 28]</span></h3>
+                            <p class="text-lg font-medium text-indigo-600 mt-1">SUBWAY NETWORKS<span class="cite-text">[cite: 27]</span></p>
+                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>October 2024 - Present (1 year 7 months) Saudi Arabia. Bahrain, UAE<span class="cite-text">[cite: 28]</span></p>
                             <ul class="text-slate-600 leading-relaxed list-disc list-inside space-y-2">
-                                <li>Managed sales operations for Siemens Partners, specializing in automation, SCADA and instrumentation.</li>
-                                <li>Oversaw supply of mechanical and electrical equipment, providing turnkey solutions for oil and gas, petrochemicals, and industrial sectors.</li>
-                                <li>Successfully expanded client base in the Kingdom of Saudi Arabia, driving revenue growth and establishing SUBWAY NETWORKS as a key player in the market.</li>
+                                <li>Managed sales operations for Siemens Partners, specializing in automation, SCADA and instrumentation.<span class="cite-text">[cite: 29]</span></li>
+                                <li>Oversaw supply of mechanical and electrical equipment, providing turnkey solutions for oil and gas, petrochemicals, and industrial sectors.<span class="cite-text">[cite: 30]</span></li>
+                                <li>Successfully expanded client base in the Kingdom of Saudi Arabia, driving revenue growth and establishing SUBWAY NETWORKS as a key player in the market.<span class="cite-text">[cite: 31]</span></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
                         <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-indigo-500 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10"></div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8">
-                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Senior Sales Engineer</h3>
-                             <p class="text-lg font-medium text-indigo-600 mt-1">Johnson Controls Arabia</p>
-                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>Apr 2022 - Oct 2024 | Al Khobar, Eastern, Saudi Arabia</p>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8 border-t-4 border-t-indigo-500">
+                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Senior Sales Engineer<span class="cite-text">[cite: 33]</span></h3>
+                             <p class="text-lg font-medium text-indigo-600 mt-1">Johnson Controls Arabia<span class="cite-text">[cite: 32]</span></p>
+                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>April 2022 October 2024 (2 years 7 months) Al Khobar, Eastern, Saudi Arabia<span class="cite-text">[cite: 34, 35]</span></p>
+                            <p class="font-medium mb-2 text-slate-700">Duties:<span class="cite-text">[cite: 36]</span></p>
                             <ul class="text-slate-600 leading-relaxed list-disc list-inside space-y-2">
-                                <li>Develop and maintain relationships with key customers and partners.</li>
-                                <li>Analyze customer requirements and develop technical solutions to meet their needs.</li>
-                                <li>Design and deliver technical presentations to customers and partners.</li>
-                                <li>Create and maintain technical documentation and sales collateral.</li>
+                                <li>Develop and maintain relationships with key customers and partners.<span class="cite-text">[cite: 37]</span></li>
+                                <li>Analyze customer requirements and develop technical solutions to meet their needs.<span class="cite-text">[cite: 38, 39]</span></li>
+                                <li>Design and deliver technical presentations to customers and partners.<span class="cite-text">[cite: 40]</span></li>
+                                <li>Create and maintain technical documentation and sales collateral.<span class="cite-text">[cite: 41]</span></li>
+                                <li>Develop and maintain product knowledge and competitive analysis.<span class="cite-text">[cite: 42]</span></li>
+                                <li>Develop and maintain sales strategies and plans.<span class="cite-text">[cite: 44]</span></li>
+                                <li>Assist in the development of sales proposals and presentations.<span class="cite-text">[cite: 45]</span></li>
+                                <li>Assist in the development of pricing strategies.<span class="cite-text">[cite: 46]</span></li>
+                                <li>Develop and maintain a thorough understanding of the company's products and services.<span class="cite-text">[cite: 47, 48]</span></li>
+                                <li>Provide technical support to customers and partners.<span class="cite-text">[cite: 49]</span></li>
+                                <li>Monitor and report on sales performance.<span class="cite-text">[cite: 50]</span></li>
+                                <li>Participate in industry events and trade shows.<span class="cite-text">[cite: 51]</span></li>
                             </ul>
                         </div>
                     </div>
 
                      <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
                         <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-slate-400 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10"></div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8">
-                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Projects Sales Engineer</h3>
-                             <p class="text-lg font-medium text-indigo-600 mt-1">Heba Fire & Safety Equipments Company</p>
-                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>Sep 2018 - Mar 2022 | Saudi Arabia</p>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8 border-t-4 border-t-slate-400">
+                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Projects Sales Engineer<span class="cite-text">[cite: 52]</span></h3>
+                             <p class="text-lg font-medium text-indigo-600 mt-1">Heba Fire & Safety Equipments Company<span class="cite-text">[cite: 52]</span></p>
+                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>September 2018 - March 2022 (3 years 7 months) Saudi Arabia<span class="cite-text">[cite: 53]</span></p>
                             <ul class="text-slate-600 leading-relaxed list-disc list-inside space-y-2">
-                                <li>Managed Fire Protection projects and OMC in Saudi Arabia's Water and Power, Oil and Gas, Petrochemical, and Industrial Sectors.</li>
-                                <li>Successfully completed projects in all regions of Saudi Arabia, showcasing expertise and adaptability.</li>
+                                <li>Managed Fire Protection projects and OMC in Saudi Arabia's Water and Power, Oil and Gas, Petrochemical, and Industrial Sectors, serving a diverse customer base.<span class="cite-text">[cite: 54]</span></li>
+                                <li>Successfully completed projects in all regions of Saudi Arabia, showcasing expertise and adaptability in various environments.<span class="cite-text">[cite: 55]</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-slate-400 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10"></div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8 border-t-4 border-t-slate-400">
+                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Sales Engineer<span class="cite-text">[cite: 57]</span></h3>
+                             <p class="text-lg font-medium text-indigo-600 mt-1">Abunayyan Trading<span class="cite-text">[cite: 56]</span></p>
+                            <p class="text-sm text-slate-400 font-medium"><i class="far fa-calendar-alt mr-2"></i>August 2015 August 2018 (3 years 1 month) Saudi Arabia<span class="cite-text">[cite: 58]</span></p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-slate-300 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10"></div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8 border-t-4 border-t-slate-300">
+                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Control and Blending Engineer<span class="cite-text">[cite: 60]</span></h3>
+                             <p class="text-lg font-medium text-indigo-600 mt-1">FUCHS PETROLUB SE<span class="cite-text">[cite: 59]</span></p>
+                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>November 2014 - August 2015 (10 months) Jordan<span class="cite-text">[cite: 61, 62]</span></p>
+                            <ul class="text-slate-600 leading-relaxed list-disc list-inside space-y-2">
+                                <li>Control, Supervise and make sure every thing is going the right way and every body are doing their job that's when is it comes to production and production hall.<span class="cite-text">[cite: 63, 64]</span></li>
+                                <li>Control, Supervise and maintain the blending process for a wide range of lubricant oil types and greases.<span class="cite-text">[cite: 65, 66]</span></li>
+                                <li>Report to higher management and coordinate the work between departments.<span class="cite-text">[cite: 67]</span></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
                         <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-slate-300 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10"></div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8">
-                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Sales Engineer</h3>
-                             <p class="text-lg font-medium text-indigo-600 mt-1">Abunayyan Trading</p>
-                            <p class="text-sm text-slate-400 font-medium"><i class="far fa-calendar-alt mr-2"></i>Aug 2015 - Aug 2018 | Saudi Arabia</p>
-                        </div>
-                    </div>
-
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-slate-300 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10"></div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8">
-                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Control and Blending Engineer</h3>
-                             <p class="text-lg font-medium text-indigo-600 mt-1">FUCHS PETROLUB SE</p>
-                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>Nov 2014 - Aug 2015 | Jordan</p>
-                            <ul class="text-slate-600 leading-relaxed list-disc list-inside space-y-2">
-                                <li>Control, Supervise and maintain the blending process for a wide range of lubricant oil types and greases.</li>
-                                <li>Report to higher management and coordinate the work between departments.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-slate-300 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10"></div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8">
-                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Technical Sales Engineer</h3>
-                             <p class="text-lg font-medium text-indigo-600 mt-1">Ayoubi Steel Furniture Factory</p>
-                            <p class="text-sm text-slate-400 font-medium"><i class="far fa-calendar-alt mr-2"></i>Sep 2012 - Nov 2014 | Amman, Jordan</p>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8 border-t-4 border-t-slate-300">
+                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Technical Sales Engineer<span class="cite-text">[cite: 69]</span></h3>
+                             <p class="text-lg font-medium text-indigo-600 mt-1">Ayoubi Steel Furniture Factory<span class="cite-text">[cite: 68]</span></p>
+                            <p class="text-sm text-slate-400 font-medium"><i class="far fa-calendar-alt mr-2"></i>September 2012 - November 2014 (2 years 3 months) Amman, Jordan<span class="cite-text">[cite: 70]</span></p>
                         </div>
                     </div>
 
@@ -288,18 +287,17 @@
 
         <section id="education" class="py-24">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Education & Publications</h2>
+                <h2 class="section-title">Education<span class="cite-text">[cite: 72]</span> & Publications<span class="cite-text">[cite: 18]</span></h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     
                     <div class="card fade-in-up p-8 flex flex-col border-t-4 border-indigo-500">
                         <div class="bg-indigo-50 w-12 h-12 rounded-lg flex items-center justify-center text-indigo-600 text-xl mb-6">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <h3 class="font-bold text-xl mb-2 text-slate-800">Bachelor of Engineering - BE</h3>
-                        <p class="text-sm font-semibold text-indigo-600 mb-4">Mechatronics, Robotics, and Automation Engineering</p>
-                        <p class="text-slate-600 flex-grow leading-relaxed">Jami'at Al-Balqa Al-Tatbiqiyya</p>
+                        <h3 class="font-bold text-xl mb-2 text-slate-800">Bachelor of Engineering - BE, Mechatronics, Robotics, and Automation Engineering<span class="cite-text">[cite: 74]</span></h3>
+                        <p class="text-slate-600 flex-grow leading-relaxed font-medium">Jami'at Al-Balqa Al-Tatbiqiyya<span class="cite-text">[cite: 73]</span></p>
                         <div class="mt-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs text-slate-400 font-medium">September 2008 - June 2012</p>
+                            <p class="text-xs text-slate-400 font-medium">September 2008 - June 2012<span class="cite-text">[cite: 74]</span></p>
                         </div>
                     </div>
 
@@ -307,8 +305,8 @@
                         <div class="bg-indigo-50 w-12 h-12 rounded-lg flex items-center justify-center text-indigo-600 text-xl mb-6">
                             <i class="fas fa-book-open"></i>
                         </div>
-                        <h3 class="font-bold text-xl mb-2 text-slate-800">Publications</h3>
-                        <p class="text-slate-600 flex-grow leading-relaxed italic">"Adaptive cruise control design and further implementation"</p>
+                        <h3 class="font-bold text-xl mb-2 text-slate-800">Publications<span class="cite-text">[cite: 18]</span></h3>
+                        <p class="text-slate-600 flex-grow leading-relaxed italic">Adaptive cruise control design and further implementation<span class="cite-text">[cite: 19]</span></p>
                     </div>
 
                 </div>
@@ -317,7 +315,7 @@
 
         <section id="projects" class="py-24 bg-slate-50 border-y border-slate-200/60">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Project Log</h2>
+                <h2 class="section-title">Projects Portfolio</h2>
                 
                 <div class="max-w-5xl mx-auto fade-in-up">
                     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
@@ -485,46 +483,39 @@
 
         <section id="skills" class="py-24">
             <div class="container mx-auto px-6 fade-in-up">
-                <h2 class="section-title">Skills & Certifications</h2>
+                <h2 class="section-title">Skills<span class="cite-text">[cite: 7]</span> & Certifications<span class="cite-text">[cite: 13]</span></h2>
                 
                 <div class="max-w-5xl mx-auto bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
                     <div class="mb-8">
                         <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-3 border-b pb-2">
-                            Top Skills & Expertise
+                            Top Skills<span class="cite-text">[cite: 7]</span>
                         </h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-badge">Servo Drives</span>
-                            <span class="skill-badge">AC Drives</span>
-                            <span class="skill-badge">DC Drives</span>
-                            <span class="skill-badge">Business Development</span>
-                            <span class="skill-badge">Sales</span>
-                            <span class="skill-badge">Strategic Partnerships</span>
-                            <span class="skill-badge">Industrial Automation & Energy</span>
-                            <span class="skill-badge">Low Current</span>
-                            <span class="skill-badge">Fire Protection</span>
+                            <span class="skill-badge">Servo Drives<span class="cite-text">[cite: 8]</span></span>
+                            <span class="skill-badge">AC Drives<span class="cite-text">[cite: 9]</span></span>
+                            <span class="skill-badge">DC Drives<span class="cite-text">[cite: 10]</span></span>
                         </div>
                     </div>
 
                     <div class="mb-8">
                         <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-3 border-b pb-2">
-                            Certifications
+                            Certifications<span class="cite-text">[cite: 13]</span>
                         </h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-badge">Project Management Professional (PMP)®</span>
-                            <span class="skill-badge">Certified Fire Protection Specialist (CFPS)</span>
-                            <span class="skill-badge">Alternative Power Generation Technologies</span>
-                            <span class="skill-badge">Clean Agent Fire Suppression</span>
-                            <span class="skill-badge">3VA Molded case circuit breakers</span>
+                            <span class="skill-badge">Certified Fire Protection Specialist (CFPS) Certification<span class="cite-text">[cite: 14]</span></span>
+                            <span class="skill-badge">Alternative Power Generation Technologies<span class="cite-text">[cite: 15]</span></span>
+                            <span class="skill-badge">Clean Agent Fire Suppression<span class="cite-text">[cite: 16]</span></span>
+                            <span class="skill-badge">3VA Molded case circuit breakers<span class="cite-text">[cite: 17]</span></span>
                         </div>
                     </div>
 
                     <div>
                         <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-3 border-b pb-2">
-                            Languages
+                            Languages<span class="cite-text">[cite: 11]</span>
                         </h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-badge">Arabic (Native or Bilingual)</span>
-                            <span class="skill-badge">English (Native or Bilingual)</span>
+                            <span class="skill-badge">English (Native or Bilingual)<span class="cite-text">[cite: 12]</span></span>
+                            <span class="skill-badge">Arabic (Native or Bilingual)<span class="cite-text">[cite: 12]</span></span>
                         </div>
                     </div>
                 </div>
@@ -535,25 +526,25 @@
             <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500 via-slate-900 to-slate-900"></div>
             
             <div class="container mx-auto px-6 text-center fade-in-up relative z-10">
-                <h2 class="text-4xl font-bold mb-6 tracking-tight">Contact</h2>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+                <h2 class="text-4xl font-bold mb-6 tracking-tight">Contact<span class="cite-text">[cite: 1]</span></h2>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8 mt-12">
                     <a href="mailto:eng-m-a@outlook.com" class="flex items-center justify-center gap-3 bg-indigo-600 hover:bg-indigo-500 text-white w-full sm:w-auto px-8 py-4 rounded-full font-medium transition-all duration-300">
                         <i class="fas fa-envelope text-xl"></i>
-                        eng-m-a@outlook.com
+                        eng-m-a@outlook.com<span class="cite-text">[cite: 3]</span>
                     </a>
                     <a href="tel:+966538766689" class="flex items-center justify-center gap-3 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 w-full sm:w-auto px-8 py-4 rounded-full font-medium transition-all duration-300">
                         <i class="fas fa-phone text-xl"></i>
-                        +966-538766689
+                        +966-538766689 (Mobile)<span class="cite-text">[cite: 2]</span>
                     </a>
                 </div>
                 
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                     <a href="https://www.linkedin.com/in/m-o-abdullah" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2">
-                        <i class="fab fa-linkedin text-xl"></i> LinkedIn
+                        <i class="fab fa-linkedin text-xl"></i> www.linkedin.com/in/m-o-abdullah<span class="cite-text">[cite: 4, 5]</span>
                     </a>
                     <span class="hidden sm:inline text-slate-600">|</span>
                     <a href="https://xgurux90.github.io/MAbdullah/portfolio.html" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2">
-                        <i class="fas fa-globe text-xl"></i> Personal Portfolio
+                        <i class="fas fa-globe text-xl"></i> Personal Portfolio<span class="cite-text">[cite: 6]</span>
                     </a>
                 </div>
             </div>
@@ -608,43 +599,6 @@
                     header.classList.add('bg-transparent');
                 }
             });
-
-            const typingTextElement = document.getElementById('typing-text');
-            const texts = [
-                "Sales & Marketing Manager", 
-                "Strategic Partnerships & Business Development",
-                "Industrial Automation & Energy",
-                "CFPS® Certified Fire Specialist"
-            ];
-            let textIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-
-            function type() {
-                const currentText = texts[textIndex];
-                
-                if (isDeleting) {
-                    typingTextElement.textContent = currentText.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    typingTextElement.textContent = currentText.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-
-                let typingSpeed = isDeleting ? 30 : 60;
-
-                if (!isDeleting && charIndex === currentText.length) {
-                    typingSpeed = 2500;
-                    isDeleting = true;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    textIndex = (textIndex + 1) % texts.length;
-                    typingSpeed = 500;
-                }
-
-                setTimeout(type, typingSpeed);
-            }
-            setTimeout(type, 1000);
 
             const observerOptions = {
                 threshold: 0.1,
