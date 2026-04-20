@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad Abdullah | Mechatronics Engineer & Sales Manager</title>
+    <title>Mohammad Abdullah | Sales & Marketing Manager | Mechatronics Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
             display: block;
             width: 60px;
             height: 4px;
-            background: #4f46e5; /* Indigo 600 */
+            background: #4f46e5;
             margin: 16px auto 0;
             border-radius: 2px;
         }
@@ -69,7 +69,6 @@
             @apply bg-slate-100 text-slate-700 border border-slate-200 text-sm font-medium mr-2 mb-3 px-4 py-1.5 rounded-full shadow-sm transition-colors hover:bg-slate-200 cursor-default;
         }
 
-        /* Fade-in animation on scroll */
         .fade-in-up {
             opacity: 0;
             transform: translateY(30px);
@@ -80,7 +79,6 @@
             transform: translateY(0);
         }
 
-        /* Profile image glow */
         .profile-img-container {
             position: relative;
             display: inline-block;
@@ -98,7 +96,6 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* Typing effect */
         .typing-cursor {
             display: inline-block;
             width: 3px;
@@ -111,6 +108,22 @@
         @keyframes blink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
+        }
+        
+        /* Custom Scrollbar for Project List */
+        .project-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .project-scroll::-webkit-scrollbar-track {
+            background: #f1f5f9; 
+            border-radius: 8px;
+        }
+        .project-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 8px;
+        }
+        .project-scroll::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
         }
     </style>
 </head>
@@ -125,9 +138,9 @@
             <div class="hidden md:flex items-center space-x-1">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#skills" class="nav-link">Skills</a>
-                <a href="#certifications" class="nav-link">Certifications</a>
                 <a href="#contact" class="nav-link bg-indigo-600/20 text-indigo-300 hover:bg-indigo-600 ml-4">Contact</a>
             </div>
             
@@ -139,9 +152,9 @@
             <div class="flex flex-col px-6 py-4 space-y-2">
                 <a href="#about" class="py-2 text-slate-300 hover:text-white">About</a>
                 <a href="#experience" class="py-2 text-slate-300 hover:text-white">Experience</a>
+                <a href="#education" class="py-2 text-slate-300 hover:text-white">Education</a>
                 <a href="#projects" class="py-2 text-slate-300 hover:text-white">Projects</a>
                 <a href="#skills" class="py-2 text-slate-300 hover:text-white">Skills</a>
-                <a href="#certifications" class="py-2 text-slate-300 hover:text-white">Certifications</a>
                 <a href="#contact" class="py-2 text-indigo-400 font-medium">Contact</a>
             </div>
         </div>
@@ -156,12 +169,20 @@
                 <div class="profile-img-container mb-8">
                     <img src="1650302875259.jpg" alt="M.O. Abdullah" class="rounded-full h-44 w-44 object-cover border-4 border-slate-900 bg-slate-800">
                 </div>
-                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4 tracking-tight">
                     Mohammad Abdullah
                 </h1>
+                <p class="text-lg md:text-xl text-indigo-300 font-medium mb-6">
+                    PMP® | CFPS®
+                </p>
                 <p class="text-xl md:text-2xl text-slate-300 mb-10 h-8 font-light">
                     <span id="typing-text"></span><span class="typing-cursor"></span>
                 </p>
+                <div class="flex flex-wrap justify-center gap-3 mb-10 text-sm font-medium text-slate-300">
+                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Business Development</span>
+                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Industrial Automation & Energy</span>
+                    <span class="bg-white/10 px-4 py-2 rounded-full border border-white/10">Fire Protection</span>
+                </div>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                     <a href="#experience" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 shadow-lg shadow-indigo-500/30">
                         View Experience
@@ -179,7 +200,7 @@
                 <div class="max-w-4xl mx-auto bg-white p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 relative">
                     <i class="fas fa-quote-left absolute top-8 left-8 text-4xl text-slate-100"></i>
                     <p class="text-lg text-slate-600 leading-relaxed mb-6 relative z-10">
-                        A dedicated and results-oriented Mechatronics Engineer with over a decade of experience and a proven track record in project management and industrial automation. My expertise bridges the gap between mechanical, electrical, and software systems, specializing in life safety, security, and low current systems. Holding prestigious certifications such as PMP® and CFPS®, I excel in designing and managing complex engineering solutions from concept to completion.
+                        A highly experienced Sales & Marketing Manager and Certified Fire Protection Specialist (CFPS) with over a decade of expertise. I have exceptional MEP knowledge, working with prestigious clients across the Oil & Gas, Water & Power, and Industrial sectors. My focus is on driving strategic partnerships, business development, and delivering complex engineering solutions.
                     </p>
                      <p class="text-lg text-slate-600 leading-relaxed relative z-10">
                         Beyond traditional engineering, I am deeply passionate about modern software development and automation. From building custom workflow solutions with Python and n8n to architecting local applications, I leverage technology to create safer environments and exponentially more efficient business operations. I thrive in collaborative environments, leading cross-functional teams to exceed client expectations.
@@ -209,10 +230,14 @@
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
                         <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-50 bg-indigo-500 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-sm font-bold shadow-md z-10"></div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8">
-                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Sales Manager</h3>
-                            <p class="text-lg font-medium text-indigo-600 mt-1">Subway Networks</p>
-                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>Oct 2024 - 2026 | KSA, Bahrain, UAE</p>
-                            <p class="text-slate-600 leading-relaxed">Managed sales for Siemens Partners, specializing in automation and SCADA. Oversaw supply of equipment for oil & gas, petrochemical, and industrial sectors, successfully expanding the client base.</p>
+                            <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Sales and Marketing Manager</h3>
+                            <p class="text-lg font-medium text-indigo-600 mt-1">SUBWAY NETWORKS</p>
+                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>Oct 2024 - Present | Saudi Arabia, Bahrain, UAE</p>
+                            <ul class="text-slate-600 leading-relaxed list-disc list-inside space-y-2">
+                                <li>Managed sales operations for Siemens Partners, specializing in automation, SCADA and instrumentation.</li>
+                                <li>Oversaw supply of mechanical and electrical equipment, providing turnkey solutions for oil and gas, petrochemicals, and industrial sectors.</li>
+                                <li>Successfully expanded client base in the Kingdom of Saudi Arabia, driving revenue growth and establishing SUBWAY NETWORKS as a key player in the market.</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -221,8 +246,8 @@
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card p-8">
                             <h3 class="font-bold text-2xl text-slate-800 tracking-tight">Senior Sales Engineer</h3>
                              <p class="text-lg font-medium text-indigo-600 mt-1">Johnson Controls Arabia</p>
-                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>Apr 2022 - Oct 2024</p>
-                            <p class="text-slate-600 leading-relaxed">Developed relationships with key customers, analyzed requirements to provide technical solutions, and delivered product presentations. Maintained technical documentation and sales strategies.</p>
+                            <p class="text-sm text-slate-400 mb-4 font-medium"><i class="far fa-calendar-alt mr-2"></i>Apr 2022 - Oct 2024 | Al Khobar, KSA</p>
+                            <p class="text-slate-600 leading-relaxed">Developed and maintained relationships with key customers, analyzed requirements to provide technical solutions, and delivered product presentations. Monitored sales performance and developed pricing strategies.</p>
                         </div>
                     </div>
 
@@ -239,46 +264,51 @@
             </div>
         </section>
 
-        <section id="projects" class="py-24">
+        <section id="education" class="py-24">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Key Projects & Architecture</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <h2 class="section-title">Education & Publications</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     
+                    <div class="card fade-in-up p-8 flex flex-col border-t-4 border-indigo-500">
+                        <div class="bg-indigo-50 w-12 h-12 rounded-lg flex items-center justify-center text-indigo-600 text-xl mb-6">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2 text-slate-800">Bachelor of Engineering (BE)</h3>
+                        <p class="text-sm font-semibold text-indigo-600 mb-4">Mechatronics, Robotics, and Automation</p>
+                        <p class="text-slate-600 flex-grow leading-relaxed">Jami'at Al-Balqa Al-Tatbiqiyya</p>
+                        <div class="mt-6 border-t border-slate-100 pt-4">
+                            <p class="text-xs text-slate-400 font-medium">Sep 2008 - June 2012</p>
+                        </div>
+                    </div>
+
+                    <div class="card fade-in-up p-8 flex flex-col border-t-4 border-indigo-500">
+                        <div class="bg-indigo-50 w-12 h-12 rounded-lg flex items-center justify-center text-indigo-600 text-xl mb-6">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2 text-slate-800">Academic Publication</h3>
+                        <p class="text-sm font-semibold text-indigo-600 mb-4">Research & Implementation</p>
+                        <p class="text-slate-600 flex-grow leading-relaxed italic">"Adaptive cruise control design and further implementation"</p>
+                        <div class="mt-6 border-t border-slate-100 pt-4">
+                            <p class="text-xs text-slate-400 font-medium">Author / Co-Author</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-24 bg-slate-50 border-y border-slate-200/60">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Key Projects & Portfolio</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
                     <div class="card fade-in-up p-8 flex flex-col border-t-4 border-indigo-500">
                         <div class="bg-indigo-50 w-12 h-12 rounded-lg flex items-center justify-center text-indigo-600 text-xl mb-6">
                             <i class="fas fa-server"></i>
                         </div>
                         <h3 class="font-bold text-xl mb-2 text-slate-800">SNT Stock Manager</h3>
                         <p class="text-sm font-semibold text-indigo-600 mb-4">Internal Workflow Architecture</p>
-                        <p class="text-slate-600 flex-grow leading-relaxed">Designed and built a local CRM and inventory management system utilizing an Excel-based workflow to harvest, organize, and sync client contact details, streamlining internal operations.</p>
-                        <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="text-xs font-semibold bg-slate-100 text-slate-600 px-2 py-1 rounded">Automation</span>
-                            <span class="text-xs font-semibold bg-slate-100 text-slate-600 px-2 py-1 rounded">Local CRM</span>
-                        </div>
-                    </div>
-
-                    <div class="card fade-in-up p-8 flex flex-col">
-                        <div class="bg-slate-50 w-12 h-12 rounded-lg flex items-center justify-center text-slate-600 text-xl mb-6">
-                            <i class="fas fa-oil-well"></i>
-                        </div>
-                        <h3 class="font-bold text-xl mb-2 text-slate-800">Marjan Oil Field Development</h3>
-                        <p class="text-sm font-semibold text-indigo-600 mb-4">Client: Saudi Aramco</p>
-                        <p class="text-slate-600 flex-grow leading-relaxed">Designed, supplied, and commissioned Fire Alarm and FM-200 fire suppression systems for critical E-houses within the oil field.</p>
-                        <div class="mt-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs text-slate-400 font-medium">Associated with Heba Fire & Safety</p>
-                        </div>
-                    </div>
-
-                    <div class="card fade-in-up p-8 flex flex-col">
-                        <div class="bg-slate-50 w-12 h-12 rounded-lg flex items-center justify-center text-slate-600 text-xl mb-6">
-                            <i class="fas fa-industry"></i>
-                        </div>
-                        <h3 class="font-bold text-xl mb-2 text-slate-800">Jubail Energy Service Co.</h3>
-                        <p class="text-sm font-semibold text-indigo-600 mb-4">Client: JESCO</p>
-                        <p class="text-slate-600 flex-grow leading-relaxed">Executed a comprehensive replacement and upgradation of existing Fire Protection Systems to enhance safety and regulatory compliance.</p>
-                        <div class="mt-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs text-slate-400 font-medium">Associated with Johnson Controls Arabia</p>
-                        </div>
+                        <p class="text-slate-600 flex-grow leading-relaxed">Designed and built a local CRM and inventory management system utilizing an Excel-based workflow to harvest, organize, and sync client contact details.</p>
                     </div>
 
                     <div class="card fade-in-up p-8 flex flex-col border-t-4 border-indigo-500">
@@ -288,40 +318,180 @@
                         <h3 class="font-bold text-xl mb-2 text-slate-800">LifeOS Ecosystem</h3>
                         <p class="text-sm font-semibold text-indigo-600 mb-4">Personal Development</p>
                         <p class="text-slate-600 flex-grow leading-relaxed">Architecting a personalized productivity platform utilizing modern agentic development workflows, integrating a local SQLite backend for comprehensive data modeling.</p>
-                        <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="text-xs font-semibold bg-slate-100 text-slate-600 px-2 py-1 rounded">Data Architecture</span>
-                            <span class="text-xs font-semibold bg-slate-100 text-slate-600 px-2 py-1 rounded">DevOps</span>
-                        </div>
                     </div>
 
                     <div class="card fade-in-up p-8 flex flex-col">
-                        <div class="bg-slate-50 w-12 h-12 rounded-lg flex items-center justify-center text-slate-600 text-xl mb-6">
-                            <i class="fas fa-headset"></i>
+                        <div class="bg-slate-100 w-12 h-12 rounded-lg flex items-center justify-center text-slate-600 text-xl mb-6">
+                            <i class="fas fa-oil-well"></i>
                         </div>
-                        <h3 class="font-bold text-xl mb-2 text-slate-800">SEC Call Center</h3>
-                        <p class="text-sm font-semibold text-indigo-600 mb-4">Client: Saudi Electricity Co.</p>
-                        <p class="text-slate-600 flex-grow leading-relaxed">Delivered a turnkey solution including the design, supply, testing, and commissioning of Fire Alarm and FM-200 systems for the new Makkah call center.</p>
-                        <div class="mt-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs text-slate-400 font-medium">Associated with Heba Fire & Safety</p>
-                        </div>
-                    </div>
-
-                    <div class="card fade-in-up p-8 flex flex-col">
-                        <div class="bg-slate-50 w-12 h-12 rounded-lg flex items-center justify-center text-slate-600 text-xl mb-6">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h3 class="font-bold text-xl mb-2 text-slate-800">KAPSARC Fire Systems</h3>
+                        <h3 class="font-bold text-xl mb-2 text-slate-800">Marjan Oil Field</h3>
                         <p class="text-sm font-semibold text-indigo-600 mb-4">Client: Saudi Aramco</p>
-                        <p class="text-slate-600 flex-grow leading-relaxed">Oversaw the fire alarm system project at the King Abdullah Petroleum Studies and Research Center, a high-profile architectural landmark.</p>
-                        <div class="mt-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs text-slate-400 font-medium">Associated with Heba Fire & Safety</p>
+                        <p class="text-slate-600 flex-grow leading-relaxed">Designed, supplied, and commissioned Fire Alarm and FM-200 fire suppression systems for critical E-houses within the oil field.</p>
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mx-auto fade-in-up">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                        <i class="fas fa-list-check text-indigo-500"></i> Comprehensive Project Log
+                    </h3>
+                    
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                        <div class="max-h-[600px] overflow-y-auto project-scroll p-2">
+                            
+                            <div class="mb-6 px-6 pt-6">
+                                <h4 class="text-lg font-bold text-indigo-700 border-b border-indigo-100 pb-2 mb-4">Johnson Controls Arabia</h4>
+                                <ul class="space-y-4">
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <div>
+                                            <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Jubail Energy Service Co. Fire Protection Systems replacement and upgradation</p>
+                                        </div>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Nov 2023 – Present</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <div>
+                                            <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Dammam Camp Wet Chemical Fire Extinguishing System</p>
+                                            <p class="text-sm text-slate-500">Design, Supply Installation Testing and Commissioning</p>
+                                        </div>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Oct 2023 – Oct 2023</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <div>
+                                            <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Hardh Camp Wet Chemical Fire Extinguishing System</p>
+                                            <p class="text-sm text-slate-500">Design, Supply, Installation, Testing and Commissioning</p>
+                                        </div>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Aug 2023 – Sep 2023</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <div>
+                                            <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Rectification and Maintenance of PA/GA system @ Saudi Kayan</p>
+                                        </div>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Aug 2022 – Sep 2022</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6 px-6">
+                                <h4 class="text-lg font-bold text-indigo-700 border-b border-indigo-100 pb-2 mb-4">Heba Fire & Safety Equipments Company</h4>
+                                <ul class="space-y-4">
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <div>
+                                            <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Saudi Electricity Company - New Call Center Makkah</p>
+                                            <p class="text-sm text-slate-500">Design, Supply, testing and commissioning of Fire Alarm and Fm-200 Fire Suppression System</p>
+                                        </div>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Apr 2021 – Feb 2022</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Supply and installation of Fire Alarm System @ JT MTU Radar Room - ARAMCO</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Sep 2020 – Present</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">ARAMCO ABQAIQ FOAM CHAMBERS</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Jul 2020 – Mar 2021</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Apex Pharma - KAEC</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Mar 2020 – Present</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">JODRAN AL-WATAN PRECAST PANEL FACTORY, JUBAIL - Fire Protection Systems</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Sep 2019 – Jun 2020</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Marjan - E-houses Fire Alarm & Suppression system</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Sep 2019 – May 2021</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Supply of Fire Alarm system for Al Kifah batching plant</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Aug 2019 – Sep 2019</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Ras Tanura Fire Alarm System Replacement - ARAMCO</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Apr 2019 – Feb 2020</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Waad Al Shamaal - Fire protection systems for 7 pumping stations</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Feb 2019 – Nov 2019</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Port Control Center - Jazan Fire Protection Systems</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Jan 2019 – May 2020</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">KAPSARK Riyadh Fire Alarm system - Hi-Tech & Saudi ARAMCO</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Jan 2019 – Apr 2020</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Fire Protection System - GTG Load Compartment Mafriq</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Dec 2018 – Sep 2020</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">ARASCO - DPS Maintenance and rectification of Fire Systems</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Dec 2018 – Dec 2019</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">ARASCO DFM maintenance and rectification of Fire Suppression systems</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Dec 2018 – Dec 2019</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">FAAST system turnkey project</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Dec 2018 – Aug 2019</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Replacement of Fire Alarm Systems @ Jubail Desalination Plants</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Sep 2018 – Feb 2019</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Various projects in Saudi Arabia</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Sep 2015 – Present</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6 px-6">
+                                <h4 class="text-lg font-bold text-indigo-700 border-b border-indigo-100 pb-2 mb-4">Abunayyan Trading</h4>
+                                <ul class="space-y-4">
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <div>
+                                            <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">National Guard Housing - Thowal</p>
+                                            <p class="text-sm text-slate-500">Supply of 9 Dewatering pumps</p>
+                                        </div>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Jun 2017 – Nov 2018</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">King Fahad Armed Forces Hospital Warehouse</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Jan 2017 – Nov 2017</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <div>
+                                            <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Leejam Sports Company - Riyadh Warehouse</p>
+                                            <p class="text-sm text-slate-500">Logistics Solutions</p>
+                                        </div>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Feb 2016 – Jul 2016</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-4 px-6 pb-4">
+                                <h4 class="text-lg font-bold text-indigo-700 border-b border-indigo-100 pb-2 mb-4">Ayoubi Steel Furniture Factory</h4>
+                                <ul class="space-y-4">
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Jordanian Wheat Mills "Al Ghazal" Racking System</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Dec 2013 – Present</span>
+                                    </li>
+                                    <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 group">
+                                        <p class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors">Various projects in Jordan</p>
+                                        <span class="text-sm text-slate-500 whitespace-nowrap bg-slate-100 px-3 py-1 rounded-full">Feb 2013 – Jan 2015</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="py-24 bg-slate-50 border-y border-slate-200/60">
+        <section id="skills" class="py-24">
             <div class="container mx-auto px-6 fade-in-up">
                 <h2 class="section-title">Core Competencies & Tech Stack</h2>
                 
@@ -332,14 +502,14 @@
                         </h3>
                         <div class="flex flex-wrap">
                             <span class="skill-badge">Project Management (PMP)®</span>
-                            <span class="skill-badge">Fire Protection (CFPS)</span>
-                            <span class="skill-badge">NFPA Standards</span>
-                            <span class="skill-badge">Low Current Systems</span>
-                            <span class="skill-badge">Siemens S7-1200 & S7-1500</span>
+                            <span class="skill-badge">Certified Fire Protection Specialist (CFPS)</span>
                             <span class="skill-badge">Automation & SCADA</span>
-                            <span class="skill-badge">Building Management (BMS)</span>
+                            <span class="skill-badge">Servo, AC & DC Drives</span>
+                            <span class="skill-badge">Clean Agent Fire Suppression</span>
+                            <span class="skill-badge">Alternative Power Generation</span>
+                            <span class="skill-badge">3VA Molded Case Circuit Breakers</span>
                             <span class="skill-badge">Technical Sales</span>
-                            <span class="skill-badge">AutoCAD Design</span>
+                            <span class="skill-badge">English & Arabic (Bilingual)</span>
                         </div>
                     </div>
 
@@ -369,16 +539,27 @@
             <div class="container mx-auto px-6 text-center fade-in-up relative z-10">
                 <h2 class="text-4xl font-bold mb-6 tracking-tight">Let's Build the Future</h2>
                 <p class="text-slate-400 mb-10 max-w-2xl mx-auto text-lg font-light">
-                    Whether discussing industrial automation, workflow architecture, or exploring synergies in physical and digital systems—I am always open to connecting.
+                    Whether discussing industrial automation, strategic partnerships, or exploring synergies in physical and digital systems—I am always open to connecting.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
                     <a href="mailto:eng-m-a@outlook.com" class="flex items-center justify-center gap-3 bg-indigo-600 hover:bg-indigo-500 text-white w-full sm:w-auto px-8 py-4 rounded-full font-medium transition-all duration-300">
                         <i class="fas fa-envelope text-xl"></i>
                         eng-m-a@outlook.com
                     </a>
-                    <a href="https://www.linkedin.com/in/m-o-abdullah/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 w-full sm:w-auto px-8 py-4 rounded-full font-medium transition-all duration-300">
-                        <i class="fab fa-linkedin text-xl"></i>
-                        LinkedIn Profile
+                    <a href="tel:+966538766689" class="flex items-center justify-center gap-3 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 w-full sm:w-auto px-8 py-4 rounded-full font-medium transition-all duration-300">
+                        <i class="fas fa-phone text-xl"></i>
+                        +966-538766689
+                    </a>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="https://www.linkedin.com/in/m-o-abdullah" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i class="fab fa-linkedin text-xl"></i> LinkedIn
+                    </a>
+                    <span class="hidden sm:inline text-slate-600">|</span>
+                    <a href="https://xgurux90.github.io/MAbdullah/portfolio.html" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i class="fas fa-globe text-xl"></i> Personal Portfolio
                     </a>
                 </div>
             </div>
@@ -388,19 +569,13 @@
     <footer class="bg-slate-950 text-slate-500 py-8 border-t border-slate-800">
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-sm">&copy; <span id="year"></span> Mohammad Abdullah. All Rights Reserved.</p>
-            <div class="flex space-x-6">
-                <a href="#" class="hover:text-indigo-400 transition-colors"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/m-o-abdullah/" class="hover:text-indigo-400 transition-colors"><i class="fab fa-linkedin"></i></a>
-            </div>
         </div>
     </footer>
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Set current year
             document.getElementById('year').textContent = new Date().getFullYear();
 
-            // Mobile menu logic
             const header = document.getElementById('header');
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -409,7 +584,6 @@
                 mobileMenu.classList.toggle('hidden');
             });
             
-            // Smooth scroll & glassmorphism header
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -441,13 +615,12 @@
                 }
             });
 
-            // Enhanced Typing Effect
             const typingTextElement = document.getElementById('typing-text');
             const texts = [
-                "PMP® Certified Engineering Manager", 
-                "Leader in Automation & SCADA", 
-                "Software & Homelab Enthusiast",
-                "CFPS® Certified Fire Specialist"
+                "Sales & Marketing Manager", 
+                "Strategic Partnerships & Business Development",
+                "CFPS® Certified Fire Specialist",
+                "Leader in Automation & SCADA"
             ];
             let textIndex = 0;
             let charIndex = 0;
@@ -467,19 +640,18 @@
                 let typingSpeed = isDeleting ? 30 : 60;
 
                 if (!isDeleting && charIndex === currentText.length) {
-                    typingSpeed = 2500; // Pause at end of word
+                    typingSpeed = 2500;
                     isDeleting = true;
                 } else if (isDeleting && charIndex === 0) {
                     isDeleting = false;
                     textIndex = (textIndex + 1) % texts.length;
-                    typingSpeed = 500; // Pause before typing new word
+                    typingSpeed = 500;
                 }
 
                 setTimeout(type, typingSpeed);
             }
             setTimeout(type, 1000);
 
-            // Intersection Observer for Scroll Animations
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: "0px 0px -50px 0px"
@@ -489,7 +661,7 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // Run once
+                        observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
