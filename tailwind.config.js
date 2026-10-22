@@ -1,6 +1,6 @@
 /** Tailwind build for the static pages. Run `npm run build` after editing HTML classes. */
 module.exports = {
-    content: ['./index.html', './portfolio.html'],
+    content: ['./index.html', './ar.html'],
     theme: {
         extend: {
             fontFamily: {
