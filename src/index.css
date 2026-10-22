@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Page components for index.html. Rebuild with: npm run build */
+@layer components {
+        .section-title {
+            @apply text-3xl md:text-5xl font-extrabold text-slate-800 mb-16 text-center tracking-tight;
+        }
+
+        .section-title span {
+            @apply text-brand-500;
+        }
+
+        .neo-card {
+            @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100/80 transition-all duration-300;
+        }
+
+        .neo-card:hover {
+            @apply shadow-2xl shadow-brand-500/10 border-brand-200 -translate-y-1.5;
+        }
+
+        .skill-badge {
+            @apply bg-dark-900 text-brand-400 border border-brand-500/30 px-4 py-2.5 rounded-xl text-sm font-semibold tracking-wide shadow-sm hover:bg-brand-500 hover:text-white hover:border-brand-500 transition-colors duration-300 inline-block;
+        }
+
+        .timeline-dot {
+            @apply w-12 h-12 rounded-xl flex items-center justify-center border-4 border-slate-50 text-white font-bold shadow-lg z-10 shrink-0 transition-transform duration-300;
+        }
+
+        .group:hover .timeline-dot {
+            @apply scale-110;
+        }
+}

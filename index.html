@@ -5,37 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad Abdullah | Business Development Manager — Fire Protection</title>
     <meta name="description" content="Mohammad Abdullah PMP® CFPS® — Business Development Manager, Fire Protection. Gas suppression, fire pumps (NFPA 20), fire alarm & detection and consultative technical sales in Saudi Arabia.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Mohammad Abdullah PMP® CFPS® | Business Development Manager — Fire Protection">
+    <meta property="og:description" content="Gas suppression, fire pumps (NFPA 20), fire alarm &amp; detection and consultative technical sales — 14 years, 11 in Saudi Arabia.">
+    <meta property="og:url" content="https://xgurux90.github.io/MAbdullah/">
+    <meta property="og:image" content="https://xgurux90.github.io/MAbdullah/img/profile.jpg">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#ecfeff',
-                            100: '#cffafe',
-                            400: '#22d3ee',
-                            500: '#06b6d4',
-                            600: '#0891b2',
-                            900: '#164e63',
-                        },
-                        dark: {
-                            900: '#0f172a',
-                            800: '#1e293b',
-                            700: '#334155',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="css/index.css">
     <style>
         body {
             background-color: #f8fafc;
@@ -70,25 +52,10 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .section-title {
-            @apply text-3xl md:text-5xl font-extrabold text-slate-800 mb-16 text-center tracking-tight;
-        }
 
-        .section-title span {
-            @apply text-brand-500;
-        }
 
-        .neo-card {
-            @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100/80 transition-all duration-300;
-        }
         
-        .neo-card:hover {
-            @apply shadow-2xl shadow-brand-500/10 border-brand-200 -translate-y-1.5;
-        }
 
-        .skill-badge {
-            @apply bg-dark-900 text-brand-400 border border-brand-500/30 px-4 py-2.5 rounded-xl text-sm font-semibold tracking-wide shadow-sm hover:bg-brand-500 hover:text-white hover:border-brand-500 transition-colors duration-300 inline-block;
-        }
 
         .profile-img-container {
             position: relative;
@@ -119,13 +86,7 @@
             100% { transform: rotate(360deg); }
         }
 
-        .timeline-dot {
-            @apply w-12 h-12 rounded-xl flex items-center justify-center border-4 border-slate-50 text-white font-bold shadow-lg z-10 shrink-0 transition-transform duration-300;
-        }
         
-        .group:hover .timeline-dot {
-            @apply scale-110;
-        }
 
         .project-scroll::-webkit-scrollbar {
             width: 6px;
@@ -142,12 +103,12 @@
             background: #06b6d4; 
         }
 
-        .fade-in-up {
+        .js .fade-in-up {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .fade-in-up.visible {
+        .js .fade-in-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
@@ -169,10 +130,11 @@
                 <a href="#experience" class="px-5 py-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all text-sm font-semibold">Experience</a>
                 <a href="#projects" class="px-5 py-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all text-sm font-semibold">Projects</a>
                 <a href="#certifications" class="px-5 py-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all text-sm font-semibold">Certifications</a>
+                <a href="#education" class="px-5 py-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all text-sm font-semibold">Education</a>
                 <a href="#contact" class="px-6 py-2 bg-brand-500 hover:bg-brand-400 text-white rounded-full transition-all text-sm font-bold shadow-lg shadow-brand-500/20 ml-2">Contact</a>
             </div>
             
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2 bg-white/10 rounded-lg">
+            <button id="mobile-menu-btn" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden text-white focus:outline-none p-2 bg-white/10 rounded-lg">
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </nav>
@@ -183,6 +145,7 @@
                 <a href="#experience" class="py-3 text-slate-300 hover:text-white font-medium border-b border-white/5">Experience</a>
                 <a href="#projects" class="py-3 text-slate-300 hover:text-white font-medium border-b border-white/5">Projects</a>
                 <a href="#certifications" class="py-3 text-slate-300 hover:text-white font-medium border-b border-white/5">Certifications</a>
+                <a href="#education" class="py-3 text-slate-300 hover:text-white font-medium border-b border-white/5">Education</a>
                 <a href="#contact" class="py-3 text-brand-400 font-bold">Contact</a>
             </div>
         </div>
@@ -194,7 +157,7 @@
             
             <div class="container mx-auto px-6 text-center relative z-10">
                 <div class="profile-img-container mb-10">
-                    <img src="1650302875259.jpg" alt="M.O. Abdullah" class="rounded-full h-48 w-48 object-cover relative z-10 border-4 border-dark-900">
+                    <img src="img/profile.jpg" alt="M.O. Abdullah" class="rounded-full h-48 w-48 object-cover relative z-10 border-4 border-dark-900">
                 </div>
                 <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
                     Mohammad Abdullah
@@ -202,13 +165,13 @@
                 <p class="text-xl md:text-2xl font-bold text-brand-400 mb-8 tracking-tight">Business Development Manager — Fire Protection</p>
                 <div class="flex flex-wrap items-center justify-center gap-4 mb-8">
                     <span class="px-4 py-1.5 rounded-full bg-dark-800 border border-slate-700 text-brand-400 font-bold tracking-widest text-sm shadow-inner flex items-center gap-2">
-                        <img src="project-management-professional-pmp (1).png" alt="PMP" class="h-4 object-contain hidden sm:inline-block"> PMP®
+                        <img src="img/pmp.png" alt="PMP" class="h-4 object-contain hidden sm:inline-block"> PMP®
                     </span>
                     <span class="px-4 py-1.5 rounded-full bg-dark-800 border border-slate-700 text-brand-400 font-bold tracking-widest text-sm shadow-inner flex items-center gap-2">
-                        <img src="certified-fire-protection-specialist-cfps-certifica (1).png" alt="CFPS" class="h-4 object-contain hidden sm:inline-block"> CFPS®
+                        <img src="img/cfps.png" alt="CFPS" class="h-4 object-contain hidden sm:inline-block"> CFPS®
                     </span>
                     <span class="px-4 py-1.5 rounded-full bg-dark-800 border border-slate-700 text-brand-400 font-bold tracking-widest text-sm shadow-inner flex items-center gap-2">
-                        <img src="Saudi_Council_of_Engineers_Logo.svg.png" alt="SCE" class="h-4 object-contain hidden sm:inline-block"> SCE Engineer
+                        <img src="img/sce.png" alt="SCE" class="h-4 object-contain hidden sm:inline-block"> SCE Engineer
                     </span>
                 </div>
                 
@@ -373,7 +336,7 @@
                 <div class="max-w-5xl mx-auto space-y-12 relative before:absolute before:inset-0 before:ml-6 before:h-full before:w-1 before:bg-gradient-to-b before:from-brand-500 before:via-blue-300 before:to-slate-200 before:md:mx-auto">
                     
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="timeline-dot bg-brand-500 md:ml-[-1.35rem]">
+                        <div class="timeline-dot bg-brand-500 md:order-1 md:mx-6">
                             <i class="fas fa-fire-flame-curved text-xl"></i>
                         </div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] neo-card p-8 border-l-4 border-l-brand-500 group-odd:border-l-0 group-odd:border-r-4 group-odd:border-r-brand-500">
@@ -393,7 +356,7 @@
                     </div>
 
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="timeline-dot bg-blue-500 md:ml-[-1.35rem]">
+                        <div class="timeline-dot bg-blue-500 md:order-1 md:mx-6">
                             <i class="fas fa-chart-line text-xl"></i>
                         </div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] neo-card p-8 border-l-4 border-l-blue-500 group-odd:border-l-0 group-odd:border-r-4 group-odd:border-r-blue-500">
@@ -411,7 +374,7 @@
                     </div>
 
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="timeline-dot bg-indigo-500 md:ml-[-1.35rem]">
+                        <div class="timeline-dot bg-indigo-500 md:order-1 md:mx-6">
                             <i class="fas fa-building text-xl"></i>
                         </div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] neo-card p-8 border-l-4 border-l-indigo-500 group-odd:border-l-0 group-odd:border-r-4 group-odd:border-r-indigo-500">
@@ -429,7 +392,7 @@
                     </div>
 
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="timeline-dot bg-slate-700 md:ml-[-1.35rem]">
+                        <div class="timeline-dot bg-slate-700 md:order-1 md:mx-6">
                             <i class="fas fa-fire-extinguisher text-xl"></i>
                         </div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] neo-card p-8">
@@ -447,7 +410,7 @@
                     </div>
 
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="timeline-dot bg-slate-600 md:ml-[-1.35rem]">
+                        <div class="timeline-dot bg-slate-600 md:order-1 md:mx-6">
                             <i class="fas fa-gears text-xl"></i>
                         </div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] neo-card p-8">
@@ -464,7 +427,7 @@
                     </div>
 
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="timeline-dot bg-slate-500 md:ml-[-1.35rem]">
+                        <div class="timeline-dot bg-slate-500 md:order-1 md:mx-6">
                             <i class="fas fa-tools text-xl"></i>
                         </div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] neo-card p-8">
@@ -751,12 +714,6 @@
                                         </div>
                                         <span class="text-[11px] font-bold text-slate-400 w-fit">Sep 2018 – Feb 2019</span>
                                     </div>
-                                    <div class="p-4 hover:bg-slate-50 rounded-xl border border-slate-100 transition-colors flex flex-col justify-between h-full lg:col-span-2">
-                                        <div class="mb-3">
-                                            <p class="font-bold text-slate-700">Various projects in Saudi Arabia</p>
-                                        </div>
-                                        <span class="text-[11px] font-bold text-slate-400 w-fit">Sep 2015 – Jan 2016</span>
-                                    </div>
                                 </div>
                             </div>
 
@@ -818,13 +775,6 @@
                                         </div>
                                         <span class="text-xs font-bold text-slate-500 whitespace-nowrap bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">Dec 2013 – Feb 2014</span>
                                     </li>
-                                    <li class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 p-4 hover:bg-slate-50 rounded-xl border border-transparent hover:border-slate-100 transition-colors">
-                                        <div class="flex items-start gap-3">
-                                            <i class="fas fa-caret-right text-brand-500 mt-1"></i>
-                                            <p class="font-bold text-slate-700">Various projects in Jordan</p>
-                                        </div>
-                                        <span class="text-xs font-bold text-slate-500 whitespace-nowrap bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">Feb 2013 – Jan 2015</span>
-                                    </li>
                                 </ul>
                             </div>
                             
@@ -840,7 +790,7 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
                     <div class="neo-card p-8 flex flex-col items-center text-center">
-                        <img src="project-management-professional-pmp (1).png" alt="PMP Logo" class="h-20 mb-6 object-contain">
+                        <img src="img/pmp.png" alt="PMP Logo" class="h-20 mb-6 object-contain">
                         <h3 class="text-xl font-extrabold text-slate-900 mb-2">Project Management Professional (PMP)®</h3>
                         <p class="text-brand-600 font-bold text-sm mb-4">Project Management Institute</p>
                         <div class="mt-auto border-t border-slate-100 pt-4 w-full">
@@ -849,7 +799,7 @@
                     </div>
                     
                     <div class="neo-card p-8 flex flex-col items-center text-center">
-                        <img src="certified-fire-protection-specialist-cfps-certifica (1).png" alt="CFPS Logo" class="h-20 mb-6 object-contain">
+                        <img src="img/cfps.png" alt="CFPS Logo" class="h-20 mb-6 object-contain">
                         <h3 class="text-xl font-extrabold text-slate-900 mb-2">Certified Fire Protection Specialist (CFPS)</h3>
                         <p class="text-brand-600 font-bold text-sm mb-4">National Fire Protection Association</p>
                         <div class="mt-auto border-t border-slate-100 pt-4 w-full">
@@ -858,7 +808,7 @@
                     </div>
 
                     <div class="neo-card p-8 flex flex-col items-center text-center">
-                        <img src="Saudi_Council_of_Engineers_Logo.svg.png" alt="SCE Logo" class="h-20 mb-6 object-contain">
+                        <img src="img/sce.png" alt="SCE Logo" class="h-20 mb-6 object-contain">
                         <h3 class="text-xl font-extrabold text-slate-900 mb-2">Professional Engineer</h3>
                         <p class="text-brand-600 font-bold text-sm mb-4">Saudi Council of Engineers (SCE)</p>
                         <div class="mt-auto border-t border-slate-100 pt-4 w-full">
@@ -1085,7 +1035,8 @@
             const mobileMenu = document.getElementById('mobile-menu');
             
             mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+                const isOpen = !mobileMenu.classList.toggle('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
             });
             
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1093,9 +1044,12 @@
                     e.preventDefault();
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
                     }
                     const targetId = this.getAttribute('href');
-                    if (targetId.length > 1) {
+                    if (targetId === '#') {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                    } else {
                         const targetElement = document.querySelector(targetId);
                         const headerOffset = 90;
                         const elementPosition = targetElement.getBoundingClientRect().top;

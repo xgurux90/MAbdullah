@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad Abdullah | Business Development Manager — Fire Protection</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Mohammad Abdullah PMP® CFPS® — fire protection business development: gas suppression, fire pumps, fire alarm &amp; detection, industrial automation and power projects in Saudi Arabia.">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Mohammad Abdullah PMP® CFPS® | Portfolio">
+    <meta property="og:description" content="Fire protection, detection, automation and power projects across Saudi Arabia.">
+    <meta property="og:url" content="https://xgurux90.github.io/MAbdullah/portfolio.html">
+    <meta property="og:image" content="https://xgurux90.github.io/MAbdullah/img/profile.jpg">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -18,25 +27,13 @@
             background-image: radial-gradient(circle at 1px 1px, #374151 1px, transparent 0);
             background-size: 20px 20px;
         }
-        .section-title {
-            @apply text-3xl font-bold text-gray-800 mb-8 text-center;
-        }
-        .card {
-            @apply bg-white rounded-xl shadow-md overflow-hidden;
-        }
-        .nav-link {
-            @apply px-4 py-2 text-gray-300 hover:text-white transition-colors duration-300 rounded-md;
-        }
-        .skill-badge {
-            @apply bg-blue-100 text-blue-800 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full;
-        }
         /* Fade-in animation on scroll */
-        .fade-in-up {
+        .js .fade-in-up {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        .fade-in-up.visible {
+        .js .fade-in-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
@@ -59,7 +56,7 @@
 
     <header id="header" class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-white">M. O. Abdullah</a>
+            <a href="#" class="text-xl font-bold text-white">M. Abdullah</a>
             <div class="hidden md:flex items-center space-x-2">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#experience" class="nav-link">Experience</a>
@@ -68,7 +65,7 @@
                 <a href="#certifications" class="nav-link">Certifications</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <button id="mobile-menu-btn" class="md:hidden text-white">
+            <button id="mobile-menu-btn" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
@@ -87,8 +84,8 @@
     <main>
         <section class="hero-bg text-white pt-32 pb-20">
             <div class="container mx-auto px-6 text-center">
-                <img src="1650302875259.jpg" alt="M.O. Abdullah" class="rounded-full h-40 w-40 object-cover border-4 border-gray-600 mx-auto mb-6">
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Mohammad Omar Abdullah</h1>
+                <img src="img/profile.jpg" alt="M.O. Abdullah" class="rounded-full h-40 w-40 object-cover border-4 border-gray-600 mx-auto mb-6">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Mohammad Abdullah</h1>
                 <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                     <span id="typing-text"></span><span class="typing-cursor"></span>
                 </p>
@@ -118,7 +115,7 @@
                 <h2 class="section-title">Professional Experience</h2>
                 <div class="max-w-4xl mx-auto space-y-8 relative before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:bg-gray-300 before:md:mx-auto before:md:w-px">
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white bg-blue-500 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-lg font-bold shadow-md">1</div>
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white bg-blue-500 md:order-1 md:mx-5 text-white text-lg font-bold shadow-md">1</div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-md">
                             <h3 class="font-bold text-xl text-gray-800">Senior Sales Engineer — Fire Protection</h3>
                             <p class="text-md font-semibold text-gray-600">M.H. Sherbiny</p>
@@ -131,34 +128,32 @@
                         </div>
                     </div>
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white bg-blue-500 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-lg font-bold shadow-md">2</div>
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white bg-blue-500 md:order-1 md:mx-5 text-white text-lg font-bold shadow-md">2</div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-md">
                             <h3 class="font-bold text-xl text-gray-800">Sales Manager</h3>
-                            <p class="text-md font-semibold text-gray-600">SUBWAY NETWORKS (Siemens Partner)</p>
+                            <p class="text-md font-semibold text-gray-600">Subway Networks</p>
                             <p class="text-sm text-gray-500 mb-2">Oct 2024 - May 2026 | Dammam, Saudi Arabia</p>
-                            <p class="text-gray-600 mb-2">Leading a team of 10 sales engineers specializing in SCADA, sensors, and low current systems.</p>
+                            <p class="text-gray-600 mb-2">Led a 10-person team (7 inside, 3 outside sales engineers) delivering automation, SCADA, instrumentation and gas detection projects.</p>
                             <ul class="list-disc list-inside text-sm text-gray-600">
-                                <li>Successfully registered company as approved vendor for: <strong>Saudi Aramco, SABIC, SEC, Maaden, and Siemens Energy</strong>.</li>
-                                <li>Expanded portfolio into IoT (MindSphere) and Fire Suppression.</li>
+                                <li>Opened a fire protection revenue stream alongside BMS, CCTV, access control and public address.</li>
                                 <li>Grew annual revenue by ~60% and won the company's largest-ever project: a <strong>SAR 17M</strong> MV cable contract at Hadeed.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white bg-blue-500 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-lg font-bold shadow-md">3</div>
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white bg-blue-500 md:order-1 md:mx-5 text-white text-lg font-bold shadow-md">3</div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-md">
                             <h3 class="font-bold text-xl text-gray-800">Senior Sales Engineer — Fire Suppression &amp; Life Safety</h3>
                             <p class="text-md font-semibold text-gray-600">Johnson Controls Arabia</p>
                             <p class="text-sm text-gray-500 mb-2">Apr 2022 - Oct 2024</p>
-                            <p class="text-gray-600">Spearheaded market entry for new product lines.</p>
+                            <p class="text-gray-600">Sold FM-200 clean agent, wet chemical kitchen suppression and PA/GA systems to industrial, oil &amp; gas and food-processing clients.</p>
                             <ul class="list-disc list-inside text-sm text-gray-600 mt-2">
-                                <li>Implemented sales plans resulting in a <strong>180% revenue increase</strong>.</li>
-                                <li>Achieved 50% increase in repeat business through technical consultancy in Steel and Mining sectors.</li>
+                                <li>Grew revenue by <strong>180%</strong> and repeat business by <strong>50%</strong> through a consultative account strategy.</li>
                             </ul>
                         </div>
                     </div>
                      <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white bg-blue-500 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-lg font-bold shadow-md">4</div>
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white bg-blue-500 md:order-1 md:mx-5 text-white text-lg font-bold shadow-md">4</div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-md">
                             <h3 class="font-bold text-xl text-gray-800">Project Sales Engineer — Fire Protection</h3>
                             <p class="text-md font-semibold text-gray-600">Heba Fire &amp; Safety Equipment Co.</p>
@@ -167,7 +162,7 @@
                         </div>
                     </div>
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white bg-blue-500 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-lg font-bold shadow-md">5</div>
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white bg-blue-500 md:order-1 md:mx-5 text-white text-lg font-bold shadow-md">5</div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-md">
                             <h3 class="font-bold text-xl text-gray-800">Project Sales Engineer — Pumps &amp; Power</h3>
                             <p class="text-md font-semibold text-gray-600">Abunayyan Trading Corp.</p>
@@ -176,7 +171,7 @@
                         </div>
                     </div>
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-up">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white bg-blue-500 group-odd:order-1 group-odd:ml-auto md:ml-0 text-white text-lg font-bold shadow-md">6</div>
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white bg-blue-500 md:order-1 md:mx-5 text-white text-lg font-bold shadow-md">6</div>
                         <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-md">
                             <h3 class="font-bold text-xl text-gray-800">Technical Sales Engineer</h3>
                             <p class="text-md font-semibold text-gray-600">Ayoubi Steel Factory</p>
@@ -192,21 +187,21 @@
                 <h2 class="section-title">Key Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <div class="card fade-in-up p-6 flex flex-col border-l-4 border-blue-500">
-                        <h3 class="font-bold text-xl mb-2 text-gray-800">RTU Aindar Wasia Well-965</h3>
-                        <p class="text-sm font-semibold text-gray-500 mb-3">Client: Saudi Aramco</p>
-                        <p class="text-gray-600 flex-grow">Technical sales and delivery of Remote Terminal Units (RTU) for well monitoring.</p>
+                        <h3 class="font-bold text-xl mb-2 text-gray-800">H2 Gas Detection System</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Client: Aujan Coca-Cola Beverages</p>
+                        <p class="text-gray-600 flex-grow">Design, supply, installation, testing and commissioning of an H2 gas detection system, plus H2S sensors integrated into an existing Siemens SCADA system.</p>
                         <p class="text-xs text-gray-400 mt-4">Associated with Subway Networks</p>
                     </div>
                     <div class="card fade-in-up p-6 flex flex-col border-l-4 border-blue-500">
-                        <h3 class="font-bold text-xl mb-2 text-gray-800">Sea Water Cooling RTU System</h3>
-                        <p class="text-sm font-semibold text-gray-500 mb-3">Client: MARAFIQ (Jubail 2)</p>
-                        <p class="text-gray-600 flex-grow">Supply, installation, and commissioning of RTU systems for critical cooling infrastructure.</p>
+                        <h3 class="font-bold text-xl mb-2 text-gray-800">60 km MV Cable Revamp</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Client: Hadeed (Saudi Iron &amp; Steel)</p>
+                        <p class="text-gray-600 flex-grow">SAR 17M revamp, replacement, testing and commissioning of MV cables for six feeders, with cable tray replacement and crane motion control.</p>
                         <p class="text-xs text-gray-400 mt-4">Associated with Subway Networks</p>
                     </div>
                     <div class="card fade-in-up p-6 flex flex-col border-l-4 border-blue-500">
-                        <h3 class="font-bold text-xl mb-2 text-gray-800">PLC Control Upgrade</h3>
-                        <p class="text-sm font-semibold text-gray-500 mb-3">Client: NADEC</p>
-                        <p class="text-gray-600 flex-grow">Upgrade of PC-based PLC control using Siemens Open Controller technology.</p>
+                        <h3 class="font-bold text-xl mb-2 text-gray-800">VFD Booster Pumps</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Client: Saudi Aramco (Tanajib)</p>
+                        <p class="text-gray-600 flex-grow">Supply of variable frequency drives for booster pumps.</p>
                         <p class="text-xs text-gray-400 mt-4">Associated with Subway Networks</p>
                     </div>
                     <div class="card fade-in-up p-6 flex flex-col">
@@ -235,7 +230,7 @@
                     </div>
                      <div class="card fade-in-up p-6 flex flex-col">
                         <h3 class="font-bold text-xl mb-2 text-gray-800">Waad Al Shamaal Pumping Stations</h3>
-                        <p class="text-sm font-semibold text-gray-500 mb-3">Client: Waad Al Shamaal</p>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Client: Ma'aden</p>
                         <p class="text-gray-600 flex-grow">Implemented comprehensive fire protection systems for seven critical pumping stations.</p>
                         <p class="text-xs text-gray-400 mt-4">Associated with Heba Fire & Safety</p>
                     </div>
@@ -275,19 +270,19 @@
                 <h2 class="section-title">Licenses & Certifications</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <div class="card fade-in-up flex flex-col items-center text-center p-6 transition-transform duration-300 transform hover:-translate-y-1">
-                        <img src="project-management-professional-pmp (1).png" alt="PMP Certification Logo" class="h-16 mb-4">
+                        <img src="img/pmp.png" alt="PMP Certification Logo" class="h-16 mb-4">
                         <h3 class="font-bold text-xl mb-2 text-gray-800">Project Management Professional (PMP)®</h3>
                         <p class="text-gray-600">Project Management Institute</p>
                         <p class="text-sm text-gray-500 mt-2">ID: 3128273 | Valid: 2027</p>
                     </div>
                     <div class="card fade-in-up flex flex-col items-center text-center p-6 transition-transform duration-300 transform hover:-translate-y-1">
-                        <img src="certified-fire-protection-specialist-cfps-certifica (1).png" alt="CFPS Logo" class="h-16 mb-4">
+                        <img src="img/cfps.png" alt="CFPS Logo" class="h-16 mb-4">
                         <h3 class="font-bold text-xl mb-2 text-gray-800">Certified Fire Protection Specialist (CFPS)</h3>
                         <p class="text-gray-600">National Fire Protection Association</p>
                         <p class="text-sm text-gray-500 mt-2">ID: 1131510-CFPS | Valid: 2027</p>
                     </div>
                      <div class="card fade-in-up flex flex-col items-center text-center p-6 transition-transform duration-300 transform hover:-translate-y-1">
-                        <img src="Saudi_Council_of_Engineers_Logo.svg.png" alt="SCE Logo" class="h-16 mb-4 object-contain">
+                        <img src="img/sce.png" alt="SCE Logo" class="h-16 mb-4 object-contain">
                         <h3 class="font-bold text-xl mb-2 text-gray-800">Accredited Engineer</h3>
                         <p class="text-gray-600">Saudi Council of Engineers</p>
                         <p class="text-sm text-gray-500 mt-2">Mechatronics | ID: 251526</p>
@@ -295,14 +290,14 @@
                     <div class="card fade-in-up md:col-span-2 lg:col-span-3 p-6">
                         <h3 class="font-bold text-xl text-center mb-4 text-gray-800">Technical Training Partners</h3>
                         <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 mb-6">
-                            <img src="Honeywell.png" alt="Honeywell" class="h-10">
-                            <img src="imgbin-3m-adhesive-tape-logo-quality-meguiars-d4knn2ZhWteZkEKKRSP0z5xG6.jpg" alt="3M" class="h-8">
-                            <img src="FEMA-Symbol.png" alt="FEMA" class="h-10">
-                             <img src="Schneider_Electric_2007.svg.png" alt="Schneider Electric" class="h-12">
-                            <img src="604-6044642_kohler-logo-png-transparent-kohler-logo-vector-png.png" alt="Kohler" class="h-10">
+                            <img src="img/honeywell.png" alt="Honeywell" class="h-10">
+                            <img src="img/3m.jpg" alt="3M" class="h-8">
+                            <img src="img/fema.png" alt="FEMA" class="h-10">
+                             <img src="img/schneider.png" alt="Schneider Electric" class="h-12">
+                            <img src="img/kohler.png" alt="Kohler" class="h-10">
                         </div>
                         <div class="text-sm text-gray-600 text-center max-w-3xl mx-auto">
-                            <p class="mb-2"><strong>Recent Technical Certifications (2025):</strong></p>
+                            <p class="mb-2"><strong>Recent Technical Training (2024 – 2025):</strong></p>
                             <p>Siemens SITRAIN (Protection Systems, 3WA/3VA Breakers) | Honeywell Security (Access Control, Video Systems)</p>
                         </div>
                     </div>
@@ -330,7 +325,7 @@
 
     <footer class="bg-gray-800 text-gray-400 py-6">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; <span id="year"></span> Mohammad Omar Abdullah. All Rights Reserved.</p>
+            <p>&copy; <span id="year"></span> Mohammad Abdullah. All Rights Reserved.</p>
         </div>
     </footer>
     
@@ -343,7 +338,8 @@
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+                const isOpen = !mobileMenu.classList.toggle('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
             });
             
             // Smooth scroll for nav links and close mobile menu on click
@@ -352,9 +348,12 @@
                     e.preventDefault();
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
                     }
                     const targetId = this.getAttribute('href');
-                    if (targetId.length > 1) {
+                    if (targetId === '#') {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    } else {
                         document.querySelector(targetId).scrollIntoView({
                             behavior: 'smooth'
                         });

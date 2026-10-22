@@ -1,0 +1,10 @@
+{
+  "name": "mabdullah-site",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i src/index.css -o css/index.css --minify && tailwindcss -i src/portfolio.css -o css/portfolio.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}
