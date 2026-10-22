@@ -13,8 +13,9 @@ Published with GitHub Pages at https://xgurux90.github.io/MAbdullah/
 
 ## Editing
 
-Edit the HTML directly. Styles come from Tailwind classes compiled into `css/index.css`, and icons are
-referenced as `<use href="img/icons.svg#solid-…">` from Font Awesome Free.
+Edit the HTML directly. Styles come from Tailwind classes compiled into `css/index.css` (colours and
+fonts are defined in `tailwind.config.js`, shared components in `src/index.css`). Fonts are self-hosted in
+`fonts/`, and icons are referenced as `<use href="img/icons.svg#solid-…">` from Font Awesome Free.
 
 After a change is pushed to `main`, the **Build CSS** GitHub Action recompiles `css/` and `img/icons.svg`
 automatically. To build locally instead:
