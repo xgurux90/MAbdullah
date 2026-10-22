@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Page components for index.html. Rebuild with: npm run build */
+@layer components {
+        .section-title {
+            @apply text-3xl md:text-5xl font-extrabold text-slate-800 mb-16 text-center tracking-tight;
+        }
+
+        .section-title span {
+            @apply text-brand-500;
+        }
+
+        .neo-card {
+            @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100/80 transition-all duration-300;
+        }
+
+        .neo-card:hover {
+            @apply shadow-2xl shadow-brand-500/10 border-brand-200 -translate-y-1.5;
+        }
+
+        .skill-badge {
+            @apply bg-dark-900 text-brand-400 border border-brand-500/30 px-4 py-2.5 rounded-xl text-sm font-semibold tracking-wide shadow-sm hover:bg-brand-500 hover:text-white hover:border-brand-500 transition-colors duration-300 inline-block;
+        }
+
+        .timeline-dot {
+            @apply w-12 h-12 rounded-xl flex items-center justify-center border-4 border-slate-50 text-white font-bold shadow-lg z-10 shrink-0 transition-transform duration-300;
+        }
+
+        .group:hover .timeline-dot {
+            @apply scale-110;
+        }
+}
+
+/* Page-level styles shared by index.html and ar.html */
+body {
+    background-color: #f8fafc;
+    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+.hero-pattern {
+    background-color: #0f172a;
+    background-image: 
+        linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    position: relative;
+}
+
+.hero-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.glass-nav {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-img-container {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+}
+
+.profile-img-container::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #06b6d4, #3b82f6, #06b6d4);
+    animation: spin 4s linear infinite;
+    z-index: -1;
+}
+
+.profile-img-container::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: #0f172a;
+    z-index: -1;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+.js .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.js .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Inline SVG icons from img/icons.svg (built by tools/build-icons.js) */
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    vertical-align: -0.125em;
+}
+
+/* Filtered-out project cards (their flex class would otherwise override [hidden]) */
+.project-card[hidden] {
+    display: none;
+}
+
+/* Floating WhatsApp button appears once the hero has scrolled away */
+.js .whatsapp-float {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.js .whatsapp-float.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+}
+
+/* Print: a clean, CV-like copy of the page */
+@media print {
+    @page { margin: 14mm; }
+
+    #header,
+    #mobile-menu,
+    .whatsapp-float,
+    .hero-glow,
+    .project-filter,
+    footer,
+    a[download] {
+        display: none !important;
+    }
+
+    body,
+    section,
+    .hero-pattern {
+        background: #fff !important;
+        color: #1e293b !important;
+    }
+
+    .hero-pattern *,
+    .hero-pattern .section-title {
+        color: #1e293b !important;
+    }
+
+    .hero-pattern [class*="bg-"] {
+        background: transparent !important;
+        border-color: #cbd5e1 !important;
+        box-shadow: none !important;
+    }
+
+    a[href^="https://wa.me"],
+    a[href="#case-studies"],
+    #projects-more {
+        display: none !important;
+    }
+
+    section {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+        min-height: 0 !important;
+        border: 0 !important;
+    }
+
+    .section-title {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .neo-card,
+    article {
+        box-shadow: none !important;
+        border: 1px solid #e2e8f0 !important;
+        transform: none !important;
+        break-inside: avoid;
+    }
+
+    .project-card[hidden] {
+        display: flex !important;
+    }
+
+    .fade-in-up,
+    .js .fade-in-up {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .profile-img-container::before,
+    .profile-img-container::after {
+        display: none;
+    }
+
+    a[href^="mailto:"]::after,
+    a[href^="tel:"]::after {
+        content: none;
+    }
+}

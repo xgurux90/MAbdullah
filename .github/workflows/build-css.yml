@@ -1,0 +1,41 @@
+# Rebuilds css/index.css and img/icons.svg whenever the pages or Tailwind sources change, so
+# edits made directly on GitHub still get their Tailwind classes compiled.
+name: Build CSS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'src/**'
+      - 'tools/**'
+      - 'tailwind.config.js'
+      - 'package.json'
+      - 'package-lock.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Commit rebuilt CSS
+        run: |
+          if git diff --quiet -- css img/icons.svg; then
+            echo "CSS and icons already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add css img/icons.svg
+          git commit -m "Rebuild CSS and icons"
+          git push
