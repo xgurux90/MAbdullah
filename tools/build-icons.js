@@ -10,7 +10,7 @@ const svgDir = path.join(root, 'node_modules/@fortawesome/fontawesome-free/svgs'
 const ids = new Set();
 for (const page of pages) {
     const html = fs.readFileSync(path.join(root, page), 'utf8');
-    for (const m of html.matchAll(/icons\.svg#((?:solid|regular|brands)-[a-z0-9-]+)/g)) ids.add(m[1]);
+    for (const m of html.matchAll(/icons\.svg(?:\?v=[0-9a-f]+)?#((?:solid|regular|brands)-[a-z0-9-]+)/g)) ids.add(m[1]);
 }
 
 const symbols = [...ids].sort().map(id => {

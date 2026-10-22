@@ -2,7 +2,7 @@
   "name": "mabdullah-site",
   "private": true,
   "scripts": {
-    "build": "node tools/build-icons.js && tailwindcss -i src/index.css -o css/index.css --minify"
+    "build": "node tools/build-icons.js && tailwindcss -i src/index.css -o css/index.css --minify && node tools/stamp-assets.js"
   },
   "devDependencies": {
     "@fontsource/barlow": "^5.0.13",
