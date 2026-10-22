@@ -1,109 +1,131 @@
+/* Self-hosted fonts (from @fontsource) */
+@font-face { font-family: 'Barlow'; font-weight: 400; font-display: swap; src: url(../fonts/barlow-latin-400-normal.woff2) format('woff2'); }
+@font-face { font-family: 'Barlow'; font-weight: 500; font-display: swap; src: url(../fonts/barlow-latin-500-normal.woff2) format('woff2'); }
+@font-face { font-family: 'Barlow'; font-weight: 600; font-display: swap; src: url(../fonts/barlow-latin-600-normal.woff2) format('woff2'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 600; font-display: swap; src: url(../fonts/barlow-condensed-latin-600-normal.woff2) format('woff2'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 700; font-display: swap; src: url(../fonts/barlow-condensed-latin-700-normal.woff2) format('woff2'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 800; font-display: swap; src: url(../fonts/barlow-condensed-latin-800-normal.woff2) format('woff2'); }
+@font-face { font-family: 'IBM Plex Sans Arabic'; font-weight: 400; font-display: swap; src: url(../fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: 'IBM Plex Sans Arabic'; font-weight: 500; font-display: swap; src: url(../fonts/ibm-plex-sans-arabic-arabic-500-normal.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: 'IBM Plex Sans Arabic'; font-weight: 600; font-display: swap; src: url(../fonts/ibm-plex-sans-arabic-arabic-600-normal.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: 'IBM Plex Sans Arabic'; font-weight: 700; font-display: swap; src: url(../fonts/ibm-plex-sans-arabic-arabic-700-normal.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Page components for index.html. Rebuild with: npm run build */
+/* Page components. Rebuild with: npm run build */
+@layer base {
+    html:lang(ar) {
+        font-family: 'IBM Plex Sans Arabic', 'Barlow', sans-serif;
+    }
+
+    html:lang(ar) .font-display {
+        font-family: 'IBM Plex Sans Arabic', 'Barlow Condensed', sans-serif;
+        letter-spacing: 0;
+    }
+}
+
 @layer components {
-        .section-title {
-            @apply text-3xl md:text-5xl font-extrabold text-slate-800 mb-16 text-center tracking-tight;
-        }
+    .eyebrow {
+        @apply font-display font-bold uppercase tracking-[0.2em] text-[15px] text-ember;
+    }
 
-        .section-title span {
-            @apply text-brand-500;
-        }
+    .heading {
+        @apply font-display font-extrabold uppercase leading-[0.95] text-5xl md:text-6xl;
+    }
 
-        .neo-card {
-            @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100/80 transition-all duration-300;
-        }
+    .fire-text {
+        @apply bg-gradient-to-r from-ember to-fire bg-clip-text text-transparent;
+    }
 
-        .neo-card:hover {
-            @apply shadow-2xl shadow-brand-500/10 border-brand-200 -translate-y-1.5;
-        }
+    .fire-bar {
+        @apply h-1.5 w-28 bg-gradient-to-r from-fire to-ember;
+    }
 
-        .skill-badge {
-            @apply bg-dark-900 text-brand-400 border border-brand-500/30 px-4 py-2.5 rounded-xl text-sm font-semibold tracking-wide shadow-sm hover:bg-brand-500 hover:text-white hover:border-brand-500 transition-colors duration-300 inline-block;
-        }
+    .btn {
+        @apply inline-flex items-center justify-center gap-3 px-7 py-4 font-display font-bold uppercase tracking-[0.08em] text-lg transition-all duration-300;
+        clip-path: polygon(0 0, 100% 0, 100% 70%, calc(100% - 14px) 100%, 0 100%);
+    }
 
-        .timeline-dot {
-            @apply w-12 h-12 rounded-xl flex items-center justify-center border-4 border-slate-50 text-white font-bold shadow-lg z-10 shrink-0 transition-transform duration-300;
-        }
+    .btn-fire {
+        @apply btn text-white bg-gradient-to-r from-fire to-ember hover:brightness-110;
+    }
 
-        .group:hover .timeline-dot {
-            @apply scale-110;
-        }
+    .btn-ghost {
+        @apply btn text-white border-2 border-white/30 hover:border-ember hover:text-ember;
+    }
+
+    .btn-dark {
+        @apply btn text-white bg-steel-900 hover:bg-steel-800;
+    }
+
+    .btn-whatsapp {
+        @apply btn text-white bg-[#25D366] hover:bg-[#1ebe5b];
+    }
+
+    .card {
+        @apply bg-white shadow-[0_20px_50px_-30px_rgba(20,22,25,0.35)] transition-transform duration-300;
+    }
+
+    .card-fire {
+        @apply card border-t-[6px] border-ember;
+    }
+
+    .tag {
+        @apply inline-block font-display font-bold uppercase tracking-[0.12em] text-sm text-fire;
+    }
+
+    .nav-link {
+        @apply px-3 py-2 font-display font-semibold uppercase tracking-[0.08em] text-[15px] text-steel-300 hover:text-white transition-colors;
+    }
+
+    .ill {
+        @apply w-full h-36 text-steel-900;
+    }
 }
 
-/* Page-level styles shared by index.html and ar.html */
-body {
-    background-color: #f8fafc;
-    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
-    background-size: 32px 32px;
-}
-
-.hero-pattern {
-    background-color: #0f172a;
-    background-image: 
-        linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
-    position: relative;
-}
-
-.hero-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
-    z-index: 0;
-    pointer-events: none;
+/* Dark steel texture used behind the hero, approach and contact sections */
+.steel {
+    background-color: #141619;
+    background-image:
+        radial-gradient(ellipse at 78% 35%, rgba(255, 106, 26, 0.2), transparent 55%),
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.025) 0 2px, transparent 2px 14px);
 }
 
 .glass-nav {
-    background: rgba(15, 23, 42, 0.85);
+    background: rgba(20, 22, 25, 0.92);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.profile-img-container {
+/* Hero portrait fades into the dark background: from the bottom on phones, from the side on desktop */
+.hero-photo img {
+    -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+}
+
+@media (min-width: 1024px) {
+    .hero-photo img {
+        -webkit-mask-image: linear-gradient(to right, transparent 0, #000 32%);
+        mask-image: linear-gradient(to right, transparent 0, #000 32%);
+    }
+
+    [dir="rtl"] .hero-photo img {
+        -webkit-mask-image: linear-gradient(to left, transparent 0, #000 32%);
+        mask-image: linear-gradient(to left, transparent 0, #000 32%);
+    }
+}
+
+/* Large faint numbers behind cards */
+.ghost-num {
+    @apply absolute bottom-[-0.15em] end-5 font-display font-extrabold text-[7.5rem] leading-none text-[#f1ece4] select-none pointer-events-none;
+    z-index: 0;
+}
+
+.ghost-num ~ * {
     position: relative;
-    display: inline-block;
-    z-index: 10;
-}
-
-.profile-img-container::before {
-    content: '';
-    position: absolute;
-    inset: -8px;
-    border-radius: 50%;
-    background: conic-gradient(from 0deg, #06b6d4, #3b82f6, #06b6d4);
-    animation: spin 4s linear infinite;
-    z-index: -1;
-}
-
-.profile-img-container::after {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    border-radius: 50%;
-    background: #0f172a;
-    z-index: -1;
-}
-
-@keyframes spin {
-    100% { transform: rotate(360deg); }
-}
-
-.js .fade-in-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.js .fade-in-up.visible {
-    opacity: 1;
-    transform: translateY(0);
+    z-index: 1;
 }
 
 /* Inline SVG icons from img/icons.svg (built by tools/build-icons.js) */
@@ -113,6 +135,30 @@ body {
     height: 1em;
     fill: currentColor;
     vertical-align: -0.125em;
+}
+
+/* Scroll-in animation, only when JavaScript is running */
+.js .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.js .fade-in-up.visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .js .fade-in-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
 
 /* Filtered-out project cards (their flex class would otherwise override [hidden]) */
@@ -141,54 +187,53 @@ body {
     #header,
     #mobile-menu,
     .whatsapp-float,
-    .hero-glow,
     .project-filter,
+    #projects-more,
     footer,
-    a[download] {
+    a[download],
+    a[href^="https://wa.me"],
+    .hero-actions {
         display: none !important;
     }
 
     body,
     section,
-    .hero-pattern {
+    .steel {
         background: #fff !important;
-        color: #1e293b !important;
+        color: #141619 !important;
     }
 
-    .hero-pattern *,
-    .hero-pattern .section-title {
-        color: #1e293b !important;
+    .steel *,
+    .steel .heading {
+        color: #141619 !important;
     }
 
-    .hero-pattern [class*="bg-"] {
+    .steel .fire-text {
+        -webkit-text-fill-color: #e5262f;
+    }
+
+    .steel [class*="bg-"] {
         background: transparent !important;
-        border-color: #cbd5e1 !important;
-        box-shadow: none !important;
+        border-color: #d4d4d4 !important;
     }
 
-    a[href^="https://wa.me"],
-    a[href="#case-studies"],
-    #projects-more {
-        display: none !important;
+    .hero-photo img {
+        -webkit-mask-image: none;
+        mask-image: none;
+        max-height: 70mm;
+        width: auto !important;
     }
 
     section {
-        padding-top: 1.5rem !important;
-        padding-bottom: 1.5rem !important;
+        padding-top: 1.25rem !important;
+        padding-bottom: 1.25rem !important;
         min-height: 0 !important;
-        border: 0 !important;
     }
 
-    .section-title {
-        font-size: 1.5rem !important;
-        margin-bottom: 1rem !important;
-    }
-
-    .neo-card,
+    .card,
     article {
         box-shadow: none !important;
-        border: 1px solid #e2e8f0 !important;
-        transform: none !important;
+        border: 1px solid #e5e5e5 !important;
         break-inside: avoid;
     }
 
@@ -196,19 +241,8 @@ body {
         display: flex !important;
     }
 
-    .fade-in-up,
     .js .fade-in-up {
         opacity: 1 !important;
         transform: none !important;
-    }
-
-    .profile-img-container::before,
-    .profile-img-container::after {
-        display: none;
-    }
-
-    a[href^="mailto:"]::after,
-    a[href^="tel:"]::after {
-        content: none;
     }
 }
