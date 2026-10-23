@@ -312,6 +312,358 @@
     padding-bottom: env(safe-area-inset-bottom);
 }
 
+/* ---------- Scroll story: Detect -> Alarm -> Release -> Extinguish ---------- */
+.story {
+    position: relative;
+}
+
+.story-sticky {
+    padding: 6rem 0;
+}
+
+.js .story {
+    height: 320vh;
+}
+
+.js .story-sticky {
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 5.5rem 0 2rem;
+    overflow: hidden;
+}
+
+.js .story-step {
+    opacity: 0.35;
+    transition: opacity 0.4s ease;
+}
+
+.js .story-step.active {
+    opacity: 1;
+}
+
+.js .story-step:not(.active) p + p {
+    display: none;
+}
+
+.story-num {
+    color: #ff6a1a;
+}
+
+.story-progress {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.story-progress span {
+    display: block;
+    height: 100%;
+    width: calc(var(--p, 0) * 100%);
+    background: linear-gradient(90deg, #e5262f, #ff6a1a);
+}
+
+@media (max-width: 1023px) {
+    .js .story-step:not(.active) {
+        display: none;
+    }
+
+    .js .story .heading {
+        font-size: 2.25rem;
+    }
+
+    .js .story-sticky {
+        padding-bottom: 4.5rem;
+    }
+
+    .js .story-stage {
+        order: -1;
+    }
+
+    .js .story-note {
+        display: none;
+    }
+}
+
+.story-scene text,
+.ksa-map text,
+.pump-chart text {
+    direction: ltr;
+    unicode-bidi: plaintext;
+    font-family: 'Barlow Condensed', 'IBM Plex Sans Arabic', sans-serif;
+}
+
+.story-labels text {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    fill: #9aa0a8;
+}
+
+.story-panel-label {
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    fill: #9aa0a8;
+}
+
+.story-count {
+    font-weight: 800;
+    font-size: 20px;
+    fill: #ff3b3b;
+}
+
+.story-done-text {
+    font-weight: 700;
+    font-size: 17px;
+    fill: #fff;
+}
+
+.story-fire {
+    opacity: var(--fire, 0);
+}
+
+.story-fire path {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: flicker 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+    to { transform: scaleY(1.12) skewX(3deg); }
+}
+
+.story-smoke {
+    opacity: calc(var(--smoke, 0) * 0.85);
+    transform: translateY(calc((1 - var(--smoke, 0)) * 60px));
+}
+
+.story-gas {
+    transform-box: fill-box;
+    transform-origin: top;
+    transform: scaleY(var(--gas, 0));
+    opacity: calc(var(--gas, 0) * (1 - var(--clear, 0) * 0.6));
+}
+
+.story-flow {
+    stroke-dasharray: 1;
+    stroke-dashoffset: calc(1 - var(--flow, 0));
+}
+
+.story-jet {
+    opacity: var(--jet, 0);
+}
+
+.story-led {
+    fill: #454a52;
+}
+
+.story-ring,
+.alarm-tint,
+.story-strobe-glow {
+    opacity: 0;
+}
+
+.story-strobe {
+    fill: #7f1d1d;
+}
+
+.panel-led {
+    fill: #22c55e;
+}
+
+.story.is-detect .story-led {
+    fill: #ff3b3b;
+}
+
+.story.is-detect .story-ring {
+    opacity: 1;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: pulse-ring 1.6s ease-out infinite;
+}
+
+/* The alarm flashes slowly (1 Hz) over a small area, well inside photosensitivity limits */
+.story.is-alarm .alarm-tint {
+    animation: alarm-tint 1s steps(2) infinite;
+}
+
+.story.is-alarm .story-strobe {
+    animation: strobe 1s infinite;
+}
+
+.story.is-alarm .story-strobe-glow {
+    animation: strobe-glow 1s infinite;
+}
+
+.story.is-alarm .panel-led {
+    fill: #ff3b3b;
+}
+
+@keyframes alarm-tint {
+    0% { opacity: 0.07; }
+    50% { opacity: 0; }
+}
+
+@keyframes strobe {
+    0%, 40% { fill: #ff3b3b; }
+    50%, 100% { fill: #7f1d1d; }
+}
+
+@keyframes strobe-glow {
+    0%, 40% { opacity: 0.8; }
+    50%, 100% { opacity: 0; }
+}
+
+.story-done {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.story.is-done .story-done {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------- Blueprint flashlight on dark sections ---------- */
+.blueprint {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url(../img/blueprint.svg);
+    background-size: 480px;
+    -webkit-mask-image: radial-gradient(circle var(--bp-r, 260px) at var(--bp-x, 72%) var(--bp-y, 40%), #000 0, rgba(0, 0, 0, 0.55) 45%, transparent 72%);
+    mask-image: radial-gradient(circle var(--bp-r, 260px) at var(--bp-x, 72%) var(--bp-y, 40%), #000 0, rgba(0, 0, 0, 0.55) 45%, transparent 72%);
+}
+
+.blueprint::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle var(--bp-r, 260px) at var(--bp-x, 72%) var(--bp-y, 40%), rgba(255, 106, 26, 0.16), transparent 70%);
+}
+
+/* ---------- Clickable project map ---------- */
+.pin {
+    cursor: pointer;
+    outline: none;
+}
+
+.pin-hit {
+    fill: transparent;
+}
+
+.pin-dot {
+    fill: #ff6a1a;
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.pin:hover .pin-dot,
+.pin:focus-visible .pin-dot,
+.pin.active .pin-dot {
+    transform: scale(1.6);
+    fill: #fff;
+}
+
+.pin:focus-visible .pin-hit {
+    stroke: #fff;
+    stroke-width: 2;
+}
+
+.pin .pin-pulse {
+    fill: none;
+    stroke: #ff6a1a;
+}
+
+.map-card {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 2.75rem;
+    margin-inline: auto;
+    max-width: 22rem;
+    background: rgba(20, 22, 25, 0.97);
+    border-top: 4px solid #ff6a1a;
+    padding: 1.25rem 1.25rem 1rem;
+    box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    animation: rise-in 0.35s ease both;
+}
+
+@media (min-width: 640px) {
+    .map-card {
+        bottom: 3rem;
+        left: auto;
+        right: 1rem;
+    }
+
+    .map-card.on-left {
+        left: 1rem;
+        right: auto;
+    }
+}
+
+.map-card-close {
+    position: absolute;
+    top: 0.25rem;
+    inset-inline-end: 0.75rem;
+    font-size: 1.75rem;
+    line-height: 1;
+    color: #9aa0a8;
+}
+
+.map-card-close:hover {
+    color: #fff;
+}
+
+/* ---------- Pump curve explorer ---------- */
+.pump-ticks text {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    fill: #6b7079;
+}
+
+.pump-axis {
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    fill: #454a52;
+}
+
+.pump-limit {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    fill: #e5262f;
+}
+
+.pump-slider {
+    accent-color: #ff6a1a;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.pump-check {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+    background: #16a34a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
 /* Inline SVG icons from img/icons.svg (built by tools/build-icons.js) */
 .icon {
     display: inline-block;
@@ -365,6 +717,14 @@
     .lift:hover {
         transform: none;
     }
+
+    .story-fire path,
+    .story.is-detect .story-ring,
+    .story.is-alarm .alarm-tint,
+    .story.is-alarm .story-strobe,
+    .story.is-alarm .story-strobe-glow {
+        animation: none;
+    }
 }
 
 /* Hidden elements stay hidden even when a utility class sets their display */
@@ -395,6 +755,10 @@
     #scroll-progress,
     #older-roles,
     .mobile-bar,
+    .blueprint,
+    #story,
+    .map-hint,
+    .pump-tool,
     .hero-glow,
     .whatsapp-float,
     .project-filter,
