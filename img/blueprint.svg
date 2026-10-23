@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480">
+  <!-- Engineering-sketch tile revealed by the cursor "flashlight" on dark sections -->
+  <g fill="none" stroke="#ff8a4c">
+    <!-- grid -->
+    <path stroke-opacity="0.32" stroke-width="0.7" d="M0 24H480M0 48H480M0 72H480M0 96H480M0 144H480M0 168H480M0 192H480M0 216H480M0 264H480M0 288H480M0 312H480M0 336H480M0 384H480M0 408H480M0 432H480M0 456H480M24 0V480M48 0V480M72 0V480M96 0V480M144 0V480M168 0V480M192 0V480M216 0V480M264 0V480M288 0V480M312 0V480M336 0V480M384 0V480M408 0V480M432 0V480M456 0V480"/>
+    <path stroke-opacity="0.55" stroke-width="0.9" d="M0 0H480M0 120H480M0 240H480M0 360H480M0 0V480M120 0V480M240 0V480M360 0V480"/>
+    <g stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <!-- main pipe run with sprinkler drops -->
+      <path d="M30 84H196Q214 84 214 102V204H330"/>
+      <path d="M30 92H190Q206 92 206 108V212H330" stroke-opacity="0.55"/>
+      <path d="M70 92V112M130 92V112"/>
+      <circle cx="70" cy="118" r="6"/><path d="M64 118h12M70 112v12"/>
+      <circle cx="130" cy="118" r="6"/><path d="M124 118h12M130 112v12"/>
+      <!-- valve -->
+      <path d="M262 196l16 16v-16l-16 16z"/><path d="M270 204v-14h-8h16"/>
+      <!-- cylinder -->
+      <rect x="380" y="250" width="50" height="160" rx="25"/>
+      <rect x="397" y="234" width="16" height="16" rx="2"/>
+      <path d="M380 290h50M380 298h50"/>
+      <path d="M405 234V208H330"/>
+      <!-- pump symbol -->
+      <circle cx="110" cy="390" r="26"/><path d="M92 372l36 18-36 18z"/>
+      <path d="M30 390h54M136 390h70V320"/>
+      <!-- detector -->
+      <circle cx="300" cy="64" r="14"/><path d="M294 58c4-4 12-2 12 4s-12 4-12 8 8 6 12 2"/>
+      <!-- dimension lines -->
+      <path d="M30 300H200M30 294v12M200 294v12M30 300l8-4M30 300l8 4M200 300l-8-4M200 300l-8 4" stroke-opacity="0.8"/>
+      <path d="M450 250V410M444 250h12M444 410h12" stroke-opacity="0.8"/>
+      <!-- leader -->
+      <path d="M214 150l40-30h60" stroke-opacity="0.8"/>
+    </g>
+  </g>
+  <g fill="#ff8a4c" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" letter-spacing="1">
+    <text x="88" y="292">6 400</text>
+    <text x="458" y="334" transform="rotate(90 458 334)">1 450</text>
+    <text x="258" y="114">Ø100 SCH40</text>
+    <text x="320" y="68">DET-01</text>
+    <text x="40" y="74">SPRINKLER MAIN · EL +4.200</text>
+    <text x="378" y="430">FM-200 · NFPA 2001</text>
+    <text x="150" y="432">FIRE PUMP · NFPA 20</text>
+    <text x="250" y="236">OS&amp;Y</text>
+  </g>
+</svg>

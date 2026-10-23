@@ -83,7 +83,7 @@
     <link rel="preload" href="fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="img/portrait.webp" as="image" type="image/webp">
-    <link rel="stylesheet" href="css/index.css?v=6d4698fa16">
+    <link rel="stylesheet" href="css/index.css?v=25ef22fcfc">
 </head>
 <body class="bg-off text-steel-900 antialiased selection:bg-ember selection:text-white pb-16 lg:pb-0">
     <div id="scroll-progress" class="fixed top-0 inset-x-0 z-[60] h-[3px] bg-gradient-to-r from-fire to-ember origin-left rtl:origin-right scale-x-0" aria-hidden="true"></div>
@@ -286,27 +286,176 @@
             </div>
         </section>
 
-        <section class="steel angled text-white">
+        <section id="story" class="story steel text-white" data-countdown="RELEASE IN" data-released="DISCHARGED">
+            <div class="story-sticky">
+                <div class="container mx-auto px-6 grid lg:grid-cols-[0.8fr_1.2fr] gap-8 lg:gap-14 items-center">
+                    <div>
+                        <p class="eyebrow">See It In Action</p>
+                        <h2 class="heading text-white mt-4">From first smoke<br><span class="fire-text">to fire out.</span></h2>
+                        <p class="text-steel-300 leading-relaxed mt-5 hidden sm:block">Scroll to watch a clean agent system protect an electrical room — the kind of system I specify, propose and see through to commissioning.</p>
+                        <div class="story-progress mt-6"><span></span></div>
+                        <ol class="story-steps mt-6 space-y-5">
+                        <li class="story-step" data-step="1">
+                            <p class="font-display font-extrabold uppercase text-2xl flex items-center gap-3"><span class="story-num">01</span> Detect</p>
+                            <p class="text-steel-300 leading-relaxed mt-2">Smoke from an overheating switchgear panel reaches the ceiling detectors. Typically two detectors must confirm the fire before the system acts, to avoid false discharges.</p>
+                        </li>
+                        <li class="story-step" data-step="2">
+                            <p class="font-display font-extrabold uppercase text-2xl flex items-center gap-3"><span class="story-num">02</span> Alarm</p>
+                            <p class="text-steel-300 leading-relaxed mt-2">Strobes and sounders warn people to leave. The release panel starts a pre-discharge countdown and shuts down ventilation so the agent stays in the room.</p>
+                        </li>
+                        <li class="story-step" data-step="3">
+                            <p class="font-display font-extrabold uppercase text-2xl flex items-center gap-3"><span class="story-num">03</span> Release</p>
+                            <p class="text-steel-300 leading-relaxed mt-2">FM-200 flows from the cylinders through the pipe network and out of the nozzles — within 10 seconds, as NFPA 2001 requires.</p>
+                        </li>
+                        <li class="story-step" data-step="4">
+                            <p class="font-display font-extrabold uppercase text-2xl flex items-center gap-3"><span class="story-num">04</span> Extinguish</p>
+                            <p class="text-steel-300 leading-relaxed mt-2">The agent reaches design concentration and breaks the combustion chain. The fire is out — no water, no residue, and the equipment is back in service fast.</p>
+                        </li>
+                        </ol>
+                        <p class="story-note text-xs text-steel-500 mt-6">Illustrative sequence for a clean agent system protecting an electrical room.</p>
+                    </div>
+                    <div class="story-stage">
+                    <svg viewBox="0 0 800 460" class="story-scene w-full h-auto" role="img" aria-label="From first smoke">
+                        <defs>
+                            <linearGradient id="flameA" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#e5262f"/><stop offset="1" stop-color="#ff6a1a"/></linearGradient>
+                            <linearGradient id="flameB" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff6a1a"/><stop offset="1" stop-color="#ffd166"/></linearGradient>
+                            <linearGradient id="gasFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe" stop-opacity="0.55"/><stop offset="1" stop-color="#bae6fd" stop-opacity="0.22"/></linearGradient>
+                            <filter id="smokeBlur"><feGaussianBlur stdDeviation="6"/></filter>
+                            <radialGradient id="strobeGlow"><stop offset="0" stop-color="#ff3b3b" stop-opacity="0.9"/><stop offset="1" stop-color="#ff3b3b" stop-opacity="0"/></radialGradient>
+                        </defs>
+                        <!-- room -->
+                        <rect x="200" y="60" width="560" height="320" fill="#191b1f" stroke="#9aa0a8" stroke-width="2"/>
+                        <path d="M200 380h560" stroke="#9aa0a8" stroke-width="2"/>
+                        <path d="M200 392h560M240 380v12M300 380v12M360 380v12M420 380v12M480 380v12M540 380v12M600 380v12M660 380v12M720 380v12" stroke="#454a52"/>
+                        <rect class="alarm-tint" x="202" y="62" width="556" height="316" fill="#e5262f"/>
+                        <rect x="330" y="196" width="92" height="182" rx="2" fill="#23272d" stroke="#6b7079"/><path d="M342 214h68M342 222h68M342 230h68" stroke="#454a52"/><rect x="342" y="246" width="30" height="20" fill="#141619" stroke="#454a52"/><circle cx="392" cy="256" r="4" fill="#22c55e"/><circle cx="406" cy="256" r="4" fill="#454a52"/><path d="M376 196v182" stroke="#454a52"/><rect x="432" y="196" width="92" height="182" rx="2" fill="#23272d" stroke="#6b7079"/><path d="M444 214h68M444 222h68M444 230h68" stroke="#454a52"/><rect x="444" y="246" width="30" height="20" fill="#141619" stroke="#454a52"/><circle cx="494" cy="256" r="4" fill="#22c55e"/><circle cx="508" cy="256" r="4" fill="#454a52"/><path d="M478 196v182" stroke="#454a52"/><rect x="534" y="196" width="92" height="182" rx="2" fill="#23272d" stroke="#6b7079"/><path d="M546 214h68M546 222h68M546 230h68" stroke="#454a52"/><rect x="546" y="246" width="30" height="20" fill="#141619" stroke="#454a52"/><circle cx="596" cy="256" r="4" fill="#22c55e"/><circle cx="610" cy="256" r="4" fill="#454a52"/><path d="M580 196v182" stroke="#454a52"/>
+                        <!-- fire and smoke -->
+                        <g class="story-fire"><path d="M470 378c-14-10-16-30-4-46 2 12 8 16 12 18-2-14 4-28 16-36-4 16 4 24 10 32 8 10 6 26-6 32z" fill="url(#flameA)"/><path d="M478 378c-8-6-8-18 0-26 2 8 6 10 9 10 0-8 4-14 10-18-2 10 2 14 4 20 4 8 0 14-8 14z" fill="url(#flameB)"/></g>
+                        <g class="story-smoke" fill="#6b7079" filter="url(#smokeBlur)"><circle cx="476" cy="330" r="16"/><circle cx="492" cy="300" r="20"/><circle cx="466" cy="270" r="22"/><circle cx="488" cy="236" r="26"/><circle cx="460" cy="200" r="28"/><circle cx="482" cy="160" r="30"/><circle cx="452" cy="124" r="30"/><circle cx="420" cy="96" r="28"/><circle cx="380" cy="84" r="26"/><circle cx="520" cy="100" r="26"/></g>
+                        <!-- agent filling the room from the ceiling -->
+                        <rect class="story-gas" x="202" y="62" width="556" height="316" fill="url(#gasFill)"/>
+                        <!-- cylinders, pipe, nozzle -->
+                        <g stroke="#c9ccd1" stroke-width="2" fill="#23272d">
+                            <rect x="44" y="214" width="44" height="164" rx="20"/><rect x="104" y="214" width="44" height="164" rx="20"/>
+                            <rect x="58" y="200" width="16" height="14" rx="2"/><rect x="118" y="200" width="16" height="14" rx="2"/>
+                        </g>
+                        <path d="M48 258h36M48 266h36M108 258h36M108 266h36" stroke="#e5262f" stroke-width="3"/>
+                        <path d="M30 380h140" stroke="#9aa0a8" stroke-width="2"/>
+                        <path class="story-pipe" d="M66 200V180H126V200M96 180V150H200V96H480V108" fill="none" stroke="#9aa0a8" stroke-width="4" stroke-linejoin="round"/>
+                        <path class="story-flow" d="M66 200V180H126V200M96 180V150H200V96H480V108" fill="none" stroke="#7dd3fc" stroke-width="4" stroke-linejoin="round" pathLength="1"/>
+                        <path d="M470 108h20l-4 10h-12z" fill="#c9ccd1"/>
+                        <g class="story-jet" fill="none" stroke="#bae6fd" stroke-width="2" stroke-linecap="round">
+                            <path d="M474 124l-30 40M480 126v46M486 124l30 40"/>
+                        </g>
+                        <!-- detector -->
+                        <path d="M366 62h40v6h-40z" fill="#c9ccd1"/><path d="M370 68q16 16 32 0" fill="#c9ccd1"/>
+                        <circle class="story-led" cx="386" cy="72" r="3"/>
+                        <circle class="story-ring" cx="386" cy="72" r="10" fill="none" stroke="#ff3b3b" stroke-width="2"/>
+                        <!-- strobe -->
+                        <circle class="story-strobe-glow" cx="748" cy="150" r="60" fill="url(#strobeGlow)"/>
+                        <rect x="738" y="136" width="18" height="28" rx="3" fill="#c9ccd1"/><rect class="story-strobe" x="741" y="140" width="12" height="10" rx="2"/>
+                        <!-- release panel -->
+                        <rect x="214" y="190" width="84" height="110" rx="4" fill="#23272d" stroke="#c9ccd1" stroke-width="2"/>
+                        <rect x="224" y="202" width="64" height="44" fill="#0b0c0e"/>
+                        <text class="story-panel-label" x="256" y="218" text-anchor="middle"></text>
+                        <text class="story-count" x="256" y="240" text-anchor="middle"></text>
+                        <circle class="panel-led" cx="234" cy="262" r="4"/><circle cx="250" cy="262" r="4" fill="#454a52"/><circle cx="266" cy="262" r="4" fill="#454a52"/>
+                        <!-- labels -->
+                        <g class="story-labels">
+                            <text x="96" y="410" text-anchor="middle">FM-200 cylinders</text>
+                            <text x="256" y="322" text-anchor="middle">Release panel</text>
+                            <text x="386" y="46" text-anchor="middle">Smoke detector</text>
+                            <text x="742" y="190" text-anchor="end">Strobe / sounder</text>
+                            <text x="500" y="46" text-anchor="start">Discharge nozzle</text>
+                            <text x="530" y="412" text-anchor="middle">Switchgear</text>
+                        </g>
+                        <!-- done badge -->
+                        <g class="story-done">
+                            <rect x="330" y="130" width="300" height="56" rx="6" fill="#141619" stroke="#22c55e" stroke-width="2"/>
+                            <circle cx="360" cy="158" r="14" fill="#22c55e"/><path d="M353 158l5 5 9-10" fill="none" stroke="#141619" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <text x="384" y="164" class="story-done-text">Fire out — no water, no residue</text>
+                        </g>
+                    </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pump-explorer" class="py-24">
             <div class="container mx-auto px-6">
+                <p class="eyebrow">Engineering Tool</p>
+                <h2 class="heading mt-4">Fire pump curve<br><span class="fire-text">explorer.</span></h2>
+                <p class="text-lg text-steel-600 leading-relaxed max-w-2xl mt-5">Drag along a typical centrifugal fire pump curve and see how the NFPA 20 acceptance points are checked. Enter a rating to see real units.</p>
+                <div class="pump-tool card grid lg:grid-cols-[1.35fr_0.65fr] gap-8 p-6 sm:p-10 mt-10 fade-in-up">
+                    <div>
+                        <svg viewBox="0 0 640 400" class="pump-chart w-full h-auto" dir="ltr" role="img" aria-label="Fire pump curve">
+                            <defs><linearGradient id="pumpArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff6a1a" stop-opacity="0.22"/><stop offset="1" stop-color="#ff6a1a" stop-opacity="0"/></linearGradient></defs>
+                            <g stroke="#e8e2d8" stroke-width="1"><path d="M70.0 350.0V30.0"/><path d="M137.5 350.0V30.0"/><path d="M205.0 350.0V30.0"/><path d="M272.5 350.0V30.0"/><path d="M340.0 350.0V30.0"/><path d="M407.5 350.0V30.0"/><path d="M475.0 350.0V30.0"/><path d="M542.5 350.0V30.0"/><path d="M610.0 350.0V30.0"/><path d="M70.0 350.0H610.0"/><path d="M70.0 296.7H610.0"/><path d="M70.0 243.3H610.0"/><path d="M70.0 190.0H610.0"/><path d="M70.0 136.7H610.0"/><path d="M70.0 83.3H610.0"/><path d="M70.0 30.0H610.0"/></g>
+                            <path d="M70.0 350.0H610.0M70.0 350.0V30.0" stroke="#454a52" stroke-width="2"/>
+                            <g class="pump-ticks"><text x="70.0" y="372" text-anchor="middle">0</text><text x="137.5" y="372" text-anchor="middle">20</text><text x="205.0" y="372" text-anchor="middle">40</text><text x="272.5" y="372" text-anchor="middle">60</text><text x="340.0" y="372" text-anchor="middle">80</text><text x="407.5" y="372" text-anchor="middle">100</text><text x="475.0" y="372" text-anchor="middle">120</text><text x="542.5" y="372" text-anchor="middle">140</text><text x="610.0" y="372" text-anchor="middle">160</text><text x="58" y="354.0" text-anchor="end">0</text><text x="58" y="300.7" text-anchor="end">25</text><text x="58" y="247.3" text-anchor="end">50</text><text x="58" y="194.0" text-anchor="end">75</text><text x="58" y="140.7" text-anchor="end">100</text><text x="58" y="87.3" text-anchor="end">125</text><text x="58" y="34.0" text-anchor="end">150</text></g>
+                            <text class="pump-axis" x="340.0" y="396" text-anchor="middle">Flow, % of rated</text>
+                            <text class="pump-axis" x="16" y="190.0" text-anchor="middle" transform="rotate(-90 16 190.0)">Pressure, % of rated</text>
+                            <path d="M70.0 94.0L83.5 94.1L97.0 94.3L110.5 94.6L124.0 95.1L137.5 95.7L151.0 96.5L164.5 97.3L178.0 98.4L191.5 99.5L205.0 100.8L218.5 102.3L232.0 103.8L245.5 105.5L259.0 107.4L272.5 109.4L286.0 111.5L299.5 113.7L313.0 116.1L326.5 118.6L340.0 121.3L353.5 124.1L367.0 127.0L380.5 130.1L394.0 133.3L407.5 136.7L421.0 140.1L434.5 143.8L448.0 147.5L461.5 151.4L475.0 155.4L488.5 159.6L502.0 163.9L515.5 168.3L529.0 172.9L542.5 177.6L556.0 182.5L569.5 187.5L583.0 192.6L596.5 197.8L610.0 203.2L610.0 350.0L70.0 350.0Z" fill="url(#pumpArea)"/>
+                            <path d="M70.0 94.0L83.5 94.1L97.0 94.3L110.5 94.6L124.0 95.1L137.5 95.7L151.0 96.5L164.5 97.3L178.0 98.4L191.5 99.5L205.0 100.8L218.5 102.3L232.0 103.8L245.5 105.5L259.0 107.4L272.5 109.4L286.0 111.5L299.5 113.7L313.0 116.1L326.5 118.6L340.0 121.3L353.5 124.1L367.0 127.0L380.5 130.1L394.0 133.3L407.5 136.7L421.0 140.1L434.5 143.8L448.0 147.5L461.5 151.4L475.0 155.4L488.5 159.6L502.0 163.9L515.5 168.3L529.0 172.9L542.5 177.6L556.0 182.5L569.5 187.5L583.0 192.6L596.5 197.8L610.0 203.2" fill="none" stroke="#ff6a1a" stroke-width="3.5" stroke-linecap="round"/>
+                            <!-- NFPA 20 limits -->
+                            <path d="M70.0 51.3h70" stroke="#e5262f" stroke-width="2" stroke-dasharray="6 5"/>
+                            <text class="pump-limit" x="146.0" y="55.3">Churn limit 140%</text>
+                            <path d="M576.2 211.3v-58" stroke="#e5262f" stroke-width="2" stroke-dasharray="6 5"/>
+                            <path d="M568.2 211.3h16" stroke="#e5262f" stroke-width="3"/>
+                            <text class="pump-limit" x="570.2" y="231.3" text-anchor="end">Min. 65% at 150%</text>
+                            <circle cx="407.5" cy="136.7" r="6" fill="#141619"/>
+                            <text class="pump-limit !fill-steel-700" x="417.5" y="124.7">Rated point</text>
+                            <!-- operating point -->
+                            <path class="pump-guide-x" d="" stroke="#141619" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <path class="pump-guide-y" d="" stroke="#141619" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <circle class="pump-point" cx="0" cy="0" r="9" fill="#ff6a1a" stroke="#fff" stroke-width="3"/>
+                        </svg>
+                        <label class="block mt-6" dir="ltr">
+                            <span class="flex justify-between font-display font-bold uppercase tracking-wider text-steel-600"><span>Operating flow</span><span class="tabular-nums text-steel-900" data-out="q-pct"></span></span>
+                            <input type="range" min="0" max="160" step="1" value="100" class="pump-slider w-full mt-3" aria-label="Operating flow">
+                        </label>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="grid grid-cols-2 gap-3">
+                            <label class="block"><span class="text-sm font-semibold text-steel-600">Rated flow (gpm)</span><input type="number" min="25" max="5000" step="25" value="1000" class="pump-rated-q mt-1 w-full bg-off border border-steel-900/15 px-3 py-2 font-display font-bold text-xl" dir="ltr"></label>
+                            <label class="block"><span class="text-sm font-semibold text-steel-600">Rated pressure (psi)</span><input type="number" min="40" max="400" step="5" value="100" class="pump-rated-p mt-1 w-full bg-off border border-steel-900/15 px-3 py-2 font-display font-bold text-xl" dir="ltr"></label>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3 mt-4">
+                            <div class="bg-steel-900 text-white p-5"><p class="eyebrow !text-xs">Flow</p><p class="font-display font-extrabold text-4xl tabular-nums mt-1" data-out="q" dir="ltr"></p><p class="text-sm text-steel-400 tabular-nums" data-out="q-sub" dir="ltr"></p></div>
+                            <div class="bg-steel-900 text-white p-5"><p class="eyebrow !text-xs">Pressure</p><p class="font-display font-extrabold text-4xl tabular-nums mt-1" data-out="p" dir="ltr"></p><p class="text-sm text-steel-400 tabular-nums" data-out="p-sub" dir="ltr"></p></div>
+                        </div>
+                        <ul class="space-y-3 mt-6 text-steel-700">
+                            <li class="flex items-start gap-3"><span class="pump-check" data-check="0">✓</span> <span>Churn (zero-flow) pressure ≤ 140% of rated</span> <span class="ms-auto font-display font-bold text-lg tabular-nums" data-check-value="0" dir="ltr"></span></li>
+                            <li class="flex items-start gap-3"><span class="pump-check" data-check="1">✓</span> <span>Rated point: 100% flow at ≥ 100% pressure</span> <span class="ms-auto font-display font-bold text-lg tabular-nums" data-check-value="1" dir="ltr"></span></li>
+                            <li class="flex items-start gap-3"><span class="pump-check" data-check="2">✓</span> <span>At 150% flow, pressure ≥ 65% of rated</span> <span class="ms-auto font-display font-bold text-lg tabular-nums" data-check-value="2" dir="ltr"></span></li>
+                        </ul>
+                        <p class="text-xs text-steel-500 leading-relaxed mt-6">Illustrative curve. Real selections use the manufacturer’s certified test curve, checked against the system’s hydraulic demand.</p>
+                        <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-fire mt-6 self-start"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#brands-whatsapp"></use></svg> Discuss a pump selection</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="steel angled text-white">
+            <div class="blueprint" aria-hidden="true"></div>
+            <div class="container mx-auto px-6 relative z-[1]">
                 <p class="eyebrow">How I Work</p>
                 <h2 class="heading text-white mt-4 mb-12">Consultative<br><span class="fire-text">by design.</span></h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10 fade-in-up">
-                    <div class="bg-steel-900 p-8">
+                    <div class="bg-steel-900/75 backdrop-blur-[1px] p-8">
                         <p class="font-display font-extrabold text-6xl fire-text">01</p>
                         <h3 class="font-display font-bold uppercase text-2xl mt-4">Discover the risk</h3>
                         <p class="text-steel-300 leading-relaxed mt-3">Site visits and stakeholder interviews with end users, consultants and contractors to understand the hazard, the asset at risk, operational constraints and the specification before any product is proposed.</p>
                     </div>
-                    <div class="bg-steel-900 p-8">
+                    <div class="bg-steel-900/75 backdrop-blur-[1px] p-8">
                         <p class="font-display font-extrabold text-6xl fire-text">02</p>
                         <h3 class="font-display font-bold uppercase text-2xl mt-4">Engineer the fit</h3>
                         <p class="text-steel-300 leading-relaxed mt-3">Translate the requirement into a compliant design basis — suppression agent and method, pump duty point and driver, detection technology and coverage — referenced to NFPA and Aramco / Saudi Energy / Civil Defense requirements.</p>
                     </div>
-                    <div class="bg-steel-900 p-8">
+                    <div class="bg-steel-900/75 backdrop-blur-[1px] p-8">
                         <p class="font-display font-extrabold text-6xl fire-text">03</p>
                         <h3 class="font-display font-bold uppercase text-2xl mt-4">Advise on options</h3>
                         <p class="text-steel-300 leading-relaxed mt-3">Compare technical options, OEM alternatives and lifecycle cost so the client and consultant can decide; value-engineer and substitute equivalent approved products when budget or delivery demands it.</p>
                     </div>
-                    <div class="bg-steel-900 p-8">
+                    <div class="bg-steel-900/75 backdrop-blur-[1px] p-8">
                         <p class="font-display font-extrabold text-6xl fire-text">04</p>
                         <h3 class="font-display font-bold uppercase text-2xl mt-4">Stay through delivery</h3>
                         <p class="text-steel-300 leading-relaxed mt-3">Remain the client&#8217;s technical point of contact through submittals, consultant approvals, delivery, testing and commissioning — building the trust that drives repeat business.</p>
@@ -422,7 +571,8 @@
         </section>
 
         <section id="case-studies" class="steel angled text-white">
-            <div class="container mx-auto px-6">
+            <div class="blueprint" aria-hidden="true"></div>
+            <div class="container mx-auto px-6 relative z-[1]">
                 <p class="eyebrow">Case Studies</p>
                 <h2 class="heading text-white mt-4 mb-12">Selected work,<br><span class="fire-text">in detail.</span></h2>
                 <div class="grid lg:grid-cols-3 gap-6 fade-in-up">
@@ -467,15 +617,27 @@
             <div class="container mx-auto px-6">
                 <p class="eyebrow">Project Portfolio</p>
                 <h2 class="heading mt-4 mb-10">39 projects.<br>Five sectors.</h2>
-                <div class="steel text-white grid lg:grid-cols-[1.25fr_0.75fr] gap-8 lg:gap-12 p-6 sm:p-10 mb-12 fade-in-up">
-                    <svg viewBox="-10 0 620 503" class="ksa-map w-full h-auto" role="img" aria-label="Kingdom-wide delivery" dir="ltr">
-                        <defs><pattern id="ksa-dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="rgba(255,255,255,0.13)"/></pattern></defs>
-                        <path d="M70.2 221.6L67.4 219.5L66.3 217.9L65.1 216.9L59.8 214.9L59 213.5L59.9 212.2L60.4 213.5L61.4 214.3L65.8 216.2L70.8 220.2L70.2 221.6ZM212.8 487.7L215 487.8L214.1 486.8L214.9 485L217.9 487.9L217.8 491.3L216.2 490.7L215.2 489L212.1 489.5L210.3 488.6L207.6 485.7L206.9 483.6L209.2 482.2L209.9 480.5L209.2 478.8L210.8 479.1L211.7 480.9L211.8 484.8L211.6 486.6L212.8 487.7ZM493 417.6L486.4 418.6L480 419.6L472.8 420.6L464.1 421.9L457.4 422.9L447.5 424.4L438.6 425.6L430.3 426.9L421.9 428.1L414.9 429.2L410.6 430.4L405.7 433L398 437.1L390.2 441.3L386.3 443.4L382.1 448.9L379.9 451.7L376 456.8L373.1 460.6L369.6 465.1L368.1 469.2L365.8 475.5L363.8 477.1L360.5 479.1L357.4 480.5L352.7 480.4L350.1 476.5L347.1 472.4L345.7 470.8L344.5 470.7L339.8 471.2L334 471.8L327.3 471.2L319.6 470.4L312.3 469.7L308.7 469.1L303.9 466.5L302.7 465.9L301.4 465.8L295.8 465.7L290.2 465.7L284.5 466.5L279.2 466.2L273.6 466.7L271.6 467.7L269.5 467.6L268.1 468.5L267 469L265.4 468.2L263.7 468.4L261.2 467.7L259.5 466L258 464.4L256.4 463.6L254.5 463.1L252.9 463.1L250.9 464L249.7 464.9L246.6 467.9L247.9 470.7L245.6 472.6L245 475.5L244.7 477L244.4 480.7L245.3 483.6L246.4 484.7L246.5 486L245.9 488.5L244.1 489.2L242.9 491.6L242.1 492.7L240.8 494L235.6 498.2L235.3 495.8L233.6 492.2L233.5 489.5L232.7 487L231.3 485L228.7 483L228.4 480.2L226.5 477.4L223.9 475.1L222.4 471L221.4 465.6L214.7 458.4L206.2 451.8L203.6 448L199.3 440.3L197.2 434.3L191.5 427.4L191.3 424.7L190.4 421.5L189.1 417.9L188.4 415L182.7 402.5L180.8 400.5L179.2 397.7L178.8 395.5L178.3 394.4L174.4 392.3L170.5 387L159.3 378.6L153.8 377.8L149.4 374.8L146.2 370.9L142.8 364.2L136.7 356.9L131.7 346.6L133.3 342.8L133.2 340.2L131.6 335.7L129.8 332.3L128.6 329.1L129.6 324.4L129.9 319.2L131 316.4L131.7 313.3L130.8 307.2L129 304L129.2 301.8L127.3 300.7L125.7 298.3L127.3 298.4L124.4 295.1L123.3 293.3L122.2 288.8L120.8 285.4L116.2 277.6L114 272.8L109 266.8L103.7 262.2L100.4 260.2L98.7 258.3L95.9 258.2L92.9 255.6L90.8 255.5L88.1 255.1L85 249.9L82.4 245.1L77.9 238.8L79.1 237.2L80.4 234.5L79.8 231.1L79.1 228.7L77.1 224.4L70.7 213.6L69 212.1L66.2 210.3L64.6 205.6L63.8 201.4L59.4 199.4L51.9 184.4L47.5 179.1L45.7 175.6L40.7 169.8L38.3 164L33.1 158.6L28.7 149.4L21.9 140.1L19 138.5L12 137.9L9 137.2L6.3 139.2L6.1 136.7L8 133.1L10.6 125.6L11.2 119.1L15.5 99.7L21.4 100.6L26.4 101.5L33.5 102.7L41 103.9L45.3 104.7L46.8 104.4L52.8 99.6L58.3 95.3L61.5 90.1L64.6 85L66 83.9L70.9 83L78.6 81.5L86.1 80L88.5 75.4L90.7 70.2L91.7 69.1L97.1 66.2L100.4 64.5L95.7 59.3L91.3 54.4L86.3 48.9L82.2 44.6L75.8 38.2L71.8 34L79 32.1L86.7 29.9L94.6 27.7L104.1 25.1L111.5 23.1L122.6 20.1L127.9 18.6L133.1 14.6L139.3 15.6L148.7 17.1L157.8 18.6L167.4 20.3L170.5 21.7L179.7 26.8L185.8 30.2L192.7 34.1L201.5 39L207.5 42.3L215.3 46.7L221.2 51.6L228.9 57.8L237.2 64.6L244 69.9L253.5 77.2L262.9 84.4L272 91.5L279.4 97.2L288.6 104.3L298.7 105.4L311.3 106.5L323.9 107.6L335.3 108.6L340.3 107.6L345.6 108.2L352.9 109.1L357.2 109.7L365.5 110.8L368 115.5L368.9 118.8L369.7 122L372.2 124.8L377.8 124.8L382.8 124.7L388.9 124.6L393.9 124.6L395.4 127.5L396.1 130.3L399 137.2L403.2 142.5L404.1 144.4L404.8 147.3L404.1 148.4L403.8 149.7L406.8 152.6L411.9 155.1L413.9 155.7L416.1 156.8L414.4 158.5L417.4 162.4L420.8 166.4L424.6 167.3L429.6 173.3L437.1 177.2L441.7 182.3L439.9 181.9L438.3 181.2L437.8 183.9L438.3 186.4L440.6 188.6L442.7 190.2L443.5 193.2L441.8 199.6L440.2 199L439 198.9L439.8 203.8L441.1 207.3L442.8 210.1L444.3 214.2L445.4 215.9L450.3 220.3L451.7 223.9L453.1 230.7L456.2 234.4L457.9 237.3L460.1 239.8L461.5 243.2L463.5 245.8L464.6 246.4L466.2 246.7L468.2 246.7L470.5 246L473 245.4L475 246.7L477.1 246.5L477.3 247.7L476 249.4L474.2 253.5L476.7 254.2L478.9 254.6L480.6 255.3L481.5 256.1L481.6 260.1L482.2 261.6L483.2 262.9L484.7 265L486.3 267L487.9 269L489.4 271L490.9 273L492.5 275L494 277L495.5 279L497.1 281L498.7 283.1L500.2 285L501.7 287.1L503.3 289.1L504.8 291.1L506.3 293.1L507.9 295.1L509.2 296.8L511.5 297.1L514.4 297.5L517.7 297.9L522 298.5L527 299.2L532.7 299.9L538.8 300.7L545 301.6L551.3 302.4L557.2 303.2L562.9 304L568 304.7L572.3 305.2L575.6 305.7L577.7 305.9L580.7 306.4L583 303.8L585 307.3L586.7 310.1L589 314.1L591.6 318.4L594 322.4L595.7 325.4L594.8 328.5L593.8 331.9L592.8 335.2L591.7 338.7L590.7 342.1L589.6 345.5L588.6 348.9L587.6 352.3L586.5 355.7L585.5 359.1L584.5 362.5L583.5 365.8L582.5 369.3L581.5 372.7L580.4 376.1L579.3 379.4L578.3 382.8L577.1 386.9L574.1 388L569.4 389.8L564.5 391.5L559.7 393.3L554.8 395.1L550 396.9L545.2 398.6L540.4 400.4L535.5 402.1L530.7 403.9L525.8 405.7L521.1 407.4L516.2 409.2L511.4 410.9L506.6 412.7L501.8 414.4L497 416.2L493 417.6ZM61.6 211.4L60.1 210.8L60.2 208.4L61.2 207.1L61.1 208.9L61.6 210.8Z" fill="#1d2025" stroke="rgba(255,106,26,0.55)" stroke-width="1.5" stroke-linejoin="round"/>
-                        <path d="M70.2 221.6L67.4 219.5L66.3 217.9L65.1 216.9L59.8 214.9L59 213.5L59.9 212.2L60.4 213.5L61.4 214.3L65.8 216.2L70.8 220.2L70.2 221.6ZM212.8 487.7L215 487.8L214.1 486.8L214.9 485L217.9 487.9L217.8 491.3L216.2 490.7L215.2 489L212.1 489.5L210.3 488.6L207.6 485.7L206.9 483.6L209.2 482.2L209.9 480.5L209.2 478.8L210.8 479.1L211.7 480.9L211.8 484.8L211.6 486.6L212.8 487.7ZM493 417.6L486.4 418.6L480 419.6L472.8 420.6L464.1 421.9L457.4 422.9L447.5 424.4L438.6 425.6L430.3 426.9L421.9 428.1L414.9 429.2L410.6 430.4L405.7 433L398 437.1L390.2 441.3L386.3 443.4L382.1 448.9L379.9 451.7L376 456.8L373.1 460.6L369.6 465.1L368.1 469.2L365.8 475.5L363.8 477.1L360.5 479.1L357.4 480.5L352.7 480.4L350.1 476.5L347.1 472.4L345.7 470.8L344.5 470.7L339.8 471.2L334 471.8L327.3 471.2L319.6 470.4L312.3 469.7L308.7 469.1L303.9 466.5L302.7 465.9L301.4 465.8L295.8 465.7L290.2 465.7L284.5 466.5L279.2 466.2L273.6 466.7L271.6 467.7L269.5 467.6L268.1 468.5L267 469L265.4 468.2L263.7 468.4L261.2 467.7L259.5 466L258 464.4L256.4 463.6L254.5 463.1L252.9 463.1L250.9 464L249.7 464.9L246.6 467.9L247.9 470.7L245.6 472.6L245 475.5L244.7 477L244.4 480.7L245.3 483.6L246.4 484.7L246.5 486L245.9 488.5L244.1 489.2L242.9 491.6L242.1 492.7L240.8 494L235.6 498.2L235.3 495.8L233.6 492.2L233.5 489.5L232.7 487L231.3 485L228.7 483L228.4 480.2L226.5 477.4L223.9 475.1L222.4 471L221.4 465.6L214.7 458.4L206.2 451.8L203.6 448L199.3 440.3L197.2 434.3L191.5 427.4L191.3 424.7L190.4 421.5L189.1 417.9L188.4 415L182.7 402.5L180.8 400.5L179.2 397.7L178.8 395.5L178.3 394.4L174.4 392.3L170.5 387L159.3 378.6L153.8 377.8L149.4 374.8L146.2 370.9L142.8 364.2L136.7 356.9L131.7 346.6L133.3 342.8L133.2 340.2L131.6 335.7L129.8 332.3L128.6 329.1L129.6 324.4L129.9 319.2L131 316.4L131.7 313.3L130.8 307.2L129 304L129.2 301.8L127.3 300.7L125.7 298.3L127.3 298.4L124.4 295.1L123.3 293.3L122.2 288.8L120.8 285.4L116.2 277.6L114 272.8L109 266.8L103.7 262.2L100.4 260.2L98.7 258.3L95.9 258.2L92.9 255.6L90.8 255.5L88.1 255.1L85 249.9L82.4 245.1L77.9 238.8L79.1 237.2L80.4 234.5L79.8 231.1L79.1 228.7L77.1 224.4L70.7 213.6L69 212.1L66.2 210.3L64.6 205.6L63.8 201.4L59.4 199.4L51.9 184.4L47.5 179.1L45.7 175.6L40.7 169.8L38.3 164L33.1 158.6L28.7 149.4L21.9 140.1L19 138.5L12 137.9L9 137.2L6.3 139.2L6.1 136.7L8 133.1L10.6 125.6L11.2 119.1L15.5 99.7L21.4 100.6L26.4 101.5L33.5 102.7L41 103.9L45.3 104.7L46.8 104.4L52.8 99.6L58.3 95.3L61.5 90.1L64.6 85L66 83.9L70.9 83L78.6 81.5L86.1 80L88.5 75.4L90.7 70.2L91.7 69.1L97.1 66.2L100.4 64.5L95.7 59.3L91.3 54.4L86.3 48.9L82.2 44.6L75.8 38.2L71.8 34L79 32.1L86.7 29.9L94.6 27.7L104.1 25.1L111.5 23.1L122.6 20.1L127.9 18.6L133.1 14.6L139.3 15.6L148.7 17.1L157.8 18.6L167.4 20.3L170.5 21.7L179.7 26.8L185.8 30.2L192.7 34.1L201.5 39L207.5 42.3L215.3 46.7L221.2 51.6L228.9 57.8L237.2 64.6L244 69.9L253.5 77.2L262.9 84.4L272 91.5L279.4 97.2L288.6 104.3L298.7 105.4L311.3 106.5L323.9 107.6L335.3 108.6L340.3 107.6L345.6 108.2L352.9 109.1L357.2 109.7L365.5 110.8L368 115.5L368.9 118.8L369.7 122L372.2 124.8L377.8 124.8L382.8 124.7L388.9 124.6L393.9 124.6L395.4 127.5L396.1 130.3L399 137.2L403.2 142.5L404.1 144.4L404.8 147.3L404.1 148.4L403.8 149.7L406.8 152.6L411.9 155.1L413.9 155.7L416.1 156.8L414.4 158.5L417.4 162.4L420.8 166.4L424.6 167.3L429.6 173.3L437.1 177.2L441.7 182.3L439.9 181.9L438.3 181.2L437.8 183.9L438.3 186.4L440.6 188.6L442.7 190.2L443.5 193.2L441.8 199.6L440.2 199L439 198.9L439.8 203.8L441.1 207.3L442.8 210.1L444.3 214.2L445.4 215.9L450.3 220.3L451.7 223.9L453.1 230.7L456.2 234.4L457.9 237.3L460.1 239.8L461.5 243.2L463.5 245.8L464.6 246.4L466.2 246.7L468.2 246.7L470.5 246L473 245.4L475 246.7L477.1 246.5L477.3 247.7L476 249.4L474.2 253.5L476.7 254.2L478.9 254.6L480.6 255.3L481.5 256.1L481.6 260.1L482.2 261.6L483.2 262.9L484.7 265L486.3 267L487.9 269L489.4 271L490.9 273L492.5 275L494 277L495.5 279L497.1 281L498.7 283.1L500.2 285L501.7 287.1L503.3 289.1L504.8 291.1L506.3 293.1L507.9 295.1L509.2 296.8L511.5 297.1L514.4 297.5L517.7 297.9L522 298.5L527 299.2L532.7 299.9L538.8 300.7L545 301.6L551.3 302.4L557.2 303.2L562.9 304L568 304.7L572.3 305.2L575.6 305.7L577.7 305.9L580.7 306.4L583 303.8L585 307.3L586.7 310.1L589 314.1L591.6 318.4L594 322.4L595.7 325.4L594.8 328.5L593.8 331.9L592.8 335.2L591.7 338.7L590.7 342.1L589.6 345.5L588.6 348.9L587.6 352.3L586.5 355.7L585.5 359.1L584.5 362.5L583.5 365.8L582.5 369.3L581.5 372.7L580.4 376.1L579.3 379.4L578.3 382.8L577.1 386.9L574.1 388L569.4 389.8L564.5 391.5L559.7 393.3L554.8 395.1L550 396.9L545.2 398.6L540.4 400.4L535.5 402.1L530.7 403.9L525.8 405.7L521.1 407.4L516.2 409.2L511.4 410.9L506.6 412.7L501.8 414.4L497 416.2L493 417.6ZM61.6 211.4L60.1 210.8L60.2 208.4L61.2 207.1L61.1 208.9L61.6 210.8Z" fill="url(#ksa-dots)"/>
-                        <g fill="none" stroke="#ff6a1a"><circle class="pin-pulse" cx="442" cy="183" r="6" style="animation-delay:0.00s"/><circle cx="442" cy="183" r="5" fill="#ff6a1a"/><circle class="pin-pulse" cx="428" cy="205" r="6" style="animation-delay:0.17s"/><circle cx="428" cy="205" r="5" fill="#ff6a1a"/><circle class="pin-pulse" cx="428" cy="172" r="6" style="animation-delay:0.34s"/><circle cx="428" cy="172" r="5" fill="#ff6a1a"/><circle class="pin-pulse" cx="440" cy="189" r="6" style="animation-delay:0.51s"/><circle cx="440" cy="189" r="5" fill="#ff6a1a"/><circle class="pin-pulse" cx="406" cy="146" r="6" style="animation-delay:0.68s"/><circle cx="406" cy="146" r="5" fill="#ff6a1a"/><circle class="pin-pulse" cx="426" cy="143" r="6" style="animation-delay:0.85s"/><circle cx="426" cy="143" r="5" fill="#ff6a1a"/><circle class="pin-pulse" cx="344" cy="242" r="6" style="animation-delay:1.02s"/><circle cx="344" cy="242" r="5" fill="#ff6a1a"/><circle class="pin-pulse" cx="134" cy="341" r="6" style="animation-delay:1.19s"/><circle cx="134" cy="341" r="5" fill="#ff6a1a"/><circle class="pin-pulse" cx="153" cy="344" r="6" style="animation-delay:1.36s"/><circle cx="153" cy="344" r="5" fill="#ff6a1a"/><circle class="pin-pulse" cx="103" cy="261" r="6" style="animation-delay:1.53s"/><circle cx="103" cy="261" r="5" fill="#ff6a1a"/><circle class="pin-pulse" cx="132" cy="313" r="6" style="animation-delay:1.70s"/><circle cx="132" cy="313" r="5" fill="#ff6a1a"/><circle class="pin-pulse" cx="132" cy="317" r="6" style="animation-delay:1.87s"/><circle cx="132" cy="317" r="5" fill="#ff6a1a"/><circle class="pin-pulse" cx="229" cy="482" r="6" style="animation-delay:2.04s"/><circle cx="229" cy="482" r="5" fill="#ff6a1a"/><circle class="pin-pulse" cx="123" cy="40" r="6" style="animation-delay:2.21s"/><circle cx="123" cy="40" r="5" fill="#ff6a1a"/></g>
-                        <g class="map-labels" fill="#c9ccd1"><text x="452" y="236" text-anchor="start">EASTERN PROVINCE</text><text x="356" y="266" text-anchor="start">RIYADH</text><text x="120" y="372" text-anchor="end">JEDDAH · MAKKAH</text><text x="90" y="258" text-anchor="end">YANBU</text><text x="244" y="487" text-anchor="start">JAZAN</text><text x="140" y="44" text-anchor="start">WAAD AL SHAMAAL</text></g>
-                    </svg>
-                    <div class="flex flex-col justify-center">
+                <div class="steel relative text-white grid lg:grid-cols-[1.25fr_0.75fr] gap-8 lg:gap-12 p-6 sm:p-10 mb-12 fade-in-up">
+                    <div class="blueprint" aria-hidden="true"></div>
+                    <div class="relative z-[1]">
+                        <svg viewBox="-10 0 620 503" class="ksa-map w-full h-auto" role="group" aria-label="Kingdom-wide delivery" dir="ltr">
+                            <defs><pattern id="ksa-dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="rgba(255,255,255,0.13)"/></pattern></defs>
+                            <path d="M70.2 221.6L67.4 219.5L66.3 217.9L65.1 216.9L59.8 214.9L59 213.5L59.9 212.2L60.4 213.5L61.4 214.3L65.8 216.2L70.8 220.2L70.2 221.6ZM212.8 487.7L215 487.8L214.1 486.8L214.9 485L217.9 487.9L217.8 491.3L216.2 490.7L215.2 489L212.1 489.5L210.3 488.6L207.6 485.7L206.9 483.6L209.2 482.2L209.9 480.5L209.2 478.8L210.8 479.1L211.7 480.9L211.8 484.8L211.6 486.6L212.8 487.7ZM493 417.6L486.4 418.6L480 419.6L472.8 420.6L464.1 421.9L457.4 422.9L447.5 424.4L438.6 425.6L430.3 426.9L421.9 428.1L414.9 429.2L410.6 430.4L405.7 433L398 437.1L390.2 441.3L386.3 443.4L382.1 448.9L379.9 451.7L376 456.8L373.1 460.6L369.6 465.1L368.1 469.2L365.8 475.5L363.8 477.1L360.5 479.1L357.4 480.5L352.7 480.4L350.1 476.5L347.1 472.4L345.7 470.8L344.5 470.7L339.8 471.2L334 471.8L327.3 471.2L319.6 470.4L312.3 469.7L308.7 469.1L303.9 466.5L302.7 465.9L301.4 465.8L295.8 465.7L290.2 465.7L284.5 466.5L279.2 466.2L273.6 466.7L271.6 467.7L269.5 467.6L268.1 468.5L267 469L265.4 468.2L263.7 468.4L261.2 467.7L259.5 466L258 464.4L256.4 463.6L254.5 463.1L252.9 463.1L250.9 464L249.7 464.9L246.6 467.9L247.9 470.7L245.6 472.6L245 475.5L244.7 477L244.4 480.7L245.3 483.6L246.4 484.7L246.5 486L245.9 488.5L244.1 489.2L242.9 491.6L242.1 492.7L240.8 494L235.6 498.2L235.3 495.8L233.6 492.2L233.5 489.5L232.7 487L231.3 485L228.7 483L228.4 480.2L226.5 477.4L223.9 475.1L222.4 471L221.4 465.6L214.7 458.4L206.2 451.8L203.6 448L199.3 440.3L197.2 434.3L191.5 427.4L191.3 424.7L190.4 421.5L189.1 417.9L188.4 415L182.7 402.5L180.8 400.5L179.2 397.7L178.8 395.5L178.3 394.4L174.4 392.3L170.5 387L159.3 378.6L153.8 377.8L149.4 374.8L146.2 370.9L142.8 364.2L136.7 356.9L131.7 346.6L133.3 342.8L133.2 340.2L131.6 335.7L129.8 332.3L128.6 329.1L129.6 324.4L129.9 319.2L131 316.4L131.7 313.3L130.8 307.2L129 304L129.2 301.8L127.3 300.7L125.7 298.3L127.3 298.4L124.4 295.1L123.3 293.3L122.2 288.8L120.8 285.4L116.2 277.6L114 272.8L109 266.8L103.7 262.2L100.4 260.2L98.7 258.3L95.9 258.2L92.9 255.6L90.8 255.5L88.1 255.1L85 249.9L82.4 245.1L77.9 238.8L79.1 237.2L80.4 234.5L79.8 231.1L79.1 228.7L77.1 224.4L70.7 213.6L69 212.1L66.2 210.3L64.6 205.6L63.8 201.4L59.4 199.4L51.9 184.4L47.5 179.1L45.7 175.6L40.7 169.8L38.3 164L33.1 158.6L28.7 149.4L21.9 140.1L19 138.5L12 137.9L9 137.2L6.3 139.2L6.1 136.7L8 133.1L10.6 125.6L11.2 119.1L15.5 99.7L21.4 100.6L26.4 101.5L33.5 102.7L41 103.9L45.3 104.7L46.8 104.4L52.8 99.6L58.3 95.3L61.5 90.1L64.6 85L66 83.9L70.9 83L78.6 81.5L86.1 80L88.5 75.4L90.7 70.2L91.7 69.1L97.1 66.2L100.4 64.5L95.7 59.3L91.3 54.4L86.3 48.9L82.2 44.6L75.8 38.2L71.8 34L79 32.1L86.7 29.9L94.6 27.7L104.1 25.1L111.5 23.1L122.6 20.1L127.9 18.6L133.1 14.6L139.3 15.6L148.7 17.1L157.8 18.6L167.4 20.3L170.5 21.7L179.7 26.8L185.8 30.2L192.7 34.1L201.5 39L207.5 42.3L215.3 46.7L221.2 51.6L228.9 57.8L237.2 64.6L244 69.9L253.5 77.2L262.9 84.4L272 91.5L279.4 97.2L288.6 104.3L298.7 105.4L311.3 106.5L323.9 107.6L335.3 108.6L340.3 107.6L345.6 108.2L352.9 109.1L357.2 109.7L365.5 110.8L368 115.5L368.9 118.8L369.7 122L372.2 124.8L377.8 124.8L382.8 124.7L388.9 124.6L393.9 124.6L395.4 127.5L396.1 130.3L399 137.2L403.2 142.5L404.1 144.4L404.8 147.3L404.1 148.4L403.8 149.7L406.8 152.6L411.9 155.1L413.9 155.7L416.1 156.8L414.4 158.5L417.4 162.4L420.8 166.4L424.6 167.3L429.6 173.3L437.1 177.2L441.7 182.3L439.9 181.9L438.3 181.2L437.8 183.9L438.3 186.4L440.6 188.6L442.7 190.2L443.5 193.2L441.8 199.6L440.2 199L439 198.9L439.8 203.8L441.1 207.3L442.8 210.1L444.3 214.2L445.4 215.9L450.3 220.3L451.7 223.9L453.1 230.7L456.2 234.4L457.9 237.3L460.1 239.8L461.5 243.2L463.5 245.8L464.6 246.4L466.2 246.7L468.2 246.7L470.5 246L473 245.4L475 246.7L477.1 246.5L477.3 247.7L476 249.4L474.2 253.5L476.7 254.2L478.9 254.6L480.6 255.3L481.5 256.1L481.6 260.1L482.2 261.6L483.2 262.9L484.7 265L486.3 267L487.9 269L489.4 271L490.9 273L492.5 275L494 277L495.5 279L497.1 281L498.7 283.1L500.2 285L501.7 287.1L503.3 289.1L504.8 291.1L506.3 293.1L507.9 295.1L509.2 296.8L511.5 297.1L514.4 297.5L517.7 297.9L522 298.5L527 299.2L532.7 299.9L538.8 300.7L545 301.6L551.3 302.4L557.2 303.2L562.9 304L568 304.7L572.3 305.2L575.6 305.7L577.7 305.9L580.7 306.4L583 303.8L585 307.3L586.7 310.1L589 314.1L591.6 318.4L594 322.4L595.7 325.4L594.8 328.5L593.8 331.9L592.8 335.2L591.7 338.7L590.7 342.1L589.6 345.5L588.6 348.9L587.6 352.3L586.5 355.7L585.5 359.1L584.5 362.5L583.5 365.8L582.5 369.3L581.5 372.7L580.4 376.1L579.3 379.4L578.3 382.8L577.1 386.9L574.1 388L569.4 389.8L564.5 391.5L559.7 393.3L554.8 395.1L550 396.9L545.2 398.6L540.4 400.4L535.5 402.1L530.7 403.9L525.8 405.7L521.1 407.4L516.2 409.2L511.4 410.9L506.6 412.7L501.8 414.4L497 416.2L493 417.6ZM61.6 211.4L60.1 210.8L60.2 208.4L61.2 207.1L61.1 208.9L61.6 210.8Z" fill="#1d2025" stroke="rgba(255,106,26,0.55)" stroke-width="1.5" stroke-linejoin="round"/>
+                            <path d="M70.2 221.6L67.4 219.5L66.3 217.9L65.1 216.9L59.8 214.9L59 213.5L59.9 212.2L60.4 213.5L61.4 214.3L65.8 216.2L70.8 220.2L70.2 221.6ZM212.8 487.7L215 487.8L214.1 486.8L214.9 485L217.9 487.9L217.8 491.3L216.2 490.7L215.2 489L212.1 489.5L210.3 488.6L207.6 485.7L206.9 483.6L209.2 482.2L209.9 480.5L209.2 478.8L210.8 479.1L211.7 480.9L211.8 484.8L211.6 486.6L212.8 487.7ZM493 417.6L486.4 418.6L480 419.6L472.8 420.6L464.1 421.9L457.4 422.9L447.5 424.4L438.6 425.6L430.3 426.9L421.9 428.1L414.9 429.2L410.6 430.4L405.7 433L398 437.1L390.2 441.3L386.3 443.4L382.1 448.9L379.9 451.7L376 456.8L373.1 460.6L369.6 465.1L368.1 469.2L365.8 475.5L363.8 477.1L360.5 479.1L357.4 480.5L352.7 480.4L350.1 476.5L347.1 472.4L345.7 470.8L344.5 470.7L339.8 471.2L334 471.8L327.3 471.2L319.6 470.4L312.3 469.7L308.7 469.1L303.9 466.5L302.7 465.9L301.4 465.8L295.8 465.7L290.2 465.7L284.5 466.5L279.2 466.2L273.6 466.7L271.6 467.7L269.5 467.6L268.1 468.5L267 469L265.4 468.2L263.7 468.4L261.2 467.7L259.5 466L258 464.4L256.4 463.6L254.5 463.1L252.9 463.1L250.9 464L249.7 464.9L246.6 467.9L247.9 470.7L245.6 472.6L245 475.5L244.7 477L244.4 480.7L245.3 483.6L246.4 484.7L246.5 486L245.9 488.5L244.1 489.2L242.9 491.6L242.1 492.7L240.8 494L235.6 498.2L235.3 495.8L233.6 492.2L233.5 489.5L232.7 487L231.3 485L228.7 483L228.4 480.2L226.5 477.4L223.9 475.1L222.4 471L221.4 465.6L214.7 458.4L206.2 451.8L203.6 448L199.3 440.3L197.2 434.3L191.5 427.4L191.3 424.7L190.4 421.5L189.1 417.9L188.4 415L182.7 402.5L180.8 400.5L179.2 397.7L178.8 395.5L178.3 394.4L174.4 392.3L170.5 387L159.3 378.6L153.8 377.8L149.4 374.8L146.2 370.9L142.8 364.2L136.7 356.9L131.7 346.6L133.3 342.8L133.2 340.2L131.6 335.7L129.8 332.3L128.6 329.1L129.6 324.4L129.9 319.2L131 316.4L131.7 313.3L130.8 307.2L129 304L129.2 301.8L127.3 300.7L125.7 298.3L127.3 298.4L124.4 295.1L123.3 293.3L122.2 288.8L120.8 285.4L116.2 277.6L114 272.8L109 266.8L103.7 262.2L100.4 260.2L98.7 258.3L95.9 258.2L92.9 255.6L90.8 255.5L88.1 255.1L85 249.9L82.4 245.1L77.9 238.8L79.1 237.2L80.4 234.5L79.8 231.1L79.1 228.7L77.1 224.4L70.7 213.6L69 212.1L66.2 210.3L64.6 205.6L63.8 201.4L59.4 199.4L51.9 184.4L47.5 179.1L45.7 175.6L40.7 169.8L38.3 164L33.1 158.6L28.7 149.4L21.9 140.1L19 138.5L12 137.9L9 137.2L6.3 139.2L6.1 136.7L8 133.1L10.6 125.6L11.2 119.1L15.5 99.7L21.4 100.6L26.4 101.5L33.5 102.7L41 103.9L45.3 104.7L46.8 104.4L52.8 99.6L58.3 95.3L61.5 90.1L64.6 85L66 83.9L70.9 83L78.6 81.5L86.1 80L88.5 75.4L90.7 70.2L91.7 69.1L97.1 66.2L100.4 64.5L95.7 59.3L91.3 54.4L86.3 48.9L82.2 44.6L75.8 38.2L71.8 34L79 32.1L86.7 29.9L94.6 27.7L104.1 25.1L111.5 23.1L122.6 20.1L127.9 18.6L133.1 14.6L139.3 15.6L148.7 17.1L157.8 18.6L167.4 20.3L170.5 21.7L179.7 26.8L185.8 30.2L192.7 34.1L201.5 39L207.5 42.3L215.3 46.7L221.2 51.6L228.9 57.8L237.2 64.6L244 69.9L253.5 77.2L262.9 84.4L272 91.5L279.4 97.2L288.6 104.3L298.7 105.4L311.3 106.5L323.9 107.6L335.3 108.6L340.3 107.6L345.6 108.2L352.9 109.1L357.2 109.7L365.5 110.8L368 115.5L368.9 118.8L369.7 122L372.2 124.8L377.8 124.8L382.8 124.7L388.9 124.6L393.9 124.6L395.4 127.5L396.1 130.3L399 137.2L403.2 142.5L404.1 144.4L404.8 147.3L404.1 148.4L403.8 149.7L406.8 152.6L411.9 155.1L413.9 155.7L416.1 156.8L414.4 158.5L417.4 162.4L420.8 166.4L424.6 167.3L429.6 173.3L437.1 177.2L441.7 182.3L439.9 181.9L438.3 181.2L437.8 183.9L438.3 186.4L440.6 188.6L442.7 190.2L443.5 193.2L441.8 199.6L440.2 199L439 198.9L439.8 203.8L441.1 207.3L442.8 210.1L444.3 214.2L445.4 215.9L450.3 220.3L451.7 223.9L453.1 230.7L456.2 234.4L457.9 237.3L460.1 239.8L461.5 243.2L463.5 245.8L464.6 246.4L466.2 246.7L468.2 246.7L470.5 246L473 245.4L475 246.7L477.1 246.5L477.3 247.7L476 249.4L474.2 253.5L476.7 254.2L478.9 254.6L480.6 255.3L481.5 256.1L481.6 260.1L482.2 261.6L483.2 262.9L484.7 265L486.3 267L487.9 269L489.4 271L490.9 273L492.5 275L494 277L495.5 279L497.1 281L498.7 283.1L500.2 285L501.7 287.1L503.3 289.1L504.8 291.1L506.3 293.1L507.9 295.1L509.2 296.8L511.5 297.1L514.4 297.5L517.7 297.9L522 298.5L527 299.2L532.7 299.9L538.8 300.7L545 301.6L551.3 302.4L557.2 303.2L562.9 304L568 304.7L572.3 305.2L575.6 305.7L577.7 305.9L580.7 306.4L583 303.8L585 307.3L586.7 310.1L589 314.1L591.6 318.4L594 322.4L595.7 325.4L594.8 328.5L593.8 331.9L592.8 335.2L591.7 338.7L590.7 342.1L589.6 345.5L588.6 348.9L587.6 352.3L586.5 355.7L585.5 359.1L584.5 362.5L583.5 365.8L582.5 369.3L581.5 372.7L580.4 376.1L579.3 379.4L578.3 382.8L577.1 386.9L574.1 388L569.4 389.8L564.5 391.5L559.7 393.3L554.8 395.1L550 396.9L545.2 398.6L540.4 400.4L535.5 402.1L530.7 403.9L525.8 405.7L521.1 407.4L516.2 409.2L511.4 410.9L506.6 412.7L501.8 414.4L497 416.2L493 417.6ZM61.6 211.4L60.1 210.8L60.2 208.4L61.2 207.1L61.1 208.9L61.6 210.8Z" fill="url(#ksa-dots)"/>
+                            <g class="map-routes draw" fill="none" stroke="rgba(255,106,26,0.45)" stroke-width="1.3" stroke-dasharray="1" style="--d:0.2s"><path class="ln" pathLength="1" d="M440 189Q441 176 442 183"/><path class="ln" pathLength="1" d="M440 189Q434 185 428 205"/><path class="ln" pathLength="1" d="M440 189Q434 168 428 172"/><path class="ln" pathLength="1" d="M440 189Q423 151 406 146"/><path class="ln" pathLength="1" d="M440 189Q433 153 426 143"/><path class="ln" pathLength="1" d="M440 189Q426 209 411 260"/><path class="ln" pathLength="1" d="M440 189Q392 188 344 242"/><path class="ln" pathLength="1" d="M440 189Q287 200 134 341"/><path class="ln" pathLength="1" d="M440 189Q296 205 153 344"/><path class="ln" pathLength="1" d="M440 189Q272 154 103 261"/><path class="ln" pathLength="1" d="M440 189Q286 186 132 313"/><path class="ln" pathLength="1" d="M440 189Q286 188 132 317"/><path class="ln" pathLength="1" d="M440 189Q334 288 229 482"/><path class="ln" pathLength="1" d="M440 189Q282 47 123 40"/></g>
+                            <g class="map-labels" fill="#c9ccd1"><text x="452" y="236" text-anchor="start">EASTERN PROVINCE</text><text x="356" y="266" text-anchor="start">RIYADH</text><text x="120" y="372" text-anchor="end">JEDDAH · MAKKAH</text><text x="90" y="258" text-anchor="end">YANBU</text><text x="244" y="487" text-anchor="start">JAZAN</text><text x="140" y="44" text-anchor="start">WAAD AL SHAMAAL</text></g>
+                            <g class="map-pins"><g class="pin" data-site="ras_tanura" tabindex="0" role="button" aria-label="Ras Tanura — 1 project"><circle class="pin-hit" cx="442" cy="183" r="16"/><circle class="pin-pulse" cx="442" cy="183" r="6" style="animation-delay:0.00s"/><circle class="pin-dot" cx="442" cy="183" r="5.5"/></g><g class="pin" data-site="abqaiq" tabindex="0" role="button" aria-label="Abqaiq — 2 projects"><circle class="pin-hit" cx="428" cy="205" r="16"/><circle class="pin-pulse" cx="428" cy="205" r="6" style="animation-delay:0.17s"/><circle class="pin-dot" cx="428" cy="205" r="5.5"/></g><g class="pin" data-site="jubail" tabindex="0" role="button" aria-label="Jubail — 6 projects"><circle class="pin-hit" cx="428" cy="172" r="16"/><circle class="pin-pulse" cx="428" cy="172" r="6" style="animation-delay:0.34s"/><circle class="pin-dot" cx="428" cy="172" r="5.5"/></g><g class="pin" data-site="dammam" tabindex="0" role="button" aria-label="Dammam — home base — 1 project"><circle class="pin-hit" cx="440" cy="189" r="16"/><circle class="pin-pulse" cx="440" cy="189" r="6" style="animation-delay:0.51s"/><circle class="pin-dot" cx="440" cy="189" r="5.5"/></g><g class="pin" data-site="tanajib" tabindex="0" role="button" aria-label="Tanajib — 1 project"><circle class="pin-hit" cx="406" cy="146" r="16"/><circle class="pin-pulse" cx="406" cy="146" r="6" style="animation-delay:0.68s"/><circle class="pin-dot" cx="406" cy="146" r="5.5"/></g><g class="pin" data-site="marjan" tabindex="0" role="button" aria-label="Marjan field — 1 project"><circle class="pin-hit" cx="426" cy="143" r="16"/><circle class="pin-pulse" cx="426" cy="143" r="6" style="animation-delay:0.85s"/><circle class="pin-dot" cx="426" cy="143" r="5.5"/></g><g class="pin" data-site="haradh" tabindex="0" role="button" aria-label="Haradh &amp; South Ghawar — 1 project"><circle class="pin-hit" cx="411" cy="260" r="16"/><circle class="pin-pulse" cx="411" cy="260" r="6" style="animation-delay:1.02s"/><circle class="pin-dot" cx="411" cy="260" r="5.5"/></g><g class="pin" data-site="riyadh" tabindex="0" role="button" aria-label="Riyadh — 1 project"><circle class="pin-hit" cx="344" cy="242" r="16"/><circle class="pin-pulse" cx="344" cy="242" r="6" style="animation-delay:1.19s"/><circle class="pin-dot" cx="344" cy="242" r="5.5"/></g><g class="pin" data-site="jeddah" tabindex="0" role="button" aria-label="Jeddah — 1 project"><circle class="pin-hit" cx="134" cy="341" r="16"/><circle class="pin-pulse" cx="134" cy="341" r="6" style="animation-delay:1.36s"/><circle class="pin-dot" cx="134" cy="341" r="5.5"/></g><g class="pin" data-site="makkah" tabindex="0" role="button" aria-label="Makkah — 1 project"><circle class="pin-hit" cx="153" cy="344" r="16"/><circle class="pin-pulse" cx="153" cy="344" r="6" style="animation-delay:1.53s"/><circle class="pin-dot" cx="153" cy="344" r="5.5"/></g><g class="pin" data-site="yanbu" tabindex="0" role="button" aria-label="Yanbu — 1 project"><circle class="pin-hit" cx="103" cy="261" r="16"/><circle class="pin-pulse" cx="103" cy="261" r="6" style="animation-delay:1.70s"/><circle class="pin-dot" cx="103" cy="261" r="5.5"/></g><g class="pin" data-site="kaec" tabindex="0" role="button" aria-label="KAEC — 1 project"><circle class="pin-hit" cx="132" cy="313" r="16"/><circle class="pin-pulse" cx="132" cy="313" r="6" style="animation-delay:1.87s"/><circle class="pin-dot" cx="132" cy="313" r="5.5"/></g><g class="pin" data-site="thuwal" tabindex="0" role="button" aria-label="Thuwal — 1 project"><circle class="pin-hit" cx="132" cy="317" r="16"/><circle class="pin-pulse" cx="132" cy="317" r="6" style="animation-delay:2.04s"/><circle class="pin-dot" cx="132" cy="317" r="5.5"/></g><g class="pin" data-site="jazan" tabindex="0" role="button" aria-label="Jazan — 1 project"><circle class="pin-hit" cx="229" cy="482" r="16"/><circle class="pin-pulse" cx="229" cy="482" r="6" style="animation-delay:2.21s"/><circle class="pin-dot" cx="229" cy="482" r="5.5"/></g><g class="pin" data-site="waad" tabindex="0" role="button" aria-label="Waad Al Shamaal — 1 project"><circle class="pin-hit" cx="123" cy="40" r="16"/><circle class="pin-pulse" cx="123" cy="40" r="6" style="animation-delay:2.38s"/><circle class="pin-dot" cx="123" cy="40" r="5.5"/></g></g>
+                        </svg>
+                        <p class="map-hint flex items-center gap-2 text-sm text-steel-300 mt-3"><span class="inline-block w-2.5 h-2.5 rounded-full bg-ember"></span> Tap a pin to see the projects there</p>
+                        <div id="map-card" class="map-card" hidden role="dialog" aria-live="polite">
+                            <button type="button" class="map-card-close" aria-label="Close">×</button>
+                            <p class="eyebrow !text-xs" data-map="count"></p>
+                            <h4 class="font-display font-extrabold uppercase text-2xl leading-tight mt-1" data-map="name"></h4>
+                            <ul class="mt-3 space-y-3" data-map="list"></ul>
+                        </div>
+                        <script type="application/json" id="map-sites">{"ras_tanura": {"name": "Ras Tanura", "projects": [["Fire alarm system replacement", "Saudi Aramco · Heba · 2019 – 2020"]]}, "abqaiq": {"name": "Abqaiq", "projects": [["Foam chambers", "Saudi Aramco · Heba · 2020 – 2021"], ["Flow metering &amp; Siemens PCS7 integration — water pipelines", "Saudi Aramco · Subway Networks"]]}, "jubail": {"name": "Jubail", "projects": [["60 km MV cable revamp — Hadeed (SAR 17M)", "Saudi Iron &amp; Steel · Subway Networks"], ["Fire protection replacement &amp; upgrade", "Jubail Energy Service Co. · JCI · 2023 – 2024"], ["Fire alarm replacement — desalination plants", "Water &amp; Power · Heba · 2018 – 2019"], ["PA/GA rectification", "Saudi Kayan · JCI · 2022"], ["MV circuit breakers", "SIPCHEM · Subway Networks"], ["Precast panel factory fire protection", "Jordan Al-Watan · Heba · 2019 – 2020"]]}, "dammam": {"name": "Dammam — home base", "projects": [["Wet chemical kitchen suppression — Dammam Camp", "Johnson Controls · 2023"]]}, "tanajib": {"name": "Tanajib", "projects": [["VFD-driven booster pumps", "Saudi Aramco · Subway Networks"]]}, "marjan": {"name": "Marjan field", "projects": [["E-houses: FM-200 suppression &amp; fire alarm", "Saudi Aramco · KiCE · Heba · 2019 – 2021"]]}, "haradh": {"name": "Haradh &amp; South Ghawar", "projects": [["Wet chemical kitchen suppression — Hardh &amp; South Ghowar camps", "Johnson Controls · 2023"]]}, "riyadh": {"name": "Riyadh", "projects": [["KAPSARC fire alarm system", "Hi-Tech &amp; Saudi Aramco · Heba · 2019 – 2020"]]}, "jeddah": {"name": "Jeddah", "projects": [["JT MTU radar room fire alarm — Jeddah Refinery", "Saudi Aramco · Heba · 2020"]]}, "makkah": {"name": "Makkah", "projects": [["New Call Center: FM-200 &amp; fire alarm", "Saudi Energy · Heba · 2021 – 2022"]]}, "yanbu": {"name": "Yanbu", "projects": [["Tri-Sponge plant fire protection", "Heba · 2021"]]}, "kaec": {"name": "KAEC", "projects": [["Apex Pharma fire protection", "Heba · 2020"]]}, "thuwal": {"name": "Thuwal", "projects": [["Nine dewatering pumps — National Guard Housing", "Abunayyan Trading · 2017 – 2018"]]}, "jazan": {"name": "Jazan", "projects": [["Port Control Center fire protection", "Heba · 2019 – 2020"]]}, "waad": {"name": "Waad Al Shamaal", "projects": [["Fire protection incl. fire pumps — 7 pumping stations", "Ma&#8217;aden · Heba · 2019"]]}}</script>
+                    </div>
+                    <div class="relative z-[1] flex flex-col justify-center">
                         <p class="eyebrow">Project Footprint</p>
                         <h3 class="font-display font-extrabold uppercase text-4xl leading-none mt-3">Kingdom-wide delivery</h3>
                         <p class="text-steel-300 leading-relaxed mt-4">Projects delivered from the Gulf coast to the Red Sea, from Waad Al Shamaal in the north to Jazan in the south.</p>
@@ -911,7 +1073,8 @@
         </section>
 
         <section id="contact" class="steel angled-top text-white pb-28 overflow-hidden">
-            <div class="container mx-auto px-6 fade-in-up">
+            <div class="blueprint" aria-hidden="true"></div>
+            <div class="container mx-auto px-6 relative z-[1] fade-in-up">
                 <p class="eyebrow">Get In Touch</p>
                 <h2 class="font-display font-extrabold uppercase leading-[0.9] text-6xl md:text-8xl mt-4">Let&#8217;s talk<br><span class="fire-text">fire protection.</span></h2>
                 <p class="text-lg text-steel-300 max-w-2xl mt-6">Discussing a hazard, a specification or an opportunity? The fastest way to reach me is WhatsApp.</p>
@@ -1099,6 +1262,144 @@
                     });
                     olderButton.hidden = true;
                 });
+            }
+
+            const clamp = (v) => Math.min(Math.max(v, 0), 1);
+            const ramp = (p, a, b) => clamp((p - a) / (b - a));
+
+            // Scroll story: smoke -> detector -> alarm -> FM-200 discharge -> fire out
+            const story = document.getElementById('story');
+            if (story) {
+                const steps = [...story.querySelectorAll('.story-step')];
+                const count = story.querySelector('.story-count');
+                const panelLabel = story.querySelector('.story-panel-label');
+                const updateStory = () => {
+                    const rect = story.getBoundingClientRect();
+                    if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+                    const total = story.offsetHeight - window.innerHeight;
+                    const p = total > 0 ? clamp(-rect.top / total) : 1;
+                    const vars = {
+                        '--p': p,
+                        '--fire': ramp(p, 0.05, 0.18) * (1 - ramp(p, 0.74, 0.9)),
+                        '--smoke': ramp(p, 0.1, 0.3) * (1 - ramp(p, 0.8, 0.96)),
+                        '--flow': ramp(p, 0.56, 0.64),
+                        '--jet': ramp(p, 0.6, 0.64) * (1 - ramp(p, 0.8, 0.86)),
+                        '--gas': ramp(p, 0.6, 0.76),
+                        '--clear': ramp(p, 0.9, 1),
+                    };
+                    Object.entries(vars).forEach(([k, v]) => story.style.setProperty(k, v.toFixed(3)));
+                    story.classList.toggle('is-detect', p >= 0.2);
+                    story.classList.toggle('is-alarm', p >= 0.4 && p < 0.88);
+                    story.classList.toggle('is-done', p >= 0.86);
+                    const stage = p < 0.4 ? 0 : p < 0.6 ? 1 : p < 0.8 ? 2 : 3;
+                    steps.forEach((step, i) => step.classList.toggle('active', i === stage));
+                    if (p >= 0.4 && p < 0.6) {
+                        panelLabel.textContent = story.dataset.countdown;
+                        count.textContent = `${Math.ceil(30 * (1 - ramp(p, 0.4, 0.6)))}s`;
+                    } else if (p >= 0.6) {
+                        panelLabel.textContent = story.dataset.released;
+                        count.textContent = 'FM-200';
+                    } else {
+                        panelLabel.textContent = '';
+                        count.textContent = '';
+                    }
+                };
+                window.addEventListener('scroll', () => requestAnimationFrame(updateStory), { passive: true });
+                window.addEventListener('resize', updateStory);
+                updateStory();
+            }
+
+            // Blueprint flashlight: follows the pointer, or drifts slowly on touch screens
+            const canHover = window.matchMedia('(hover: hover)').matches;
+            document.querySelectorAll('.blueprint').forEach((bp, index) => {
+                const host = bp.parentElement;
+                if (canHover) {
+                    host.addEventListener('pointermove', (e) => {
+                        const r = host.getBoundingClientRect();
+                        bp.style.setProperty('--bp-x', `${e.clientX - r.left}px`);
+                        bp.style.setProperty('--bp-y', `${e.clientY - r.top}px`);
+                    });
+                } else if (!reduceMotion) {
+                    let visible = false;
+                    new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; }).observe(host);
+                    const drift = (t) => {
+                        if (visible) {
+                            bp.style.setProperty('--bp-x', `${50 + 32 * Math.sin(t / 3200 + index)}%`);
+                            bp.style.setProperty('--bp-y', `${50 + 28 * Math.cos(t / 4100 + index * 2)}%`);
+                        }
+                        requestAnimationFrame(drift);
+                    };
+                    requestAnimationFrame(drift);
+                }
+            });
+
+            // Clickable project map
+            const mapCard = document.getElementById('map-card');
+            if (mapCard) {
+                const sites = JSON.parse(document.getElementById('map-sites').textContent);
+                const pins = [...document.querySelectorAll('.pin')];
+                const closeCard = () => {
+                    mapCard.hidden = true;
+                    pins.forEach(pin => pin.classList.remove('active'));
+                };
+                const openCard = (pin) => {
+                    const site = sites[pin.dataset.site];
+                    pins.forEach(p => p.classList.toggle('active', p === pin));
+                    mapCard.querySelector('[data-map="name"]').innerHTML = site.name;
+                    mapCard.querySelector('[data-map="count"]').textContent = pin.getAttribute('aria-label').split(' — ').pop();
+                    mapCard.querySelector('[data-map="list"]').innerHTML = site.projects
+                        .map(([title, detail]) => `<li class="border-s-2 border-ember ps-3"><p class="font-semibold text-white leading-snug">${title}</p><p class="text-sm text-steel-400">${detail}</p></li>`)
+                        .join('');
+                    const pinX = Number(pin.querySelector('.pin-dot').getAttribute('cx'));
+                    mapCard.classList.toggle('on-left', pinX > 300);
+                    mapCard.hidden = false;
+                };
+                pins.forEach(pin => {
+                    pin.addEventListener('click', () => openCard(pin));
+                    pin.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            openCard(pin);
+                        }
+                    });
+                });
+                mapCard.querySelector('.map-card-close').addEventListener('click', closeCard);
+                document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCard(); });
+            }
+
+            // Fire pump curve explorer (illustrative curve: H = 120 - 0.002 Q², in % of rated)
+            const pumpTool = document.querySelector('.pump-tool');
+            if (pumpTool) {
+                const px = (q) => 70 + q / 160 * 540;
+                const py = (h) => 350 - h / 150 * 320;
+                const head = (q) => 120 - 0.002 * q * q;
+                const slider = pumpTool.querySelector('.pump-slider');
+                const ratedQ = pumpTool.querySelector('.pump-rated-q');
+                const ratedP = pumpTool.querySelector('.pump-rated-p');
+                const point = pumpTool.querySelector('.pump-point');
+                const guideX = pumpTool.querySelector('.pump-guide-x');
+                const guideY = pumpTool.querySelector('.pump-guide-y');
+                const out = (key, text) => { pumpTool.querySelector(`[data-out="${key}"]`).textContent = text; };
+                [head(0), head(100), head(150)].forEach((h, i) => {
+                    pumpTool.querySelector(`[data-check-value="${i}"]`).textContent = `${Math.round(h)}%`;
+                });
+                const updatePump = () => {
+                    const q = Number(slider.value);
+                    const h = head(q);
+                    const gpm = (Number(ratedQ.value) || 0) * q / 100;
+                    const psi = (Number(ratedP.value) || 0) * h / 100;
+                    point.setAttribute('cx', px(q));
+                    point.setAttribute('cy', py(h));
+                    guideX.setAttribute('d', `M${px(q)} ${py(0)}V${py(h)}`);
+                    guideY.setAttribute('d', `M${px(0)} ${py(h)}H${px(q)}`);
+                    out('q-pct', `${q}%`);
+                    out('q', `${q}%`);
+                    out('q-sub', `${Math.round(gpm)} gpm · ${Math.round(gpm * 3.785)} L/min`);
+                    out('p', `${Math.round(h)}%`);
+                    out('p-sub', `${Math.round(psi)} psi · ${(psi * 0.0689476).toFixed(1)} bar`);
+                };
+                [slider, ratedQ, ratedP].forEach(el => el.addEventListener('input', updatePump));
+                updatePump();
             }
 
             const observer = new IntersectionObserver((entries) => {
