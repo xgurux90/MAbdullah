@@ -89,6 +89,7 @@
 .steel {
     background-color: #141619;
     background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
         radial-gradient(ellipse at 78% 35%, rgba(255, 106, 26, 0.2), transparent 55%),
         repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.025) 0 2px, transparent 2px 14px);
 }
@@ -128,6 +129,189 @@
     z-index: 1;
 }
 
+/* Angled edges on dark sections, echoing the cut-corner buttons */
+.angled,
+.angled-top {
+    --cut: 3vw;
+    position: relative;
+    z-index: 1;
+}
+
+.angled {
+    clip-path: polygon(0 var(--cut), 100% 0, 100% calc(100% - var(--cut)), 0 100%);
+    margin-block: calc(var(--cut) * -1);
+    padding-block: calc(6rem + var(--cut));
+}
+
+.angled-top {
+    clip-path: polygon(0 var(--cut), 100% 0, 100% 100%, 0 100%);
+    margin-top: calc(var(--cut) * -1);
+    padding-top: calc(7rem + var(--cut));
+}
+
+/* Hero: warm-toned portrait, drifting ember glow, staggered entrance */
+.hero-img {
+    filter: sepia(0.14) saturate(1.1) contrast(1.05) brightness(1.02);
+}
+
+.hero-glow {
+    position: absolute;
+    top: 12%;
+    inset-inline-end: 16%;
+    width: 640px;
+    height: 640px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 106, 26, 0.3), transparent 65%);
+    filter: blur(24px);
+    pointer-events: none;
+    animation: glow-drift 14s ease-in-out infinite alternate;
+}
+
+@keyframes glow-drift {
+    to { transform: translate(-70px, 50px) scale(1.15); }
+}
+
+@keyframes rise-in {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes photo-in {
+    from { opacity: 0; transform: scale(1.04); }
+    to { opacity: 1; transform: none; }
+}
+
+.js .hero-in {
+    animation: rise-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(var(--d, 0) * 110ms + 100ms);
+}
+
+.js .hero-img {
+    animation: photo-in 1.4s ease-out both;
+}
+
+/* Navigation: active section and scroll progress */
+.nav-link {
+    position: relative;
+}
+
+.nav-link.active {
+    color: #fff;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0.75rem;
+    bottom: 2px;
+    height: 2px;
+    background: #ff6a1a;
+}
+
+/* Hover: cards lift with an ember glow, buttons get a light sweep */
+.lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 60px -28px rgba(255, 106, 26, 0.5);
+}
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 35%, rgba(255, 255, 255, 0.35) 50%, transparent 65%);
+    transform: translateX(-120%);
+    transition: transform 0.7s ease;
+    pointer-events: none;
+}
+
+.btn:hover::after {
+    transform: translateX(120%);
+}
+
+/* Illustrations draw themselves when their cards scroll into view */
+.js .draw .ln {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 1.8s cubic-bezier(0.65, 0, 0.35, 1) var(--d, 0s);
+}
+
+.js .visible .draw .ln {
+    stroke-dashoffset: 0;
+}
+
+.js .draw .late {
+    opacity: 0;
+    transition: opacity 0.6s ease calc(var(--d, 0s) + 1.5s);
+}
+
+.js .visible .draw .late {
+    opacity: 1;
+}
+
+/* Experience timeline dots */
+.timeline-dot {
+    position: absolute;
+    top: 3rem;
+    inset-inline-start: 0;
+    width: 0.875rem;
+    height: 0.875rem;
+    border-radius: 9999px;
+    background: #ff6a1a;
+    box-shadow: 0 0 0 4px #f4f1eb;
+}
+
+@media (min-width: 1024px) {
+    .timeline-dot {
+        inset-inline-start: 253px;
+    }
+}
+
+.timeline-dot.current::after,
+.pin-pulse {
+    animation: pulse-ring 2.4s ease-out infinite;
+}
+
+.timeline-dot.current::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 2px solid #ff6a1a;
+}
+
+.pin-pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    stroke-width: 2;
+}
+
+@keyframes pulse-ring {
+    from { transform: scale(1); opacity: 0.8; }
+    to { transform: scale(3.2); opacity: 0; }
+}
+
+.ksa-map text {
+    direction: ltr;
+    unicode-bidi: plaintext;
+    font-family: 'Barlow Condensed', 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+}
+
+.mobile-bar {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
 /* Inline SVG icons from img/icons.svg (built by tools/build-icons.js) */
 .icon {
     display: inline-block;
@@ -159,11 +343,33 @@
         transform: none;
         transition: none;
     }
+
+    .js .hero-in,
+    .js .hero-img,
+    .hero-glow,
+    .pin-pulse,
+    .timeline-dot.current::after {
+        animation: none;
+    }
+
+    .js .draw .ln {
+        stroke-dashoffset: 0;
+        transition: none;
+    }
+
+    .js .draw .late {
+        opacity: 1;
+        transition: none;
+    }
+
+    .lift:hover {
+        transform: none;
+    }
 }
 
-/* Filtered-out project cards (their flex class would otherwise override [hidden]) */
-.project-card[hidden] {
-    display: none;
+/* Hidden elements stay hidden even when a utility class sets their display */
+[hidden] {
+    display: none !important;
 }
 
 /* Floating WhatsApp button appears once the hero has scrolled away */
@@ -186,6 +392,10 @@
 
     #header,
     #mobile-menu,
+    #scroll-progress,
+    #older-roles,
+    .mobile-bar,
+    .hero-glow,
     .whatsapp-float,
     .project-filter,
     #projects-more,
@@ -241,8 +451,25 @@
         display: flex !important;
     }
 
-    .js .fade-in-up {
+    .js .fade-in-up,
+    .js .hero-in,
+    .js .draw .late {
         opacity: 1 !important;
         transform: none !important;
+        animation: none !important;
+    }
+
+    .js .draw .ln {
+        stroke-dashoffset: 0 !important;
+    }
+
+    [data-older][hidden] {
+        display: grid !important;
+    }
+
+    .angled,
+    .angled-top {
+        clip-path: none;
+        margin: 0;
     }
 }
