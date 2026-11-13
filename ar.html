@@ -21,7 +21,7 @@
     <link rel="preload" href="fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="img/portrait.webp" as="image" type="image/webp">
-    <link rel="stylesheet" href="css/index.css?v=16c7fc6e8f">
+    <link rel="stylesheet" href="css/index.css?v=b246c563d6">
 </head>
 <body class="bg-off text-steel-900 antialiased selection:bg-ember selection:text-white pb-16 lg:pb-0">
     <div id="scroll-progress" class="fixed top-0 inset-x-0 z-[60] h-[3px] bg-gradient-to-r from-fire to-ember origin-left rtl:origin-right scale-x-0" aria-hidden="true"></div>
@@ -40,9 +40,9 @@
                     <a href="#contact" class="nav-link text-white">تواصل</a>
                 </div>
                 <a href="./" lang="en" hreflang="en" class="px-3 py-2 font-semibold text-sm text-steel-300 hover:text-white border border-white/15 hover:border-white/40 transition-colors">English</a>
-                <a href="Mohammad_Abdullah_CV.pdf" download class="btn-fire !hidden sm:!inline-flex !px-5 !py-2.5 !text-[15px]"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#solid-file-arrow-down"></use></svg> السيرة الذاتية</a>
+                <a href="Mohammad_Abdullah_CV.pdf" download class="btn-fire !hidden sm:!inline-flex !px-5 !py-2.5 !text-[15px]"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-file-arrow-down"></use></svg> السيرة الذاتية</a>
                 <button id="mobile-menu-btn" type="button" aria-label="فتح القائمة" aria-controls="mobile-menu" aria-expanded="false" class="xl:hidden text-white p-2 border border-white/15">
-                    <svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#solid-bars"></use></svg>
+                    <svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-bars"></use></svg>
                 </button>
             </div>
         </nav>
@@ -63,6 +63,19 @@
     <main>
         <section class="steel relative text-white overflow-hidden pt-20 lg:pt-0">
             <div class="hero-glow" aria-hidden="true"></div>
+            <svg class="hero-pipes" viewBox="0 0 1440 760" preserveAspectRatio="xMinYMin slice" aria-hidden="true">
+                <defs>
+                    <path id="hero-pipe-0" d="M0 112H636Q660 112 660 136V444Q660 470 686 470H712"/>
+                    <path id="hero-pipe-2" d="M0 662H372Q396 662 396 638V560"/>
+                    <radialGradient id="particleGlow"><stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#ff6a1a" stop-opacity="0"/></radialGradient>
+                </defs>
+                <g class="pipe-lines" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M0 112H636Q660 112 660 136V444Q660 470 686 470H712" pathLength="1"/><path d="M60 112V760" pathLength="1"/><path d="M0 662H372Q396 662 396 638V560" pathLength="1"/><path d="M160 112V132M300 112V132M460 112V132" pathLength="1"/>
+                </g>
+                <g class="pipe-heads" fill="none"><circle cx="160" cy="138" r="6"/><path d="M154 138h12"/><circle cx="300" cy="138" r="6"/><path d="M294 138h12"/><circle cx="460" cy="138" r="6"/><path d="M454 138h12"/></g>
+                <g class="pipe-nozzle"><path d="M712 462h14l-3 16h-8z"/><path d="M719 486l-14 26M719 486v30M719 486l14 26" fill="none"/></g>
+                <g class="pipe-particles"><circle class="pipe-particle" r="3.2"><animateMotion dur="6.6s" begin="0s" repeatCount="indefinite" rotate="auto"><mpath href="#hero-pipe-0"/></animateMotion></circle><circle class="pipe-particle" r="3.2"><animateMotion dur="6.6s" begin="2.2s" repeatCount="indefinite" rotate="auto"><mpath href="#hero-pipe-0"/></animateMotion></circle><circle class="pipe-particle" r="3.2"><animateMotion dur="6.6s" begin="4.4s" repeatCount="indefinite" rotate="auto"><mpath href="#hero-pipe-0"/></animateMotion></circle><circle class="pipe-particle" r="3.2"><animateMotion dur="6.6s" begin="1.1s" repeatCount="indefinite" rotate="auto"><mpath href="#hero-pipe-2"/></animateMotion></circle><circle class="pipe-particle" r="3.2"><animateMotion dur="6.6s" begin="3.6s" repeatCount="indefinite" rotate="auto"><mpath href="#hero-pipe-2"/></animateMotion></circle></g>
+            </svg>
             <div class="container mx-auto px-6 grid lg:grid-cols-[1.1fr_0.9fr] lg:min-h-[720px]">
                 <div class="relative z-10 order-2 lg:order-1 pb-16 lg:pt-36 lg:pb-24">
                     <p class="eyebrow hero-in" style="--d:0">الحماية من الحرائق · المملكة العربية السعودية</p>
@@ -71,11 +84,11 @@
                     <p class="hero-in font-display font-semibold uppercase tracking-[0.06em] text-xl md:text-2xl" style="--d:3">مدير تطوير أعمال — الحماية من الحرائق</p>
                     <p class="hero-in text-lg leading-relaxed text-steel-300 max-w-xl mt-5" style="--d:4">أبدأ بتشخيص الخطر، ثم أهندس نظام الحماية من الحرائق المناسب — أنظمة الإطفاء بالغاز ومضخات الحريق والإنذار والكشف — لأرامكو والسعودية للطاقة والقطاع الصناعي في أنحاء المملكة.</p>
                     <div class="hero-in hero-actions flex flex-col sm:flex-row gap-4 mt-10" style="--d:5">
-                        <a href="Mohammad_Abdullah_CV.pdf" download class="btn-fire"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#solid-file-arrow-down"></use></svg> تحميل السيرة الذاتية</a>
-                        <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-ghost"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#brands-whatsapp"></use></svg> واتساب</a>
+                        <a href="Mohammad_Abdullah_CV.pdf" download class="btn-fire"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-file-arrow-down"></use></svg> تحميل السيرة الذاتية</a>
+                        <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-ghost"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg> واتساب</a>
                     </div>
                     <p class="hero-in text-sm text-steel-400 mt-3" style="--d:5">السيرة الذاتية باللغة الإنجليزية</p>
-                    <p class="hero-in flex items-center gap-2 text-steel-400 mt-8" style="--d:6"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#solid-location-dot"></use></svg> الدمام، المنطقة الشرقية، المملكة العربية السعودية</p>
+                    <p class="hero-in flex flex-wrap items-center gap-x-5 gap-y-2 text-steel-400 mt-8" style="--d:6"><span class="flex items-center gap-2"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-location-dot"></use></svg> الدمام، المنطقة الشرقية، المملكة العربية السعودية</span><span class="live-badge " data-live data-place="في الدمام" data-open="ضمن ساعات العمل" data-closed="خارج ساعات العمل" hidden><span class="live-dot" aria-hidden="true"></span><span data-live-text></span></span></p>
                 </div>
                 <div class="hero-photo relative lg:static order-1 lg:order-2 -mx-6 lg:mx-0 h-[440px] sm:h-[560px] lg:h-auto">
                     <picture>
@@ -91,16 +104,15 @@
             </div>
         </section>
 
-        <div class="bg-steel-800 text-steel-300">
-            <div class="container mx-auto px-6 py-6 flex flex-wrap items-center gap-x-10 gap-y-3">
-                <span class="eyebrow !text-sm">مشاريع منفذة لصالح</span>
-                <span class="font-display font-semibold uppercase tracking-wide text-xl">أرامكو السعودية</span>
-                <span class="font-display font-semibold uppercase tracking-wide text-xl">السعودية للطاقة</span>
-                <span class="font-display font-semibold uppercase tracking-wide text-xl">معادن</span>
-                <span class="font-display font-semibold uppercase tracking-wide text-xl">حديد</span>
-                <span class="font-display font-semibold uppercase tracking-wide text-xl">كابسارك</span>
-                <span class="font-display font-semibold uppercase tracking-wide text-xl">سبكيم</span>
-                <span class="font-display font-semibold uppercase tracking-wide text-xl">كيان السعودية</span>
+        <div class="bg-steel-800 text-steel-300 overflow-hidden">
+            <div class="container mx-auto px-6 py-6 flex items-center gap-8">
+                <span class="eyebrow !text-sm shrink-0">مشاريع منفذة لصالح</span>
+                <div class="marquee" aria-label="مشاريع منفذة لصالح: أرامكو السعودية, السعودية للطاقة, معادن, حديد, كابسارك, سبكيم, كيان السعودية">
+                    <div class="marquee-track">
+                        <div class="marquee-group"><span class="marquee-item">أرامكو السعودية</span><span class="marquee-item">السعودية للطاقة</span><span class="marquee-item">معادن</span><span class="marquee-item">حديد</span><span class="marquee-item">كابسارك</span><span class="marquee-item">سبكيم</span><span class="marquee-item">كيان السعودية</span></div>
+                        <div class="marquee-group" aria-hidden="true"><span class="marquee-item">أرامكو السعودية</span><span class="marquee-item">السعودية للطاقة</span><span class="marquee-item">معادن</span><span class="marquee-item">حديد</span><span class="marquee-item">كابسارك</span><span class="marquee-item">سبكيم</span><span class="marquee-item">كيان السعودية</span></div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -367,7 +379,235 @@
                             <li class="flex items-start gap-3"><span class="pump-check" data-check="2">✓</span> <span>عند 150% تدفق، الضغط ≥ 65% من المقنن</span> <span class="ms-auto font-display font-bold text-lg tabular-nums" data-check-value="2" dir="ltr"></span></li>
                         </ul>
                         <p class="text-xs text-steel-500 leading-relaxed mt-6">منحنى توضيحي. يعتمد الاختيار الفعلي على منحنى الاختبار المعتمد من المصنّع، مع التحقق منه مقابل الاحتياج الهيدروليكي للنظام.</p>
-                        <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-fire mt-6 self-start"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#brands-whatsapp"></use></svg> ناقش اختيار مضخة</a>
+                        <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-fire mt-6 self-start"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg> ناقش اختيار مضخة</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="selector" class="pb-24">
+            <div class="container mx-auto px-6">
+                <p class="eyebrow">اختيار النظام</p>
+                <h2 class="heading mt-4">أي نظام<br><span class="fire-text">يناسب؟</span></h2>
+                <p class="text-lg text-steel-600 leading-relaxed max-w-2xl mt-5">اختر نوع الخطر لعرض خيارات الحماية التي تُدرس عادةً له، ومعيار NFPA الخاص بكل منها.</p>
+                <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-6 mt-10 fade-in-up">
+                    <div class="haz-list flex flex-col gap-2" role="group" aria-label="اختيار النظام">
+                        <button type="button" class="haz-btn" data-haz="0" aria-pressed="true"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-server"></use></svg> <span>مراكز البيانات وغرف الاتصالات</span></button>
+                        <button type="button" class="haz-btn" data-haz="1" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-bolt"></use></svg> <span>الغرف الكهربائية ومباني الكهرباء</span></button>
+                        <button type="button" class="haz-btn" data-haz="2" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-fan"></use></svg> <span>حاويات التوربينات الغازية</span></button>
+                        <button type="button" class="haz-btn" data-haz="3" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-utensils"></use></svg> <span>المطابخ التجارية</span></button>
+                        <button type="button" class="haz-btn" data-haz="4" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-box-archive"></use></svg> <span>الأرشيف والسجلات</span></button>
+                        <button type="button" class="haz-btn" data-haz="5" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-warehouse"></use></svg> <span>المستودعات والتخزين</span></button>
+                        <button type="button" class="haz-btn" data-haz="6" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-oil-well"></use></svg> <span>مزارع الخزانات والسوائل القابلة للاشتعال</span></button>
+                    </div>
+                    <div class="steel relative text-white p-6 sm:p-10 flex flex-col">
+                        <div class="blueprint" aria-hidden="true"></div>
+                        <div class="relative z-[1] flex flex-col flex-grow">
+                        <div class="haz-panel" data-haz-panel="0">
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-server"></use></svg> مراكز البيانات وغرف الاتصالات</p>
+                            <ul class="space-y-4 mt-5">
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">عامل نظيف (FK-5-1-12 أو HFC-227ea)</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 2001</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">لا يترك بقايا ومناسب للغرف المأهولة عند تركيز التصميم؛ يُفرَّغ خلال 10 ثوانٍ.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">غازات خاملة (IG-541 / IG-55)</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 2001</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">غازات طبيعية لا تستنفد الأوزون؛ تحتاج مساحة أكبر للأسطوانات وفتحات لتخفيف الضغط.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">كشف الدخان بالشفط</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 72</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">إنذار مبكر جدًا يكتشف ارتفاع حرارة المعدات قبل ظهور اللهب.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">رشاشات سابقة التفعيل</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 13</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">حماية احتياطية للمبنى دون ماء في الأنابيب حتى يؤكد نظام الكشف الحريق.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="haz-panel" data-haz-panel="1">
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-bolt"></use></svg> الغرف الكهربائية ومباني الكهرباء</p>
+                            <ul class="space-y-4 mt-5">
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">عامل نظيف</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 2001</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">يحمي لوحات المفاتيح والتحكم دون ماء أو بقايا.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">إيروسول مكثّف</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 2010</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">مدمج ودون أنابيب؛ للحاويات غير المأهولة عادةً.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">ثاني أكسيد الكربون عالي الضغط</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 12</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">غمر كلي فعّال للغرف غير المأهولة فقط، مع ضوابط صارمة لسلامة الأرواح.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">كشف الدخان والشفط</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 72</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">كشف مبكر بنظام المنطقتين يطلق تسلسل التفريغ.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="haz-panel" data-haz-panel="2">
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-fan"></use></svg> حاويات التوربينات الغازية</p>
+                            <ul class="space-y-4 mt-5">
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">غمر كلي بثاني أكسيد الكربون</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 12</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">شائع لحاويات التوربينات والمولدات غير المأهولة، مع تفريغ ممتد أثناء تبريد المعدات.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">الرذاذ المائي</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 750</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">يبرّد بسرعة بكمية ماء قليلة؛ بديل حيث لا يُرغب في ثاني أكسيد الكربون.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">كشف اللهب والغازات القابلة للاشتعال</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 72</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">كشف سريع لتسرب الوقود واللهب.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="haz-panel" data-haz-panel="3">
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-utensils"></use></svg> المطابخ التجارية</p>
+                            <ul class="space-y-4 mt-5">
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">نظام المواد الكيميائية الرطبة</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 17A</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">يخمد حرائق زيوت الطهي ويعزلها في الشفاطات والمجاري والأجهزة.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">متطلبات الشفاطات والمجاري</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 96</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">متطلبات العادم والمسافات والتنظيف التي يعتمد عليها نظام الإطفاء.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">طفاية فئة K</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 10</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">حماية يدوية احتياطية لحرائق زيوت الطهي.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="haz-panel" data-haz-panel="4">
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-box-archive"></use></svg> الأرشيف والسجلات</p>
+                            <ul class="space-y-4 mt-5">
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">غازات خاملة</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 2001</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">لا تترك أي أثر على الورق أو الأفلام أو المقتنيات.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">عامل نظيف</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 2001</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">تخزين مدمج وتفريغ سريع للغرف الأصغر.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">رشاشات سابقة التفعيل</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 13</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">لا ماء إلا بعد تأكيد الكشف، ما يقلل الأضرار العرضية.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">كشف الدخان بالشفط</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 72</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">إنذار مبكر جدًا في المساحات عالية القيمة.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="haz-panel" data-haz-panel="5">
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-warehouse"></use></svg> المستودعات والتخزين</p>
+                            <ul class="space-y-4 mt-5">
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">رشاشات تلقائية (ESFR أو داخل الرفوف)</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 13</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">تُصمَّم حسب نوع البضائع وارتفاع التخزين وترتيبه.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">مضخة حريق</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 20</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">توفر احتياج الرشاشات عندما لا يكفي ضغط مصدر المياه.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">خزان مياه</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 22</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">يحفظ إمدادات المياه للمدة المطلوبة.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="haz-panel" data-haz-panel="6">
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-oil-well"></use></svg> مزارع الخزانات والسوائل القابلة للاشتعال</p>
+                            <ul class="space-y-4 mt-5">
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">أنظمة الرغوة (غرف الرغوة، الحقن السفلي)</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 11</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">تغطي سطح السائل لإخماد الحريق ومنع عودة الاشتعال.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">التبريد بالرش المائي</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 15</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">يبرّد الخزانات والمنشآت المعرّضة.</p>
+                                </li>
+                                <li class="haz-opt">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                                        <p class="font-display font-bold uppercase text-xl leading-tight">مضخات الحريق</p>
+                                        <span class="tag !text-ember shrink-0" dir="ltr">NFPA 20</span>
+                                    </div>
+                                    <p class="text-steel-300 leading-relaxed mt-1">توفر الرغوة والماء بالتدفق والضغط المطلوبين.</p>
+                                </li>
+                            </ul>
+                        </div>
+                            <p class="text-xs text-steel-400 leading-relaxed mt-auto pt-8">خيارات نموذجية فقط. يُقيَّم كل مشروع وفق خطره وطبيعة إشغاله والأكواد المحلية ومتطلبات الجهة المختصة، مثل الدفاع المدني أو أرامكو.</p>
+                            <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-fire mt-5 self-start"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg> ناقش مشروعك</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -402,107 +642,98 @@
             </div>
         </section>
 
-        <section id="experience" class="py-24">
-            <div class="container mx-auto px-6">
-                <p class="eyebrow">المسيرة المهنية</p>
-                <h2 class="heading mt-4 mb-8">الخبرات</h2>
-                <div class="relative">
-                    <span class="absolute top-0 bottom-0 start-[6px] lg:start-[259px] w-0.5 bg-gradient-to-b from-ember via-ember/40 to-transparent" aria-hidden="true"></span>
-                    <article class="relative grid lg:grid-cols-[240px_1fr] gap-4 lg:gap-10 py-10 ps-8 lg:ps-0 fade-in-up">
-                        <span class="timeline-dot current" aria-hidden="true"></span>
+        <section id="experience" class="xp">
+            <div class="xp-sticky">
+                <div class="container mx-auto px-6 w-full">
+                    <div class="flex flex-wrap items-end justify-between gap-4">
                         <div>
-                            <p class="font-display font-bold uppercase tracking-[0.08em] text-ember text-lg">مايو 2026 – حتى الآن</p>
-                            <p class="text-steel-500">الدمام</p>
+                            <p class="eyebrow">المسيرة المهنية</p>
+                            <h2 class="heading mt-4">الخبرات</h2>
                         </div>
-                        <div>
-                            <h3 class="font-display font-extrabold uppercase text-3xl leading-tight">مهندس مبيعات أول — الحماية من الحرائق <span class="inline-block align-middle ms-2 bg-gradient-to-r from-fire to-ember text-white font-display font-bold uppercase tracking-wider text-xs px-2 py-1">حاليًا</span></h3>
+                        <p class="xp-hint font-display font-bold uppercase tracking-wider text-steel-500">مرّر للتنقل عبر السنوات <span class="xp-arrow" aria-hidden="true">→</span></p>
+                    </div>
+                    <div class="xp-rail" aria-hidden="true"><span class="xp-rail-fill"></span><div class="xp-rail-years"><span class="xp-rail-year">الآن</span><span class="xp-rail-year">2024</span><span class="xp-rail-year">2022</span><span class="xp-rail-year">2018</span><span class="xp-rail-year">2015</span><span class="xp-rail-year">2012</span></div></div>
+                    <div class="xp-viewport">
+                        <span class="xp-line" aria-hidden="true"></span>
+                        <div class="xp-track">
+                        <article class="xp-card fade-in-up">
+                            <span class="timeline-dot current" aria-hidden="true"></span>
+                            <p class="xp-year font-display font-extrabold fire-text leading-none">2026</p>
+                            <p class="font-display font-bold uppercase tracking-[0.08em] text-ember mt-2">مايو 2026 – حتى الآن <span class="text-steel-500 normal-case tracking-normal font-sans font-medium">· الدمام</span></p>
+                            <h3 class="font-display font-extrabold uppercase text-3xl leading-tight mt-3">مهندس مبيعات أول — الحماية من الحرائق <span class="inline-block align-middle ms-2 bg-gradient-to-r from-fire to-ember text-white font-display font-bold uppercase tracking-wider text-xs px-2 py-1">حاليًا</span></h3>
                             <p class="font-semibold text-lg text-steel-600 mt-1"><bdi>M.H. Sherbiny</bdi></p>
-                            <ul class="space-y-2 mt-5 text-steel-600 leading-relaxed max-w-3xl">
-                            <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>تأسيس خط أعمال الحماية من الحرائق في الشركة من الصفر: خطة العمل والشراكات مع المصنّعين والتسعير والدخول إلى السوق.</span></li>
-                            <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>مراجعة اختيار المنتجات والتصاميم وفق NFPA 2001 و12 و17A و20 و72، وإعداد عروض فنية وتجارية تشرح أساس التصميم لا السعر فقط.</span></li>
-                            <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>إدارة الدورة الكاملة: الاستفسار، والدعم الفني قبل البيع، وتقديم المناقصات، والتفاوض، وإغلاق الطلبات، وتنفيذ المشاريع.</span></li>
+                            <div class="flex flex-wrap gap-2 mt-4"><span class="xp-chip">خط أعمال جديد للحماية من الحرائق</span><span class="xp-chip">NFPA 2001 · 12 · 17A · 20 · 72</span></div>
+                            <ul class="xp-bullets space-y-2 mt-5 text-steel-600 leading-relaxed max-w-3xl">
+                                <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>تأسيس خط أعمال الحماية من الحرائق في الشركة من الصفر: خطة العمل والشراكات مع المصنّعين والتسعير والدخول إلى السوق.</span></li>
+                                <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>مراجعة اختيار المنتجات والتصاميم وفق NFPA 2001 و12 و17A و20 و72، وإعداد عروض فنية وتجارية تشرح أساس التصميم لا السعر فقط.</span></li>
+                                <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>إدارة الدورة الكاملة: الاستفسار، والدعم الفني قبل البيع، وتقديم المناقصات، والتفاوض، وإغلاق الطلبات، وتنفيذ المشاريع.</span></li>
                             </ul>
-                        </div>
-                    </article>
-                    <article class="relative grid lg:grid-cols-[240px_1fr] gap-4 lg:gap-10 py-10 ps-8 lg:ps-0 fade-in-up">
-                        <span class="timeline-dot" aria-hidden="true"></span>
-                        <div>
-                            <p class="font-display font-bold uppercase tracking-[0.08em] text-ember text-lg">أكتوبر 2024 – مايو 2026</p>
-                            <p class="text-steel-500">الدمام</p>
-                        </div>
-                        <div>
-                            <h3 class="font-display font-extrabold uppercase text-3xl leading-tight">مدير المبيعات</h3>
+                        </article>
+                        <article class="xp-card fade-in-up">
+                            <span class="timeline-dot" aria-hidden="true"></span>
+                            <p class="xp-year font-display font-extrabold fire-text leading-none">2024</p>
+                            <p class="font-display font-bold uppercase tracking-[0.08em] text-ember mt-2">أكتوبر 2024 – مايو 2026 <span class="text-steel-500 normal-case tracking-normal font-sans font-medium">· الدمام</span></p>
+                            <h3 class="font-display font-extrabold uppercase text-3xl leading-tight mt-3">مدير المبيعات</h3>
                             <p class="font-semibold text-lg text-steel-600 mt-1"><bdi>Subway Networks</bdi></p>
-                            <ul class="space-y-2 mt-5 text-steel-600 leading-relaxed max-w-3xl">
-                            <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>افتتاح مصدر إيرادات للحماية من الحرائق إلى جانب أنظمة BMS والمراقبة والتحكم في الدخول والنداء العام.</span></li>
-                            <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>رفع الإيرادات السنوية بنحو 60% إلى أعلى مستوى في تاريخ الشركة، والفوز بأكبر مشروع في تاريخ Subway Networks: عقد بقيمة 17 مليون ريال في حديد (الشركة السعودية للحديد والصلب).</span></li>
-                            <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>قيادة فريق من 10 مهندسي مبيعات في مشاريع الأتمتة وSCADA والأجهزة الدقيقة وكشف الغاز.</span></li>
+                            <div class="flex flex-wrap gap-2 mt-4"><span class="xp-chip">+60% إيرادات</span><span class="xp-chip">أكبر مشروع في تاريخ الشركة</span><span class="xp-chip">فريق من 10</span></div>
+                            <ul class="xp-bullets space-y-2 mt-5 text-steel-600 leading-relaxed max-w-3xl">
+                                <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>افتتاح مصدر إيرادات للحماية من الحرائق إلى جانب أنظمة BMS والمراقبة والتحكم في الدخول والنداء العام.</span></li>
+                                <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>رفع الإيرادات السنوية بنحو 60% إلى أعلى مستوى في تاريخ الشركة، والفوز بأكبر مشروع في تاريخ Subway Networks: عقد بقيمة 17 مليون ريال في حديد (الشركة السعودية للحديد والصلب).</span></li>
+                                <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>قيادة فريق من 10 مهندسي مبيعات في مشاريع الأتمتة وSCADA والأجهزة الدقيقة وكشف الغاز.</span></li>
                             </ul>
-                        </div>
-                    </article>
-                    <article class="relative grid lg:grid-cols-[240px_1fr] gap-4 lg:gap-10 py-10 ps-8 lg:ps-0 fade-in-up">
-                        <span class="timeline-dot" aria-hidden="true"></span>
-                        <div>
-                            <p class="font-display font-bold uppercase tracking-[0.08em] text-ember text-lg">أبريل 2022 – أكتوبر 2024</p>
-                            <p class="text-steel-500">الخبر</p>
-                        </div>
-                        <div>
-                            <h3 class="font-display font-extrabold uppercase text-3xl leading-tight">مهندس مبيعات أول — الإطفاء وسلامة الأرواح</h3>
+                        </article>
+                        <article class="xp-card fade-in-up">
+                            <span class="timeline-dot" aria-hidden="true"></span>
+                            <p class="xp-year font-display font-extrabold fire-text leading-none">2022</p>
+                            <p class="font-display font-bold uppercase tracking-[0.08em] text-ember mt-2">أبريل 2022 – أكتوبر 2024 <span class="text-steel-500 normal-case tracking-normal font-sans font-medium">· الخبر</span></p>
+                            <h3 class="font-display font-extrabold uppercase text-3xl leading-tight mt-3">مهندس مبيعات أول — الإطفاء وسلامة الأرواح</h3>
                             <p class="font-semibold text-lg text-steel-600 mt-1"><bdi>Johnson Controls Arabia</bdi></p>
-                            <ul class="space-y-2 mt-5 text-steel-600 leading-relaxed max-w-3xl">
-                            <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>بيع أنظمة FM-200 وأنظمة المطابخ بالمواد الكيميائية الرطبة وأنظمة PA/GA لعملاء الصناعة والنفط والغاز والأغذية.</span></li>
-                            <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>نمو الإيرادات بنسبة 180% والأعمال المتكررة بنسبة 50% عبر استراتيجية حسابات استشارية.</span></li>
+                            <div class="flex flex-wrap gap-2 mt-4"><span class="xp-chip">+180% إيرادات</span><span class="xp-chip">+50% أعمال متكررة</span></div>
+                            <ul class="xp-bullets space-y-2 mt-5 text-steel-600 leading-relaxed max-w-3xl">
+                                <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>بيع أنظمة FM-200 وأنظمة المطابخ بالمواد الكيميائية الرطبة وأنظمة PA/GA لعملاء الصناعة والنفط والغاز والأغذية.</span></li>
+                                <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>نمو الإيرادات بنسبة 180% والأعمال المتكررة بنسبة 50% عبر استراتيجية حسابات استشارية.</span></li>
                             </ul>
-                        </div>
-                    </article>
-                    <article class="relative grid lg:grid-cols-[240px_1fr] gap-4 lg:gap-10 py-10 ps-8 lg:ps-0 fade-in-up">
-                        <span class="timeline-dot" aria-hidden="true"></span>
-                        <div>
-                            <p class="font-display font-bold uppercase tracking-[0.08em] text-ember text-lg">أغسطس 2018 – أبريل 2022</p>
-                            <p class="text-steel-500">الدمام</p>
-                        </div>
-                        <div>
-                            <h3 class="font-display font-extrabold uppercase text-3xl leading-tight">مهندس مبيعات مشاريع — الحماية من الحرائق</h3>
+                        </article>
+                        <article class="xp-card fade-in-up">
+                            <span class="timeline-dot" aria-hidden="true"></span>
+                            <p class="xp-year font-display font-extrabold fire-text leading-none">2018</p>
+                            <p class="font-display font-bold uppercase tracking-[0.08em] text-ember mt-2">أغسطس 2018 – أبريل 2022 <span class="text-steel-500 normal-case tracking-normal font-sans font-medium">· الدمام</span></p>
+                            <h3 class="font-display font-extrabold uppercase text-3xl leading-tight mt-3">مهندس مبيعات مشاريع — الحماية من الحرائق</h3>
                             <p class="font-semibold text-lg text-steel-600 mt-1"><bdi>Heba Fire &amp; Safety Equipment Co.</bdi></p>
-                            <ul class="space-y-2 mt-5 text-steel-600 leading-relaxed max-w-3xl">
-                            <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>تأمين وإدارة مشاريع حماية من الحرائق متكاملة تتجاوز قيمتها 25 مليون ريال — إطفاء بالغاز ومضخات حريق ورشاشات وإنذار — لأكثر من 100 عميل سنويًا.</span></li>
-                            <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>إعداد العروض الفنية وحزم المناقصات لأنظمة كبيرة، منها FM-200 والإنذار لمباني الكهرباء في حقل مرجان لأرامكو.</span></li>
+                            <div class="flex flex-wrap gap-2 mt-4"><span class="xp-chip">أكثر من 25 مليون ريال</span><span class="xp-chip">أكثر من 100 عميل سنويًا</span></div>
+                            <ul class="xp-bullets space-y-2 mt-5 text-steel-600 leading-relaxed max-w-3xl">
+                                <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>تأمين وإدارة مشاريع حماية من الحرائق متكاملة تتجاوز قيمتها 25 مليون ريال — إطفاء بالغاز ومضخات حريق ورشاشات وإنذار — لأكثر من 100 عميل سنويًا.</span></li>
+                                <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>إعداد العروض الفنية وحزم المناقصات لأنظمة كبيرة، منها FM-200 والإنذار لمباني الكهرباء في حقل مرجان لأرامكو.</span></li>
                             </ul>
-                        </div>
-                    </article>
-                    <article class="relative grid lg:grid-cols-[240px_1fr] gap-4 lg:gap-10 py-10 ps-8 lg:ps-0 fade-in-up" data-older>
-                        <span class="timeline-dot" aria-hidden="true"></span>
-                        <div>
-                            <p class="font-display font-bold uppercase tracking-[0.08em] text-ember text-lg">أغسطس 2015 – أغسطس 2018</p>
-                            <p class="text-steel-500">جدة</p>
-                        </div>
-                        <div>
-                            <h3 class="font-display font-extrabold uppercase text-3xl leading-tight">مهندس مبيعات مشاريع — المضخات والطاقة</h3>
+                        </article>
+                        <article class="xp-card fade-in-up" data-older>
+                            <span class="timeline-dot" aria-hidden="true"></span>
+                            <p class="xp-year font-display font-extrabold fire-text leading-none">2015</p>
+                            <p class="font-display font-bold uppercase tracking-[0.08em] text-ember mt-2">أغسطس 2015 – أغسطس 2018 <span class="text-steel-500 normal-case tracking-normal font-sans font-medium">· جدة</span></p>
+                            <h3 class="font-display font-extrabold uppercase text-3xl leading-tight mt-3">مهندس مبيعات مشاريع — المضخات والطاقة</h3>
                             <p class="font-semibold text-lg text-steel-600 mt-1"><bdi>Abunayyan Trading Corp.</bdi></p>
-                            <ul class="space-y-2 mt-5 text-steel-600 leading-relaxed max-w-3xl">
-                            <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>بيع مجموعات المضخات الطاردة المركزية والغاطسة ومضخات نزح المياه مع تحديد نقطة التشغيل وتحليل المنحنيات، وتوريد مولدات Kohler.</span></li>
+                            <div class="flex flex-wrap gap-2 mt-4"><span class="xp-chip">المضخات والطاقة</span><span class="xp-chip">المنطقة الغربية</span></div>
+                            <ul class="xp-bullets space-y-2 mt-5 text-steel-600 leading-relaxed max-w-3xl">
+                                <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>بيع مجموعات المضخات الطاردة المركزية والغاطسة ومضخات نزح المياه مع تحديد نقطة التشغيل وتحليل المنحنيات، وتوريد مولدات Kohler.</span></li>
                             </ul>
-                        </div>
-                    </article>
-                    <article class="relative grid lg:grid-cols-[240px_1fr] gap-4 lg:gap-10 py-10 ps-8 lg:ps-0 fade-in-up" data-older>
-                        <span class="timeline-dot" aria-hidden="true"></span>
-                        <div>
-                            <p class="font-display font-bold uppercase tracking-[0.08em] text-ember text-lg">أكتوبر 2012 – أغسطس 2015</p>
-                            <p class="text-steel-500">عمّان</p>
-                        </div>
-                        <div>
-                            <h3 class="font-display font-extrabold uppercase text-3xl leading-tight">مهندس مبيعات فني</h3>
+                        </article>
+                        <article class="xp-card fade-in-up" data-older>
+                            <span class="timeline-dot" aria-hidden="true"></span>
+                            <p class="xp-year font-display font-extrabold fire-text leading-none">2012</p>
+                            <p class="font-display font-bold uppercase tracking-[0.08em] text-ember mt-2">أكتوبر 2012 – أغسطس 2015 <span class="text-steel-500 normal-case tracking-normal font-sans font-medium">· عمّان</span></p>
+                            <h3 class="font-display font-extrabold uppercase text-3xl leading-tight mt-3">مهندس مبيعات فني</h3>
                             <p class="font-semibold text-lg text-steel-600 mt-1"><bdi>Ayoubi Steel Factory</bdi></p>
-                            <ul class="space-y-2 mt-5 text-steel-600 leading-relaxed max-w-3xl">
-                            <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>تطوير حلول فولاذية وعروض فنية لمشاريع صناعية وبنية تحتية.</span></li>
+                            <div class="flex flex-wrap gap-2 mt-4"><span class="xp-chip">مبيعات فنية</span><span class="xp-chip">مشاريع صناعية</span></div>
+                            <ul class="xp-bullets space-y-2 mt-5 text-steel-600 leading-relaxed max-w-3xl">
+                                <li class="flex gap-2"><span class="text-ember shrink-0">◂</span> <span>تطوير حلول فولاذية وعروض فنية لمشاريع صناعية وبنية تحتية.</span></li>
                             </ul>
+                        </article>
                         </div>
-                    </article>
+                    </div>
+                    <button id="older-roles" type="button" hidden class="btn-dark mt-2 ms-8">عرض المناصب السابقة</button>
                 </div>
-                <button id="older-roles" type="button" hidden class="btn-dark mt-2 ms-8 lg:ms-[280px]">عرض المناصب السابقة</button>
             </div>
         </section>
-
         <section id="case-studies" class="steel angled text-white">
             <div class="blueprint" aria-hidden="true"></div>
             <div class="container mx-auto px-6 relative z-[1]">
@@ -669,24 +900,57 @@
             <div class="container mx-auto px-6">
                 <p class="eyebrow">الشهادات</p>
                 <h2 class="heading mt-4 mb-12">معتمد.<br>ومؤهل.</h2>
-                <div class="grid md:grid-cols-3 gap-6 fade-in-up">
-                    <div class="lift bg-off p-8 flex flex-col">
-                        <img src="img/cfps.png" alt="شعار CFPS" width="80" height="80" loading="lazy" decoding="async" class="h-16 w-auto object-contain self-start">
-                        <h3 class="font-display font-extrabold uppercase text-2xl leading-tight mt-6">أخصائي حماية من الحرائق معتمد (CFPS)®</h3>
-                        <p class="font-semibold text-fire mt-1">الجمعية الوطنية للحماية من الحرائق (NFPA)</p>
-                        <p class="text-sm text-steel-500 mt-auto pt-5"><span dir="ltr">ID 1131510-CFPS · 2024 – 2027</span></p>
+                <div class="cert-grid grid md:grid-cols-3 gap-6 fade-in-up">
+                    <div class="cert" data-cert>
+                        <div class="cert-inner">
+                            <button type="button" class="cert-face cert-front bg-off p-8 flex flex-col text-start" aria-label="أخصائي حماية من الحرائق معتمد (CFPS)® — اضغط لعرض التفاصيل">
+                                <span class="cert-sheen" aria-hidden="true"></span>
+                                <img src="img/cfps.png" alt="شعار CFPS" width="80" height="80" loading="lazy" decoding="async" class="h-16 w-auto object-contain self-start">
+                                <span class="font-display font-extrabold uppercase text-2xl leading-tight mt-6">أخصائي حماية من الحرائق معتمد (CFPS)®</span>
+                                <span class="font-semibold text-fire mt-1">الجمعية الوطنية للحماية من الحرائق (NFPA)</span>
+                                <span class="text-sm text-steel-500 mt-auto pt-5 flex items-center justify-between gap-3 w-full"><span><span dir="ltr">ID 1131510-CFPS · 2024 – 2027</span></span><span class="font-display font-bold uppercase tracking-wider text-ember whitespace-nowrap">اضغط لعرض التفاصيل ↻</span></span>
+                            </button>
+                            <div class="cert-face cert-back steel text-white p-8 flex flex-col" aria-hidden="true">
+                                <p class="font-display font-extrabold uppercase text-xl leading-tight">أخصائي حماية من الحرائق معتمد (CFPS)®</p>
+                                <dl class="mt-3"><div class="py-2 border-b border-white/10"><dt class="text-xs uppercase tracking-wider text-steel-400">رقم الشهادة</dt><dd class="font-semibold" dir="auto">1131510-CFPS</dd></div><div class="py-2 border-b border-white/10"><dt class="text-xs uppercase tracking-wider text-steel-400">الصلاحية</dt><dd class="font-semibold" dir="auto">2024 – 2027</dd></div><div class="py-2 border-b border-white/10"><dt class="text-xs uppercase tracking-wider text-steel-400">الجهة المانحة</dt><dd class="font-semibold" dir="auto">الجمعية الوطنية للحماية من الحرائق</dd></div></dl>
+                                <p class="text-sm text-steel-300 mt-4">يمكن التحقق لدى NFPA باستخدام رقم الشهادة.</p>
+                                <button type="button" class="cert-flip-back font-display font-bold uppercase tracking-wider text-ember mt-auto pt-4 self-start">↺ رجوع</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="lift bg-off p-8 flex flex-col">
-                        <img src="img/pmp.png" alt="شعار PMP" width="80" height="80" loading="lazy" decoding="async" class="h-16 w-auto object-contain self-start">
-                        <h3 class="font-display font-extrabold uppercase text-2xl leading-tight mt-6">محترف إدارة المشاريع (PMP)®</h3>
-                        <p class="font-semibold text-fire mt-1">معهد إدارة المشاريع (PMI)</p>
-                        <p class="text-sm text-steel-500 mt-auto pt-5"><span dir="ltr">ID 3128273 · 2021 – 2027</span></p>
+                    <div class="cert" data-cert>
+                        <div class="cert-inner">
+                            <button type="button" class="cert-face cert-front bg-off p-8 flex flex-col text-start" aria-label="محترف إدارة المشاريع (PMP)® — اضغط لعرض التفاصيل">
+                                <span class="cert-sheen" aria-hidden="true"></span>
+                                <img src="img/pmp.png" alt="شعار PMP" width="80" height="80" loading="lazy" decoding="async" class="h-16 w-auto object-contain self-start">
+                                <span class="font-display font-extrabold uppercase text-2xl leading-tight mt-6">محترف إدارة المشاريع (PMP)®</span>
+                                <span class="font-semibold text-fire mt-1">معهد إدارة المشاريع (PMI)</span>
+                                <span class="text-sm text-steel-500 mt-auto pt-5 flex items-center justify-between gap-3 w-full"><span><span dir="ltr">ID 3128273 · 2021 – 2027</span></span><span class="font-display font-bold uppercase tracking-wider text-ember whitespace-nowrap">اضغط لعرض التفاصيل ↻</span></span>
+                            </button>
+                            <div class="cert-face cert-back steel text-white p-8 flex flex-col" aria-hidden="true">
+                                <p class="font-display font-extrabold uppercase text-xl leading-tight">محترف إدارة المشاريع (PMP)®</p>
+                                <dl class="mt-3"><div class="py-2 border-b border-white/10"><dt class="text-xs uppercase tracking-wider text-steel-400">رقم الشهادة</dt><dd class="font-semibold" dir="auto">3128273</dd></div><div class="py-2 border-b border-white/10"><dt class="text-xs uppercase tracking-wider text-steel-400">الصلاحية</dt><dd class="font-semibold" dir="auto">2021 – 2027</dd></div><div class="py-2 border-b border-white/10"><dt class="text-xs uppercase tracking-wider text-steel-400">الجهة المانحة</dt><dd class="font-semibold" dir="auto">معهد إدارة المشاريع</dd></div></dl>
+                                <p class="text-sm text-steel-300 mt-4"><a href="https://www.pmi.org/certifications/certification-resources/registry" target="_blank" rel="noopener noreferrer" class="underline hover:text-ember">التحقق عبر سجل شهادات PMI</a></p>
+                                <button type="button" class="cert-flip-back font-display font-bold uppercase tracking-wider text-ember mt-auto pt-4 self-start">↺ رجوع</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="lift bg-off p-8 flex flex-col">
-                        <img src="img/sce.png" alt="شعار الهيئة السعودية للمهندسين" width="200" height="80" loading="lazy" decoding="async" class="h-16 w-auto object-contain self-start">
-                        <h3 class="font-display font-extrabold uppercase text-2xl leading-tight mt-6">مهندس محترف</h3>
-                        <p class="font-semibold text-fire mt-1">الهيئة السعودية للمهندسين</p>
-                        <p class="text-sm text-steel-500 mt-auto pt-5">ميكاترونكس · رقم العضوية 251526</p>
+                    <div class="cert" data-cert>
+                        <div class="cert-inner">
+                            <button type="button" class="cert-face cert-front bg-off p-8 flex flex-col text-start" aria-label="مهندس محترف — اضغط لعرض التفاصيل">
+                                <span class="cert-sheen" aria-hidden="true"></span>
+                                <img src="img/sce.png" alt="شعار الهيئة السعودية للمهندسين" width="200" height="80" loading="lazy" decoding="async" class="h-16 w-auto object-contain self-start">
+                                <span class="font-display font-extrabold uppercase text-2xl leading-tight mt-6">مهندس محترف</span>
+                                <span class="font-semibold text-fire mt-1">الهيئة السعودية للمهندسين</span>
+                                <span class="text-sm text-steel-500 mt-auto pt-5 flex items-center justify-between gap-3 w-full"><span>ميكاترونكس · رقم العضوية 251526</span><span class="font-display font-bold uppercase tracking-wider text-ember whitespace-nowrap">اضغط لعرض التفاصيل ↻</span></span>
+                            </button>
+                            <div class="cert-face cert-back steel text-white p-8 flex flex-col" aria-hidden="true">
+                                <p class="font-display font-extrabold uppercase text-xl leading-tight">مهندس محترف</p>
+                                <dl class="mt-3"><div class="py-2 border-b border-white/10"><dt class="text-xs uppercase tracking-wider text-steel-400">رقم العضوية</dt><dd class="font-semibold" dir="auto">251526</dd></div><div class="py-2 border-b border-white/10"><dt class="text-xs uppercase tracking-wider text-steel-400">التخصص</dt><dd class="font-semibold" dir="auto">ميكاترونكس</dd></div><div class="py-2 border-b border-white/10"><dt class="text-xs uppercase tracking-wider text-steel-400">الجهة المانحة</dt><dd class="font-semibold" dir="auto">الهيئة السعودية للمهندسين</dd></div></dl>
+                                <p class="text-sm text-steel-300 mt-4">يمكن التحقق لدى الهيئة السعودية للمهندسين باستخدام رقم العضوية.</p>
+                                <button type="button" class="cert-flip-back font-display font-bold uppercase tracking-wider text-ember mt-auto pt-4 self-start">↺ رجوع</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="grid lg:grid-cols-3 gap-6 mt-6 fade-in-up">
@@ -715,15 +979,16 @@
                 <p class="eyebrow">تواصل</p>
                 <h2 class="font-display font-extrabold uppercase leading-[0.9] text-6xl md:text-8xl mt-4">لنتحدث عن<br><span class="fire-text">الحماية من الحرائق.</span></h2>
                 <p class="text-lg text-steel-300 max-w-2xl mt-6">لمناقشة خطر أو مواصفات أو فرصة عمل، أسرع وسيلة للتواصل هي واتساب.</p>
+                <p class="mt-4"><span class="live-badge " data-live data-place="في الدمام" data-open="ضمن ساعات العمل" data-closed="خارج ساعات العمل" hidden><span class="live-dot" aria-hidden="true"></span><span data-live-text></span></span></p>
                 <div class="flex flex-col lg:flex-row flex-wrap gap-4 mt-10">
-                    <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-whatsapp"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#brands-whatsapp"></use></svg> واتساب</a>
-                    <a href="mailto:eng-m-a@outlook.com" class="btn-fire !normal-case !tracking-normal"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#solid-envelope"></use></svg> eng-m-a@outlook.com</a>
-                    <a href="tel:+966538766689" class="btn-ghost"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#solid-phone"></use></svg> <span dir="ltr">+966 53 876 6689</span></a>
+                    <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-whatsapp"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg> واتساب</a>
+                    <a href="mailto:eng-m-a@outlook.com" class="btn-fire !normal-case !tracking-normal"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-envelope"></use></svg> eng-m-a@outlook.com</a>
+                    <a href="tel:+966538766689" class="btn-ghost"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-phone"></use></svg> <span dir="ltr">+966 53 876 6689</span></a>
                 </div>
                 <div class="flex flex-wrap gap-x-8 gap-y-3 mt-10 font-display font-semibold uppercase tracking-wider text-steel-300">
-                    <a href="https://www.linkedin.com/in/m-o-abdullah" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-ember"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#brands-linkedin"></use></svg> لينكدإن</a>
-                    <a href="mohammad-abdullah.vcf" download class="flex items-center gap-2 hover:text-ember"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#solid-address-card"></use></svg> حفظ جهة الاتصال</a>
-                    <a href="Mohammad_Abdullah_CV.pdf" download class="flex items-center gap-2 hover:text-ember"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#solid-file-arrow-down"></use></svg> تحميل السيرة الذاتية (PDF)</a>
+                    <a href="https://www.linkedin.com/in/m-o-abdullah" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-ember"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-linkedin"></use></svg> لينكدإن</a>
+                    <a href="mohammad-abdullah.vcf" download class="flex items-center gap-2 hover:text-ember"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-address-card"></use></svg> حفظ جهة الاتصال</a>
+                    <a href="Mohammad_Abdullah_CV.pdf" download class="flex items-center gap-2 hover:text-ember"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-file-arrow-down"></use></svg> تحميل السيرة الذاتية (PDF)</a>
                 </div>
             </div>
         </section>
@@ -755,11 +1020,11 @@
             <div>
                 <p class="eyebrow !text-sm">تواصل</p>
                 <ul class="mt-4 space-y-3">
-                    <li><a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-[#25D366]" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#brands-whatsapp"></use></svg> واتساب</a></li>
-                    <li><a href="mailto:eng-m-a@outlook.com" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#solid-envelope"></use></svg> eng-m-a@outlook.com</a></li>
-                    <li><a href="tel:+966538766689" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#solid-phone"></use></svg> <span dir="ltr">+966 53 876 6689</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/m-o-abdullah" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#brands-linkedin"></use></svg> لينكدإن</a></li>
-                    <li class="flex items-center gap-2"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#solid-location-dot"></use></svg> الدمام، المنطقة الشرقية، المملكة العربية السعودية</li>
+                    <li><a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-[#25D366]" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg> واتساب</a></li>
+                    <li><a href="mailto:eng-m-a@outlook.com" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-envelope"></use></svg> eng-m-a@outlook.com</a></li>
+                    <li><a href="tel:+966538766689" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-phone"></use></svg> <span dir="ltr">+966 53 876 6689</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/m-o-abdullah" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-linkedin"></use></svg> لينكدإن</a></li>
+                    <li class="flex items-center gap-2"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-location-dot"></use></svg> الدمام، المنطقة الشرقية، المملكة العربية السعودية</li>
                 </ul>
             </div>
         </div>
@@ -772,13 +1037,13 @@
     </footer>
 
     <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر واتساب" class="whatsapp-float fixed bottom-5 end-5 z-40 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1ebe5b] text-white hidden lg:flex items-center justify-center shadow-xl shadow-black/30 transition-transform hover:scale-110">
-        <svg class="icon text-3xl" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#brands-whatsapp"></use></svg>
+        <svg class="icon text-3xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg>
     </a>
 
     <nav class="mobile-bar lg:hidden fixed bottom-0 inset-x-0 z-40 grid grid-cols-3 bg-steel-900/95 backdrop-blur border-t border-white/10" aria-label="تواصل سريع">
-        <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 py-2.5 text-[#25D366] font-display font-bold uppercase tracking-wider text-xs"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#brands-whatsapp"></use></svg> واتساب</a>
-        <a href="tel:+966538766689" class="flex flex-col items-center gap-1 py-2.5 text-white font-display font-bold uppercase tracking-wider text-xs border-x border-white/10"><svg class="icon text-xl text-ember" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#solid-phone"></use></svg> اتصال</a>
-        <a href="Mohammad_Abdullah_CV.pdf" download class="flex flex-col items-center gap-1 py-2.5 text-white font-display font-bold uppercase tracking-wider text-xs"><svg class="icon text-xl text-ember" aria-hidden="true"><use href="img/icons.svg?v=1d3feb091c#solid-file-arrow-down"></use></svg> السيرة</a>
+        <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 py-2.5 text-[#25D366] font-display font-bold uppercase tracking-wider text-xs"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg> واتساب</a>
+        <a href="tel:+966538766689" class="flex flex-col items-center gap-1 py-2.5 text-white font-display font-bold uppercase tracking-wider text-xs border-x border-white/10"><svg class="icon text-xl text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-phone"></use></svg> اتصال</a>
+        <a href="Mohammad_Abdullah_CV.pdf" download class="flex flex-col items-center gap-1 py-2.5 text-white font-display font-bold uppercase tracking-wider text-xs"><svg class="icon text-xl text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-file-arrow-down"></use></svg> السيرة</a>
     </nav>
 
     <script>
@@ -889,7 +1154,8 @@
             // Collapse the earliest roles behind a button
             const olderButton = document.getElementById('older-roles');
             const olderRoles = document.querySelectorAll('[data-older]');
-            if (olderButton && olderRoles.length) {
+            const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+            if (olderButton && olderRoles.length && !isDesktop) {
                 olderRoles.forEach(role => { role.hidden = true; });
                 olderButton.hidden = false;
                 olderButton.addEventListener('click', () => {
@@ -1037,6 +1303,149 @@
                 };
                 [slider, ratedQ, ratedP].forEach(el => el.addEventListener('input', updatePump));
                 updatePump();
+            }
+
+            // Section headings slide up line by line
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+            document.querySelectorAll('h2.heading').forEach(heading => {
+                heading.innerHTML = heading.innerHTML
+                    .split(/<br\s*\/?>/i)
+                    .map((line, i) => `<span class="reveal-line"><span style="--li:${i}">${line}</span></span>`)
+                    .join('');
+                heading.classList.add('reveal');
+                revealObserver.observe(heading);
+            });
+
+            // Living pipe network: stop the flowing particles for reduced motion
+            const pipes = document.querySelector('.hero-pipes');
+            if (pipes && reduceMotion && pipes.pauseAnimations) pipes.pauseAnimations();
+
+            // Hero depth: the portrait and glow shift slightly with the pointer
+            const hero = document.querySelector('.hero-photo')?.closest('section');
+            const heroImg = document.querySelector('.hero-img');
+            const heroGlow = document.querySelector('.hero-glow');
+            if (hero && canHover && !reduceMotion) {
+                hero.addEventListener('pointermove', (e) => {
+                    const r = hero.getBoundingClientRect();
+                    const dx = (e.clientX - r.left) / r.width - 0.5;
+                    const dy = (e.clientY - r.top) / r.height - 0.5;
+                    heroImg.style.translate = `${dx * -18}px ${dy * -12}px`;
+                    heroGlow.style.translate = `${dx * 40}px ${dy * 30}px`;
+                });
+                hero.addEventListener('pointerleave', () => {
+                    heroImg.style.translate = '';
+                    heroGlow.style.translate = '';
+                });
+            }
+
+            // Sideways career timeline on wide screens
+            const xp = document.querySelector('.xp');
+            if (xp) {
+                const track = xp.querySelector('.xp-track');
+                const viewport = xp.querySelector('.xp-viewport');
+                const rtl = document.documentElement.dir === 'rtl';
+                let distance = 0;
+                const layoutXp = () => {
+                    const on = window.matchMedia('(min-width: 1024px)').matches;
+                    xp.classList.toggle('xp-on', on);
+                    if (on) {
+                        distance = Math.max(track.scrollWidth - viewport.clientWidth, 0);
+                        xp.style.height = `${distance + window.innerHeight}px`;
+                    } else {
+                        xp.style.height = '';
+                        track.style.transform = '';
+                    }
+                    updateXp();
+                };
+                const updateXp = () => {
+                    if (!xp.classList.contains('xp-on')) return;
+                    const rect = xp.getBoundingClientRect();
+                    const total = xp.offsetHeight - window.innerHeight;
+                    const p = total > 0 ? clamp(-rect.top / total) : 0;
+                    track.style.transform = `translateX(${(rtl ? 1 : -1) * p * distance}px)`;
+                    xp.style.setProperty('--xp-p', p.toFixed(3));
+                };
+                window.addEventListener('scroll', () => requestAnimationFrame(updateXp), { passive: true });
+                let resizeTimer;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(layoutXp, 150);
+                });
+                layoutXp();
+            }
+
+            // System selector
+            const hazButtons = document.querySelectorAll('.haz-btn');
+            const hazPanels = document.querySelectorAll('.haz-panel');
+            const showHazard = (index) => {
+                hazButtons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.haz === index)));
+                hazPanels.forEach(panel => { panel.hidden = panel.dataset.hazPanel !== index; });
+            };
+            hazButtons.forEach(button => button.addEventListener('click', () => {
+                showHazard(button.dataset.haz);
+                if (!isDesktop) {
+                    const panel = document.querySelector(`[data-haz-panel="${button.dataset.haz}"]`);
+                    const top = panel.getBoundingClientRect().top + window.pageYOffset - 90;
+                    window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+                }
+            }));
+            if (hazButtons.length) showHazard('0');
+
+            // Certificate cards: tilt with the pointer, flip for details
+            document.querySelectorAll('[data-cert]').forEach(cert => {
+                const inner = cert.querySelector('.cert-inner');
+                const back = cert.querySelector('.cert-back');
+                const front = cert.querySelector('.cert-front');
+                const flip = (show) => {
+                    cert.classList.toggle('flipped', show);
+                    back.setAttribute('aria-hidden', String(!show));
+                    front.setAttribute('aria-hidden', String(show));
+                };
+                front.addEventListener('click', () => flip(true));
+                cert.querySelector('.cert-flip-back').addEventListener('click', () => flip(false));
+                if (canHover && !reduceMotion) {
+                    cert.addEventListener('pointermove', (e) => {
+                        const r = cert.getBoundingClientRect();
+                        const x = (e.clientX - r.left) / r.width;
+                        const y = (e.clientY - r.top) / r.height;
+                        inner.style.setProperty('--tilt-x', `${(0.5 - y) * 10}deg`);
+                        inner.style.setProperty('--tilt-y', `${(x - 0.5) * 12}deg`);
+                        inner.style.setProperty('--sheen-x', `${x * 100}%`);
+                        inner.style.setProperty('--sheen-y', `${y * 100}%`);
+                    });
+                    cert.addEventListener('pointerleave', () => {
+                        inner.style.setProperty('--tilt-x', '0deg');
+                        inner.style.setProperty('--tilt-y', '0deg');
+                    });
+                }
+            });
+
+            // Live local time in Dammam and working-hours status (Sunday to Thursday, 8:00 to 17:00)
+            const liveBadges = document.querySelectorAll('[data-live]');
+            const updateLive = () => {
+                const now = new Date();
+                const lang = document.documentElement.lang === 'ar' ? 'ar-SA-u-nu-latn' : 'en-US';
+                const time = new Intl.DateTimeFormat(lang, { timeZone: 'Asia/Riyadh', hour: 'numeric', minute: '2-digit' }).format(now);
+                const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Riyadh', weekday: 'short', hour: 'numeric', hourCycle: 'h23' }).formatToParts(now);
+                const day = parts.find(p => p.type === 'weekday').value;
+                const hour = Number(parts.find(p => p.type === 'hour').value);
+                const open = !['Fri', 'Sat'].includes(day) && hour >= 8 && hour < 17;
+                liveBadges.forEach(badge => {
+                    badge.classList.toggle('is-open', open);
+                    badge.querySelector('[data-live-text]').textContent = `${time} ${badge.dataset.place} · ${open ? badge.dataset.open : badge.dataset.closed}`;
+                    badge.hidden = false;
+                });
+            };
+            if (liveBadges.length) {
+                updateLive();
+                setInterval(updateLive, 30000);
             }
 
             const observer = new IntersectionObserver((entries) => {
