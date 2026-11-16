@@ -1084,6 +1084,347 @@
     transform: none;
 }
 
+/* ---------- Header buttons (search, theme) ---------- */
+.hdr-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.7rem;
+    color: #c9ccd1;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.hdr-btn:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.theme-moon { display: none; }
+.light .theme-moon { display: inline-block; }
+.light .theme-sun { display: none; }
+
+/* ---------- Light theme ---------- */
+.light {
+    color-scheme: light;
+}
+
+.light body {
+    background: #faf7f2;
+}
+
+.light .steel {
+    background-color: #f1ede6;
+    background-image:
+        radial-gradient(ellipse at 78% 35%, rgba(255, 106, 26, 0.14), transparent 55%),
+        repeating-linear-gradient(135deg, rgba(20, 22, 25, 0.025) 0 2px, transparent 2px 14px);
+    color: #141619;
+}
+
+.light .steel .text-white,
+.light .steel .heading,
+.light .steel h3,
+.light .steel h4,
+.light .steel .xp-rail-year,
+.light .haz-btn[aria-pressed="true"],
+.light .btn-ghost,
+.light .glass-nav .text-white,
+.light #header .nav-link.active,
+.light #header .hdr-btn:hover,
+.light #header .logo,
+.light .mobile-bar .text-white {
+    color: #141619;
+}
+
+.light .steel .text-steel-300,
+.light .steel .text-steel-400 {
+    color: #454a52;
+}
+
+.light .steel .bg-steel-800,
+.light .steel .bg-steel-900,
+.light .steel .bg-steel-900\/75,
+.light .story-sticky .bg-steel-900,
+.light .haz-btn[aria-pressed="true"],
+.light .map-card,
+.light .cert-back {
+    background: #fff;
+    color: #141619;
+}
+
+.light .steel .bg-steel-900 .text-steel-300,
+.light .map-card .text-steel-400,
+.light .cert-back .text-steel-300,
+.light .cert-back .text-steel-400 {
+    color: #454a52;
+}
+
+.light .steel .border-white\/10,
+.light .steel .bg-white\/10 {
+    border-color: rgba(20, 22, 25, 0.12);
+    background-color: rgba(20, 22, 25, 0.06);
+}
+
+.light .btn-ghost {
+    border-color: rgba(20, 22, 25, 0.35);
+}
+
+.light .btn-ghost:hover {
+    color: #ff6a1a;
+    border-color: #ff6a1a;
+}
+
+.light .btn-dark {
+    background: #141619;
+    color: #fff;
+}
+
+.light .hero-photo img {
+    -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+}
+
+@media (min-width: 1024px) {
+    .light .hero-photo img {
+        -webkit-mask-image: linear-gradient(to right, transparent 0, #000 32%);
+        mask-image: linear-gradient(to right, transparent 0, #000 32%);
+    }
+
+    .light [dir="rtl"] .hero-photo img,
+    [dir="rtl"] .light .hero-photo img {
+        -webkit-mask-image: linear-gradient(to left, transparent 0, #000 32%);
+        mask-image: linear-gradient(to left, transparent 0, #000 32%);
+    }
+}
+
+.light .hero-photo .bg-steel-900\/85 {
+    background: rgba(255, 255, 255, 0.9);
+    color: #141619;
+}
+
+.light #header,
+.light .glass-nav {
+    background: rgba(250, 247, 242, 0.92);
+    border-bottom-color: rgba(20, 22, 25, 0.08);
+}
+
+.light #header .nav-link,
+.light #header .hdr-btn,
+.light #header a[hreflang] {
+    color: #454a52;
+    border-color: rgba(20, 22, 25, 0.15);
+}
+
+.light #mobile-menu a {
+    color: #454a52;
+    border-color: rgba(20, 22, 25, 0.08);
+}
+
+.light .mobile-bar,
+.light footer.bg-steel-900 {
+    background: #fff;
+    border-color: rgba(20, 22, 25, 0.1);
+    color: #454a52;
+}
+
+.light footer .text-white,
+.light .mobile-bar .text-white {
+    color: #141619;
+}
+
+.light .live-badge {
+    border-color: rgba(20, 22, 25, 0.15);
+    color: #454a52;
+}
+
+.light .story-scene rect[fill="#191b1f"],
+.light .story-scene rect[fill="#23272d"],
+.light .story-scene rect[fill="#0b0c0e"] {
+    fill: #fff;
+    stroke: #6b7079;
+}
+
+.light .story-scene .story-labels text {
+    fill: #454a52;
+}
+
+.light .story-done rect {
+    fill: #fff;
+}
+
+.light .story-done-text {
+    fill: #141619;
+}
+
+.light .ksa-map path[fill="#1d2025"] {
+    fill: #fff;
+}
+
+.light .map-labels {
+    fill: #454a52;
+}
+
+.light .blueprint {
+    opacity: 0.55;
+}
+
+.light .pipe-lines path {
+    stroke: rgba(255, 106, 26, 0.35);
+}
+
+.light .marquee {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.light .bg-steel-800 {
+    background: #ebe6de;
+    color: #454a52;
+}
+
+.light .search-box {
+    background: #fff;
+    color: #141619;
+}
+
+.light .search-box input {
+    color: #141619;
+}
+
+.light .search-result:hover,
+.light .search-result[aria-selected="true"] {
+    background: #f4f1eb;
+}
+
+/* ---------- Quick search ---------- */
+.search {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 12vh 1rem 1rem;
+}
+
+.search-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 22, 25, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 40rem;
+    background: #1d2025;
+    color: #fff;
+    border-top: 4px solid #ff6a1a;
+    box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.7);
+    animation: rise-in 0.25s ease both;
+}
+
+.search-results {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.search-result {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0.8rem 1.25rem;
+    text-align: start;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.12);
+}
+
+.search-result:hover,
+.search-result[aria-selected="true"] {
+    background: rgba(255, 106, 26, 0.12);
+}
+
+.search-type {
+    flex-shrink: 0;
+    min-width: 5.5rem;
+    font-family: 'Barlow Condensed', 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ff6a1a;
+}
+
+.search-result mark {
+    background: none;
+    color: #ff6a1a;
+    font-weight: 600;
+}
+
+/* ---------- Install-app button ---------- */
+.install-btn {
+    position: fixed;
+    bottom: 5.5rem;
+    inset-inline-start: 1rem;
+    z-index: 40;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+    background: #141619;
+    color: #fff;
+    font-family: 'Barlow Condensed', 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+    animation: rise-in 0.4s ease both;
+}
+
+@media (min-width: 1024px) {
+    .install-btn {
+        bottom: 1.5rem;
+    }
+}
+
+.light .install-btn {
+    background: #fff;
+    color: #141619;
+    border-color: rgba(20, 22, 25, 0.15);
+}
+
+/* ---------- Logo ignition on first visit ---------- */
+@keyframes ignite {
+    0% { color: #ffd166; text-shadow: 0 0 0 rgba(255, 106, 26, 0); transform: scale(1); }
+    30% { color: #fff; text-shadow: 0 0 18px #ff6a1a, 0 0 36px #e5262f; transform: scale(1.18); }
+    100% { color: #ff6a1a; text-shadow: 0 0 0 rgba(255, 106, 26, 0); transform: scale(1); }
+}
+
+@keyframes ignite-wash {
+    0% { opacity: 0; }
+    30% { opacity: 0.9; }
+    100% { opacity: 0; }
+}
+
+.ignite .logo-slash {
+    display: inline-block;
+    animation: ignite 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s both;
+}
+
+.ignite .logo::after {
+    content: '';
+    position: absolute;
+    inset: -40%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255, 106, 26, 0.5), transparent 60%);
+    animation: ignite-wash 0.9s ease 0.15s both;
+}
+
+.logo {
+    position: relative;
+}
+
 /* Inline SVG icons from img/icons.svg (built by tools/build-icons.js) */
 .icon {
     display: inline-block;
@@ -1136,6 +1477,13 @@
 
     .lift:hover {
         transform: none;
+    }
+
+    .ignite .logo-slash,
+    .ignite .logo::after,
+    .search-box,
+    .install-btn {
+        animation: none;
     }
 
     .marquee-track,
@@ -1203,6 +1551,9 @@
     #scroll-progress,
     #older-roles,
     .mobile-bar,
+    .hdr-btn,
+    .search,
+    .install-btn,
     .hero-pipes,
     .live-badge,
     .xp-rail,

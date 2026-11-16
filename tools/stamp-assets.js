@@ -23,4 +23,12 @@ for (const page of pages) {
     }
     fs.writeFileSync(file, html);
 }
-console.log('Stamped', pages.join(', '), hashes);
+// Service worker: name the cache after this build so a new build replaces the old cache
+const swTemplate = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
+const build = crypto.createHash('sha256').update(Object.values(hashes).join('')).digest('hex').slice(0, 8);
+const sw = swTemplate
+    .replace(/mabdullah-v[0-9A-Za-z_]+/, `mabdullah-v${build}`)
+    .replace(/css\/index\.css\?v=[0-9a-f_]+/, `css/index.css?v=${hashes['css/index.css']}`)
+    .replace(/img\/icons\.svg\?v=[0-9a-f_]+/, `img/icons.svg?v=${hashes['img/icons.svg']}`);
+fs.writeFileSync(path.join(root, 'sw.js'), sw);
+console.log('Stamped', pages.join(', '), hashes, 'sw', build);

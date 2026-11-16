@@ -6,6 +6,10 @@
     <title>Mohammad Abdullah | Business Development Manager — Fire Protection</title>
     <meta name="description" content="Mohammad Abdullah PMP® CFPS® — Business Development Manager, Fire Protection. Gas suppression, fire pumps (NFPA 20), fire alarm &amp; detection and consultative technical sales in Saudi Arabia.">
     <meta name="theme-color" content="#141619">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="M/Abdullah">
     <meta property="og:type" content="profile">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Mohammad Abdullah PMP® CFPS® | Business Development Manager — Fire Protection">
@@ -79,18 +83,21 @@
     ]
 }
     </script>
-    <script>document.documentElement.classList.add('js');</script>
+    <script>
+        document.documentElement.classList.add('js');
+        try { if (localStorage.getItem('theme') === 'light') document.documentElement.classList.add('light'); } catch (e) {}
+    </script>
     <link rel="preload" href="fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="img/portrait.webp" as="image" type="image/webp">
-    <link rel="stylesheet" href="css/index.css?v=b246c563d6">
+    <link rel="stylesheet" href="css/index.css?v=a5a6ad2822">
 </head>
 <body class="bg-off text-steel-900 antialiased selection:bg-ember selection:text-white pb-16 lg:pb-0">
     <div id="scroll-progress" class="fixed top-0 inset-x-0 z-[60] h-[3px] bg-gradient-to-r from-fire to-ember origin-left rtl:origin-right scale-x-0" aria-hidden="true"></div>
 
     <header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-5 flex justify-between items-center gap-4">
-            <a href="#" class="font-display font-extrabold text-2xl md:text-[28px] tracking-[0.04em] text-white" dir="ltr" aria-label="Mohammad Abdullah">M<span class="text-ember">/</span>ABDULLAH</a>
+            <a href="#" class="logo font-display font-extrabold text-xl sm:text-2xl md:text-[28px] tracking-[0.04em] text-white whitespace-nowrap" dir="ltr" aria-label="Mohammad Abdullah">M<span class="text-ember logo-slash">/</span>ABDULLAH</a>
             <div class="flex items-center gap-2">
                 <div class="hidden xl:flex items-center gap-1 me-3">
                     <a href="#about" class="nav-link">Profile</a>
@@ -101,10 +108,12 @@
                     <a href="#credentials" class="nav-link">Credentials</a>
                     <a href="#contact" class="nav-link text-white">Contact</a>
                 </div>
+                <button id="search-btn" type="button" class="hdr-btn hidden sm:inline-flex" aria-label="Search the site" title="Press / to search"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-magnifying-glass"></use></svg><kbd class="hidden md:inline ms-2 text-xs opacity-70">/</kbd></button>
+                <button id="theme-btn" type="button" class="hdr-btn" aria-label="Switch to light theme" data-label-light="Switch to light theme" data-label-dark="Switch to dark theme"><svg class="icon theme-sun" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-sun"></use></svg><svg class="icon theme-moon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-moon"></use></svg></button>
                 <a href="ar.html" lang="ar" hreflang="ar" class="px-3 py-2 font-semibold text-sm text-steel-300 hover:text-white border border-white/15 hover:border-white/40 transition-colors">عربي</a>
-                <a href="Mohammad_Abdullah_CV.pdf" download class="btn-fire !hidden sm:!inline-flex !px-5 !py-2.5 !text-[15px]"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-file-arrow-down"></use></svg> CV</a>
+                <a href="Mohammad_Abdullah_CV.pdf" download class="btn-fire !hidden sm:!inline-flex !px-5 !py-2.5 !text-[15px]"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-file-arrow-down"></use></svg> CV</a>
                 <button id="mobile-menu-btn" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" class="xl:hidden text-white p-2 border border-white/15">
-                    <svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-bars"></use></svg>
+                    <svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-bars"></use></svg>
                 </button>
             </div>
         </nav>
@@ -146,11 +155,11 @@
                     <p class="hero-in font-display font-semibold uppercase tracking-[0.06em] text-xl md:text-2xl" style="--d:3">Business Development Manager — Fire Protection</p>
                     <p class="hero-in text-lg leading-relaxed text-steel-300 max-w-xl mt-5" style="--d:4">I diagnose the hazard first, then engineer the fire protection system that fits — gas suppression, fire pumps and fire alarm &amp; detection, delivered for Aramco, Saudi Energy and industry across Saudi Arabia.</p>
                     <div class="hero-in hero-actions flex flex-col sm:flex-row gap-4 mt-10" style="--d:5">
-                        <a href="Mohammad_Abdullah_CV.pdf" download class="btn-fire"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-file-arrow-down"></use></svg> Download CV</a>
-                        <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-ghost"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg> WhatsApp</a>
+                        <a href="Mohammad_Abdullah_CV.pdf" download class="btn-fire"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-file-arrow-down"></use></svg> Download CV</a>
+                        <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-ghost"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#brands-whatsapp"></use></svg> WhatsApp</a>
                     </div>
                     
-                    <p class="hero-in flex flex-wrap items-center gap-x-5 gap-y-2 text-steel-400 mt-8" style="--d:6"><span class="flex items-center gap-2"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-location-dot"></use></svg> Dammam, Eastern Province, Saudi Arabia</span><span class="live-badge " data-live data-place="in Dammam" data-open="Working hours" data-closed="Outside working hours" hidden><span class="live-dot" aria-hidden="true"></span><span data-live-text></span></span></p>
+                    <p class="hero-in flex flex-wrap items-center gap-x-5 gap-y-2 text-steel-400 mt-8" style="--d:6"><span class="flex items-center gap-2"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-location-dot"></use></svg> Dammam, Eastern Province, Saudi Arabia</span><span class="live-badge " data-live data-place="in Dammam" data-open="Working hours" data-closed="Outside working hours" hidden><span class="live-dot" aria-hidden="true"></span><span data-live-text></span></span></p>
                 </div>
                 <div class="hero-photo relative lg:static order-1 lg:order-2 -mx-6 lg:mx-0 h-[440px] sm:h-[560px] lg:h-auto">
                     <picture>
@@ -441,7 +450,7 @@
                             <li class="flex items-start gap-3"><span class="pump-check" data-check="2">✓</span> <span>At 150% flow, pressure ≥ 65% of rated</span> <span class="ms-auto font-display font-bold text-lg tabular-nums" data-check-value="2" dir="ltr"></span></li>
                         </ul>
                         <p class="text-xs text-steel-500 leading-relaxed mt-6">Illustrative curve. Real selections use the manufacturer’s certified test curve, checked against the system’s hydraulic demand.</p>
-                        <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-fire mt-6 self-start"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg> Discuss a pump selection</a>
+                        <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-fire mt-6 self-start"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#brands-whatsapp"></use></svg> Discuss a pump selection</a>
                     </div>
                 </div>
             </div>
@@ -453,19 +462,19 @@
                 <p class="text-lg text-steel-600 leading-relaxed max-w-2xl mt-5">Pick a hazard to see the protection options typically considered for it, and the NFPA standard behind each.</p>
                 <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-6 mt-10 fade-in-up">
                     <div class="haz-list flex flex-col gap-2" role="group" aria-label="System Selector">
-                        <button type="button" class="haz-btn" data-haz="0" aria-pressed="true"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-server"></use></svg> <span>Data center / telecom room</span></button>
-                        <button type="button" class="haz-btn" data-haz="1" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-bolt"></use></svg> <span>Electrical room / E-house</span></button>
-                        <button type="button" class="haz-btn" data-haz="2" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-fan"></use></svg> <span>Gas turbine enclosure</span></button>
-                        <button type="button" class="haz-btn" data-haz="3" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-utensils"></use></svg> <span>Commercial kitchen</span></button>
-                        <button type="button" class="haz-btn" data-haz="4" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-box-archive"></use></svg> <span>Archives and records</span></button>
-                        <button type="button" class="haz-btn" data-haz="5" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-warehouse"></use></svg> <span>Warehouse and storage</span></button>
-                        <button type="button" class="haz-btn" data-haz="6" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-oil-well"></use></svg> <span>Tank farm / flammable liquids</span></button>
+                        <button type="button" class="haz-btn" data-haz="0" aria-pressed="true"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-server"></use></svg> <span>Data center / telecom room</span></button>
+                        <button type="button" class="haz-btn" data-haz="1" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-bolt"></use></svg> <span>Electrical room / E-house</span></button>
+                        <button type="button" class="haz-btn" data-haz="2" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-fan"></use></svg> <span>Gas turbine enclosure</span></button>
+                        <button type="button" class="haz-btn" data-haz="3" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-utensils"></use></svg> <span>Commercial kitchen</span></button>
+                        <button type="button" class="haz-btn" data-haz="4" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-box-archive"></use></svg> <span>Archives and records</span></button>
+                        <button type="button" class="haz-btn" data-haz="5" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-warehouse"></use></svg> <span>Warehouse and storage</span></button>
+                        <button type="button" class="haz-btn" data-haz="6" aria-pressed="false"><svg class="icon text-xl shrink-0" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-oil-well"></use></svg> <span>Tank farm / flammable liquids</span></button>
                     </div>
                     <div class="steel relative text-white p-6 sm:p-10 flex flex-col">
                         <div class="blueprint" aria-hidden="true"></div>
                         <div class="relative z-[1] flex flex-col flex-grow">
                         <div class="haz-panel" data-haz-panel="0">
-                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-server"></use></svg> Data center / telecom room</p>
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-server"></use></svg> Data center / telecom room</p>
                             <ul class="space-y-4 mt-5">
                                 <li class="haz-opt">
                                     <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -498,7 +507,7 @@
                             </ul>
                         </div>
                         <div class="haz-panel" data-haz-panel="1">
-                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-bolt"></use></svg> Electrical room / E-house</p>
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-bolt"></use></svg> Electrical room / E-house</p>
                             <ul class="space-y-4 mt-5">
                                 <li class="haz-opt">
                                     <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -531,7 +540,7 @@
                             </ul>
                         </div>
                         <div class="haz-panel" data-haz-panel="2">
-                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-fan"></use></svg> Gas turbine enclosure</p>
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-fan"></use></svg> Gas turbine enclosure</p>
                             <ul class="space-y-4 mt-5">
                                 <li class="haz-opt">
                                     <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -557,7 +566,7 @@
                             </ul>
                         </div>
                         <div class="haz-panel" data-haz-panel="3">
-                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-utensils"></use></svg> Commercial kitchen</p>
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-utensils"></use></svg> Commercial kitchen</p>
                             <ul class="space-y-4 mt-5">
                                 <li class="haz-opt">
                                     <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -583,7 +592,7 @@
                             </ul>
                         </div>
                         <div class="haz-panel" data-haz-panel="4">
-                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-box-archive"></use></svg> Archives and records</p>
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-box-archive"></use></svg> Archives and records</p>
                             <ul class="space-y-4 mt-5">
                                 <li class="haz-opt">
                                     <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -616,7 +625,7 @@
                             </ul>
                         </div>
                         <div class="haz-panel" data-haz-panel="5">
-                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-warehouse"></use></svg> Warehouse and storage</p>
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-warehouse"></use></svg> Warehouse and storage</p>
                             <ul class="space-y-4 mt-5">
                                 <li class="haz-opt">
                                     <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -642,7 +651,7 @@
                             </ul>
                         </div>
                         <div class="haz-panel" data-haz-panel="6">
-                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-oil-well"></use></svg> Tank farm / flammable liquids</p>
+                            <p class="eyebrow !text-xs"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-oil-well"></use></svg> Tank farm / flammable liquids</p>
                             <ul class="space-y-4 mt-5">
                                 <li class="haz-opt">
                                     <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -668,7 +677,7 @@
                             </ul>
                         </div>
                             <p class="text-xs text-steel-400 leading-relaxed mt-auto pt-8">Typical options only. Every project is assessed against its own hazard, occupancy, local codes and the authority having jurisdiction, such as Civil Defense or Aramco.</p>
-                            <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-fire mt-5 self-start"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg> Discuss your project</a>
+                            <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-fire mt-5 self-start"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#brands-whatsapp"></use></svg> Discuss your project</a>
                         </div>
                     </div>
                 </div>
@@ -1267,14 +1276,14 @@
                 <h3 class="font-display font-extrabold uppercase text-3xl mt-16 mb-6">Technical Training</h3>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-in-up">
                     <div class="bg-off p-6">
-                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-fire-extinguisher"></use></svg> 3M Academy</h4>
+                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-fire-extinguisher"></use></svg> 3M Academy</h4>
                         <ul class="space-y-3 text-sm">
                             <li><p class="font-semibold leading-snug">Clean Agent Fire Suppression</p><p class="text-xs text-steel-500">Sep 2018</p></li>
                             <li><p class="font-semibold leading-snug">Clean Agent Fire Extinguishment</p><p class="text-xs text-steel-500">Sep 2018</p></li>
                         </ul>
                     </div>
                     <div class="bg-off p-6">
-                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-shield-halved"></use></svg> FEMA National Fire Academy</h4>
+                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-shield-halved"></use></svg> FEMA National Fire Academy</h4>
                         <ul class="space-y-3 text-sm">
                             <li><p class="font-semibold leading-snug">Hydraulic Calculations for Water-Based Fire Protection Systems Plan Review</p><p class="text-xs text-steel-500">Sep 2018</p></li>
                             <li><p class="font-semibold leading-snug">Testing and Evaluation of Water Supplies for Fire Protection</p><p class="text-xs text-steel-500">Oct 2019</p></li>
@@ -1282,7 +1291,7 @@
                         </ul>
                     </div>
                     <div class="bg-off p-6">
-                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-microchip"></use></svg> Siemens SITRAIN</h4>
+                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-microchip"></use></svg> Siemens SITRAIN</h4>
                         <ul class="space-y-3 text-sm">
                             <li><p class="font-semibold leading-snug">Protection systems in low-voltage power distribution</p><p class="text-xs text-steel-500">Jan 2025</p></li>
                             <li><p class="font-semibold leading-snug">Protection concept</p><p class="text-xs text-steel-500">Jan 2025</p></li>
@@ -1292,7 +1301,7 @@
                         </ul>
                     </div>
                     <div class="bg-off p-6">
-                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-plug"></use></svg> Schneider Electric Energy University</h4>
+                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-plug"></use></svg> Schneider Electric Energy University</h4>
                         <ul class="space-y-3 text-sm">
                             <li><p class="font-semibold leading-snug">Pumping Systems I, II, III</p><p class="text-xs text-steel-500">Jul 2018</p></li>
                             <li><p class="font-semibold leading-snug">Power Distribution I</p><p class="text-xs text-steel-500">Jul 2018</p></li>
@@ -1303,7 +1312,7 @@
                         </ul>
                     </div>
                     <div class="bg-off p-6">
-                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-car-battery"></use></svg> Kohler Power Systems</h4>
+                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-car-battery"></use></svg> Kohler Power Systems</h4>
                         <ul class="space-y-3 text-sm">
                             <li><p class="font-semibold leading-snug">Industrial Power Systems Fundamentals</p><p class="text-xs text-steel-500">May 2017</p></li>
                             <li><p class="font-semibold leading-snug">Marine Power Systems Fundamentals</p><p class="text-xs text-steel-500">May 2017</p></li>
@@ -1312,14 +1321,14 @@
                         </ul>
                     </div>
                     <div class="bg-off p-6">
-                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-video"></use></svg> Honeywell</h4>
+                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-video"></use></svg> Honeywell</h4>
                         <ul class="space-y-3 text-sm">
                             <li><p class="font-semibold leading-snug">An Introduction to Electronic Access Control</p><p class="text-xs text-steel-500">Aug 2024</p></li>
                             <li><p class="font-semibold leading-snug">An Introduction to Video Systems</p><p class="text-xs text-steel-500">Aug 2024</p></li>
                         </ul>
                     </div>
                     <div class="bg-off p-6">
-                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-linkedin"></use></svg> LinkedIn Learning</h4>
+                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#brands-linkedin"></use></svg> LinkedIn Learning</h4>
                         <ul class="space-y-3 text-sm">
                             <li><p class="font-semibold leading-snug">Selling to Executives</p><p class="text-xs text-steel-500">2020</p></li>
                             <li><p class="font-semibold leading-snug">Managing Project Stakeholders</p><p class="text-xs text-steel-500">2020</p></li>
@@ -1327,7 +1336,7 @@
                         </ul>
                     </div>
                     <div class="bg-off p-6">
-                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-seedling"></use></svg> Early Career</h4>
+                        <h4 class="font-display font-bold uppercase text-lg flex items-center gap-2 pb-3 mb-4 border-b border-steel-900/10"><svg class="icon text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-seedling"></use></svg> Early Career</h4>
                         <ul class="space-y-3 text-sm">
                             <li><p class="font-semibold leading-snug">SolidWorks — Jordanian Association of Engineers</p><p class="text-xs text-steel-500">2011</p></li>
                             <li><p class="font-semibold leading-snug">Embedded Systems Design — Jordanian Ministry of Industry</p><p class="text-xs text-steel-500">2010</p></li>
@@ -1345,14 +1354,14 @@
                 <p class="text-lg text-steel-300 max-w-2xl mt-6">Discussing a hazard, a specification or an opportunity? The fastest way to reach me is WhatsApp.</p>
                 <p class="mt-4"><span class="live-badge " data-live data-place="in Dammam" data-open="Working hours" data-closed="Outside working hours" hidden><span class="live-dot" aria-hidden="true"></span><span data-live-text></span></span></p>
                 <div class="flex flex-col lg:flex-row flex-wrap gap-4 mt-10">
-                    <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-whatsapp"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg> WhatsApp</a>
-                    <a href="mailto:eng-m-a@outlook.com" class="btn-fire !normal-case !tracking-normal"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-envelope"></use></svg> eng-m-a@outlook.com</a>
-                    <a href="tel:+966538766689" class="btn-ghost"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-phone"></use></svg> <span dir="ltr">+966 53 876 6689</span></a>
+                    <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="btn-whatsapp"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#brands-whatsapp"></use></svg> WhatsApp</a>
+                    <a href="mailto:eng-m-a@outlook.com" class="btn-fire !normal-case !tracking-normal"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-envelope"></use></svg> eng-m-a@outlook.com</a>
+                    <a href="tel:+966538766689" class="btn-ghost"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-phone"></use></svg> <span dir="ltr">+966 53 876 6689</span></a>
                 </div>
                 <div class="flex flex-wrap gap-x-8 gap-y-3 mt-10 font-display font-semibold uppercase tracking-wider text-steel-300">
-                    <a href="https://www.linkedin.com/in/m-o-abdullah" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-ember"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-linkedin"></use></svg> LinkedIn</a>
-                    <a href="mohammad-abdullah.vcf" download class="flex items-center gap-2 hover:text-ember"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-address-card"></use></svg> Save Contact</a>
-                    <a href="Mohammad_Abdullah_CV.pdf" download class="flex items-center gap-2 hover:text-ember"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-file-arrow-down"></use></svg> Download CV (PDF)</a>
+                    <a href="https://www.linkedin.com/in/m-o-abdullah" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-ember"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#brands-linkedin"></use></svg> LinkedIn</a>
+                    <a href="mohammad-abdullah.vcf" download class="flex items-center gap-2 hover:text-ember"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-address-card"></use></svg> Save Contact</a>
+                    <a href="Mohammad_Abdullah_CV.pdf" download class="flex items-center gap-2 hover:text-ember"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-file-arrow-down"></use></svg> Download CV (PDF)</a>
                 </div>
             </div>
         </section>
@@ -1384,11 +1393,11 @@
             <div>
                 <p class="eyebrow !text-sm">Contact</p>
                 <ul class="mt-4 space-y-3">
-                    <li><a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-[#25D366]" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg> WhatsApp</a></li>
-                    <li><a href="mailto:eng-m-a@outlook.com" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-envelope"></use></svg> eng-m-a@outlook.com</a></li>
-                    <li><a href="tel:+966538766689" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-phone"></use></svg> <span dir="ltr">+966 53 876 6689</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/m-o-abdullah" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-linkedin"></use></svg> LinkedIn</a></li>
-                    <li class="flex items-center gap-2"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-location-dot"></use></svg> Dammam, Eastern Province, Saudi Arabia</li>
+                    <li><a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-[#25D366]" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#brands-whatsapp"></use></svg> WhatsApp</a></li>
+                    <li><a href="mailto:eng-m-a@outlook.com" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-envelope"></use></svg> eng-m-a@outlook.com</a></li>
+                    <li><a href="tel:+966538766689" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-phone"></use></svg> <span dir="ltr">+966 53 876 6689</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/m-o-abdullah" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-ember transition-colors"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#brands-linkedin"></use></svg> LinkedIn</a></li>
+                    <li class="flex items-center gap-2"><svg class="icon text-lg text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-location-dot"></use></svg> Dammam, Eastern Province, Saudi Arabia</li>
                 </ul>
             </div>
         </div>
@@ -1401,14 +1410,29 @@
     </footer>
 
     <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="whatsapp-float fixed bottom-5 end-5 z-40 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1ebe5b] text-white hidden lg:flex items-center justify-center shadow-xl shadow-black/30 transition-transform hover:scale-110">
-        <svg class="icon text-3xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg>
+        <svg class="icon text-3xl" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#brands-whatsapp"></use></svg>
     </a>
 
     <nav class="mobile-bar lg:hidden fixed bottom-0 inset-x-0 z-40 grid grid-cols-3 bg-steel-900/95 backdrop-blur border-t border-white/10" aria-label="Quick contact">
-        <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 py-2.5 text-[#25D366] font-display font-bold uppercase tracking-wider text-xs"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#brands-whatsapp"></use></svg> WhatsApp</a>
-        <a href="tel:+966538766689" class="flex flex-col items-center gap-1 py-2.5 text-white font-display font-bold uppercase tracking-wider text-xs border-x border-white/10"><svg class="icon text-xl text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-phone"></use></svg> Call</a>
-        <a href="Mohammad_Abdullah_CV.pdf" download class="flex flex-col items-center gap-1 py-2.5 text-white font-display font-bold uppercase tracking-wider text-xs"><svg class="icon text-xl text-ember" aria-hidden="true"><use href="img/icons.svg?v=4d7dd59060#solid-file-arrow-down"></use></svg> CV</a>
+        <a href="https://wa.me/966538766689" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 py-2.5 text-[#25D366] font-display font-bold uppercase tracking-wider text-xs"><svg class="icon text-xl" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#brands-whatsapp"></use></svg> WhatsApp</a>
+        <a href="tel:+966538766689" class="flex flex-col items-center gap-1 py-2.5 text-white font-display font-bold uppercase tracking-wider text-xs border-x border-white/10"><svg class="icon text-xl text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-phone"></use></svg> Call</a>
+        <a href="Mohammad_Abdullah_CV.pdf" download class="flex flex-col items-center gap-1 py-2.5 text-white font-display font-bold uppercase tracking-wider text-xs"><svg class="icon text-xl text-ember" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-file-arrow-down"></use></svg> CV</a>
     </nav>
+
+    <div id="search" class="search" hidden role="dialog" aria-modal="true" aria-label="Search the site">
+        <div class="search-backdrop" data-search-close></div>
+        <div class="search-box">
+            <div class="flex items-center gap-3 px-5 py-4 border-b border-white/10">
+                <svg class="icon text-ember text-xl" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-magnifying-glass"></use></svg>
+                <input id="search-input" type="search" autocomplete="off" spellcheck="false" placeholder="Search projects, skills, standards…" class="flex-1 bg-transparent text-white text-lg outline-none placeholder:text-steel-400" data-search-lang="en">
+                <kbd class="hidden sm:inline text-xs text-steel-400 border border-white/15 px-2 py-1">Esc to close</kbd>
+            </div>
+            <ul id="search-results" class="search-results" role="listbox"></ul>
+            <p id="search-empty" class="px-5 py-6 text-steel-400" hidden>No matches</p>
+        </div>
+    </div>
+
+    <button id="install-btn" type="button" hidden class="install-btn"><svg class="icon" aria-hidden="true"><use href="img/icons.svg?v=38459a3ec4#solid-download"></use></svg> Install app</button>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -1811,6 +1835,123 @@
                 updateLive();
                 setInterval(updateLive, 30000);
             }
+
+            // Logo ignites once, on the first visit only
+            try {
+                if (!localStorage.getItem('ignited') && !reduceMotion) {
+                    document.getElementById('header').classList.add('ignite');
+                    localStorage.setItem('ignited', '1');
+                }
+            } catch (e) {}
+
+            // Light / dark theme
+            const themeBtn = document.getElementById('theme-btn');
+            const themeMeta = document.querySelector('meta[name="theme-color"]');
+            const applyTheme = (light) => {
+                document.documentElement.classList.toggle('light', light);
+                themeBtn.setAttribute('aria-label', light ? themeBtn.dataset.labelDark : themeBtn.dataset.labelLight);
+                themeMeta.setAttribute('content', light ? '#faf7f2' : '#141619');
+                try { localStorage.setItem('theme', light ? 'light' : 'dark'); } catch (e) {}
+            };
+            applyTheme(document.documentElement.classList.contains('light'));
+            themeBtn.addEventListener('click', () => applyTheme(!document.documentElement.classList.contains('light')));
+
+            // Quick search: press "/" or the magnifier
+            const search = document.getElementById('search');
+            const searchInput = document.getElementById('search-input');
+            const searchResults = document.getElementById('search-results');
+            const searchEmpty = document.getElementById('search-empty');
+            let searchIndex = null;
+            let selected = -1;
+            const fold = (text) => text.toLowerCase().normalize('NFD').replace(/[̀-ًͯ-ْ]/g, '');
+            const escapeHtml = (text) => text.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+            const openSearch = async () => {
+                search.hidden = false;
+                searchInput.value = '';
+                renderResults([]);
+                searchInput.focus();
+                if (!searchIndex) {
+                    try {
+                        searchIndex = await (await fetch(`search-${searchInput.dataset.searchLang}.json`)).json();
+                    } catch (e) { searchIndex = []; }
+                }
+            };
+            const closeSearch = () => { search.hidden = true; };
+            const renderResults = (hits) => {
+                selected = -1;
+                searchResults.innerHTML = hits.map((hit, i) => {
+                    const q = fold(searchInput.value.trim());
+                    const name = escapeHtml(hit.n);
+                    const idx = fold(hit.n).indexOf(q);
+                    const marked = q && idx >= 0 ? `${name.slice(0, idx)}<mark>${name.slice(idx, idx + q.length)}</mark>${name.slice(idx + q.length)}` : name;
+                    return `<li><button type="button" class="search-result" role="option" data-anchor="${hit.a}" data-i="${i}"><span class="search-type">${hit.t}</span><span><span class="block font-semibold">${marked}</span>${hit.d ? `<span class="block text-sm opacity-70">${escapeHtml(hit.d)}</span>` : ''}</span></button></li>`;
+                }).join('');
+                searchEmpty.hidden = !(searchInput.value.trim() && hits.length === 0);
+            };
+            const runSearch = () => {
+                const q = fold(searchInput.value.trim());
+                if (!q || !searchIndex) { renderResults([]); return; }
+                const hits = searchIndex
+                    .map((item) => {
+                        const n = fold(item.n);
+                        const d = fold(item.d);
+                        const score = n.startsWith(q) ? 3 : n.includes(q) ? 2 : d.includes(q) ? 1 : 0;
+                        return { item, score };
+                    })
+                    .filter((r) => r.score > 0)
+                    .sort((a, b) => b.score - a.score)
+                    .slice(0, 12)
+                    .map((r) => r.item);
+                renderResults(hits);
+            };
+            const goTo = (anchor) => {
+                closeSearch();
+                const target = document.querySelector(anchor);
+                if (target) window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 80, behavior: reduceMotion ? 'auto' : 'smooth' });
+            };
+            document.getElementById('search-btn').addEventListener('click', openSearch);
+            search.querySelector('[data-search-close]').addEventListener('click', closeSearch);
+            searchInput.addEventListener('input', runSearch);
+            searchResults.addEventListener('click', (e) => {
+                const button = e.target.closest('.search-result');
+                if (button) goTo(button.dataset.anchor);
+            });
+            document.addEventListener('keydown', (e) => {
+                const typing = ['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName) && document.activeElement !== searchInput;
+                if (e.key === '/' && search.hidden && !typing) { e.preventDefault(); openSearch(); return; }
+                if (search.hidden) return;
+                const options = [...searchResults.querySelectorAll('.search-result')];
+                if (e.key === 'Escape') closeSearch();
+                else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    if (!options.length) return;
+                    selected = (selected + (e.key === 'ArrowDown' ? 1 : -1) + options.length) % options.length;
+                    options.forEach((o, i) => o.setAttribute('aria-selected', String(i === selected)));
+                    options[selected].scrollIntoView({ block: 'nearest' });
+                } else if (e.key === 'Enter' && options.length) {
+                    goTo(options[Math.max(selected, 0)].dataset.anchor);
+                }
+            });
+
+            // Install as an app: offline cache and the browser's install prompt
+            if ('serviceWorker' in navigator && location.protocol === 'https:') {
+                navigator.serviceWorker.register('sw.js').catch(() => {});
+            }
+            const installBtn = document.getElementById('install-btn');
+            let installPrompt = null;
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                installPrompt = e;
+                installBtn.hidden = false;
+            });
+            installBtn.addEventListener('click', async () => {
+                if (!installPrompt) return;
+                installPrompt.prompt();
+                await installPrompt.userChoice;
+                installPrompt = null;
+                installBtn.hidden = true;
+            });
+            window.addEventListener('appinstalled', () => { installBtn.hidden = true; });
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
