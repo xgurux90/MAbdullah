@@ -1,0 +1,21 @@
+{
+  "name": "Mohammad Abdullah — Fire Protection",
+  "short_name": "M/Abdullah",
+  "description": "Business Development Manager, Fire Protection. Gas suppression, fire pumps and fire alarm & detection across Saudi Arabia.",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#141619",
+  "theme_color": "#141619",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "WhatsApp", "url": "https://wa.me/966538766689", "icons": [{ "src": "img/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Download CV", "url": "./Mohammad_Abdullah_CV.pdf", "icons": [{ "src": "img/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
